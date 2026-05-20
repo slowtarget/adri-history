@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⚔️ Iberian History Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- ── START SCREEN ── -->
+    <div id="start-screen" class="screen" data-screen="start">
+      <div class="card">
+        <div class="hero-icon">⚔️</div>
+        <h1>Iberian History Quiz</h1>
+        <p class="subtitle">The Middle Ages in the Iberian Peninsula</p>
+        <p class="description">
+          Test your knowledge of Al-Andalus, the Reconquista, and the Christian Kingdoms.<br />
+          You'll get <strong>20 random questions</strong> each time — aim for 90%!
+        </p>
+        <div class="name-field">
+          <label for="player-name">Your name</label>
+          <input type="text" id="player-name" data-testid="player-name"
+            placeholder="Enter your name…" autocomplete="given-name" maxlength="60" />
+        </div>
+        <button id="start-btn" class="btn btn-primary" data-testid="start-btn">Start Quiz →</button>
+      </div>
+    </div>
+
+    <!-- ── QUIZ SCREEN ── -->
+    <div id="quiz-screen" class="screen hidden" data-screen="quiz">
+      <div class="card">
+        <div class="progress-area">
+          <span id="question-counter" class="counter" data-testid="question-counter">Question 1 of 20</span>
+          <div class="progress-bar">
+            <div id="progress-fill" class="progress-fill" style="width: 5%"></div>
+          </div>
+        </div>
+
+        <div id="question-text" class="question-text" data-testid="question-text"></div>
+
+        <div id="options" class="options">
+          <button class="option" data-key="A" data-testid="option-A"><span class="key-badge">A</span><span class="option-text" id="text-A"></span></button>
+          <button class="option" data-key="B" data-testid="option-B"><span class="key-badge">B</span><span class="option-text" id="text-B"></span></button>
+          <button class="option" data-key="C" data-testid="option-C"><span class="key-badge">C</span><span class="option-text" id="text-C"></span></button>
+          <button class="option" data-key="D" data-testid="option-D"><span class="key-badge">D</span><span class="option-text" id="text-D"></span></button>
+        </div>
+
+        <div class="nav-row">
+          <span id="score-tracker" class="score-tracker" data-testid="score-tracker">Score: 0</span>
+          <button id="next-btn" class="btn btn-primary hidden" data-testid="next-btn">Next →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── RESULTS SCREEN ── -->
+    <div id="results-screen" class="screen hidden" data-screen="results">
+      <div class="card results-card">
+        <div id="result-icon" class="hero-icon" data-testid="result-icon"></div>
+        <h2 id="result-heading" data-testid="result-heading" aria-live="polite">&#8203;</h2>
+        <p id="result-message" data-testid="result-message"></p>
+        <div id="score-display" class="score-display" data-testid="score-display"></div>
+        <div id="score-bar-container" class="score-bar-container">
+          <div id="score-bar-fill" class="score-bar-fill"></div>
+          <span class="threshold-marker" title="90% pass threshold">↑ 90%</span>
+        </div>
+
+        <div id="timing-info" class="timing-info" data-testid="timing-info"></div>
+
+        <div id="wrong-answers-section" class="wrong-answers-section hidden">
+          <h3 class="wrong-answers-heading">Questions to review:</h3>
+          <ol id="wrong-answers-list" data-testid="wrong-answers-list"></ol>
+        </div>
+
+        <div class="results-actions">
+          <button id="download-csv-btn" class="btn btn-secondary" data-testid="download-csv-btn">Download Results CSV ↓</button>
+          <button id="restart-btn" class="btn btn-primary" data-testid="restart-btn">Try Again ↺</button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /#app -->
+
+  <script src="config.js"></script>
+  <script src="questions-data.js"></script>
+  <script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "iberian-quiz-tests",
+  "version": "1.0.0",
+  "description": "Playwright browser tests for the Iberian History Quiz",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0"
+  }
+}

@@ -1,0 +1,761 @@
+// Auto-generated from questions.json — do not edit by hand
+// This file is used by index.html so the quiz works without a web server
+var QUIZ_QUESTIONS = 
+[
+  {
+    "id": 1,
+    "question": "In which century did the Visigoths arrive in Europe?",
+    "options": { "A": "3rd century", "B": "4th century", "C": "5th century", "D": "6th century" },
+    "answer": "C"
+  },
+  {
+    "id": 2,
+    "question": "What was the outcome of the Battle of Vouillé (507)?",
+    "options": {
+      "A": "The Visigoths defeated the Franks",
+      "B": "King Alaric II was defeated by King Clovis I",
+      "C": "The Byzantines defeated the Visigoths",
+      "D": "The Visigoths conquered all of Gaul"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 3,
+    "question": "What was the capital of the Visigothic Kingdom?",
+    "options": { "A": "Seville", "B": "Córdoba", "C": "Barcelona", "D": "Toledo" },
+    "answer": "D"
+  },
+  {
+    "id": 4,
+    "question": "Which Visigothic king converted the kingdom from Arianism to Catholicism?",
+    "options": { "A": "Leovigild", "B": "Alaric II", "C": "Reccared", "D": "Witiza" },
+    "answer": "C"
+  },
+  {
+    "id": 5,
+    "question": "What was the Third Council of Toledo (589) famous for?",
+    "options": {
+      "A": "Electing a new Visigothic king",
+      "B": "Signing a peace treaty with the Franks",
+      "C": "Establishing trade with the Byzantine Empire",
+      "D": "Converting the Visigoths from Arianism to Catholicism"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 6,
+    "question": "What is Arianism?",
+    "options": {
+      "A": "A form of Sunni Islam",
+      "B": "A heresy that rejects the Holy Trinity",
+      "C": "A branch of Judaism",
+      "D": "A type of paganism"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 7,
+    "question": "How was the Visigothic king chosen?",
+    "options": {
+      "A": "Hereditary succession (father to son)",
+      "B": "Appointed by the Pope",
+      "C": "Won by military conquest",
+      "D": "Elected by the nobles"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 8,
+    "question": "Which Visigothic king ruled when the crisis arose that led to the Muslim invasion?",
+    "options": { "A": "Rodrigo", "B": "Reccared", "C": "Leovigild", "D": "Witiza" },
+    "answer": "D"
+  },
+  {
+    "id": 9,
+    "question": "In what year did the Battle of Guadalete take place?",
+    "options": { "A": "507", "B": "589", "C": "711", "D": "722" },
+    "answer": "C"
+  },
+  {
+    "id": 10,
+    "question": "Who commanded the Berber army at the Battle of Guadalete?",
+    "options": { "A": "Musa", "B": "Abd al-Rahman I", "C": "Tariq", "D": "Almanzor" },
+    "answer": "C"
+  },
+  {
+    "id": 11,
+    "question": "Who was the Muslim governor of North Africa who sent the army to Iberia?",
+    "options": { "A": "Tariq", "B": "Musa", "C": "Abd al-Rahman I", "D": "Al-Hakam II" },
+    "answer": "B"
+  },
+  {
+    "id": 12,
+    "question": "What happened to the Visigothic Kingdom after the Battle of Guadalete?",
+    "options": {
+      "A": "It survived in the mountains of the north",
+      "B": "It became part of the Byzantine Empire",
+      "C": "It disappeared and Al-Andalus was established",
+      "D": "It merged with the Frankish Kingdom"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 13,
+    "question": "In what year did the Battle of Covadonga take place?",
+    "options": { "A": "711", "B": "722", "C": "732", "D": "756" },
+    "answer": "B"
+  },
+  {
+    "id": 14,
+    "question": "Who led the Astures at the Battle of Covadonga?",
+    "options": { "A": "Alfonso I", "B": "Tariq", "C": "Roderic", "D": "Pelayo" },
+    "answer": "D"
+  },
+  {
+    "id": 15,
+    "question": "What was Pelayo's ethnic background?",
+    "options": { "A": "Berber", "B": "Arab", "C": "Basque", "D": "Visigothic" },
+    "answer": "D"
+  },
+  {
+    "id": 16,
+    "question": "In what year did the Battle of Poitiers take place?",
+    "options": { "A": "722", "B": "732", "C": "756", "D": "778" },
+    "answer": "B"
+  },
+  {
+    "id": 17,
+    "question": "Who defeated the Muslims at the Battle of Poitiers (732)?",
+    "options": { "A": "The Visigoths", "B": "The Astures", "C": "The Franks", "D": "The Byzantines" },
+    "answer": "C"
+  },
+  {
+    "id": 18,
+    "question": "What was the capital of Al-Andalus?",
+    "options": { "A": "Toledo", "B": "Seville", "C": "Granada", "D": "Córdoba" },
+    "answer": "D"
+  },
+  {
+    "id": 19,
+    "question": "What were the two main groups of Muslim invaders of the Iberian Peninsula?",
+    "options": { "A": "Arabs and Turks", "B": "Berbers and Persians", "C": "Berbers and Arabs", "D": "Moors and Saracens" },
+    "answer": "C"
+  },
+  {
+    "id": 20,
+    "question": "What period is known as the Dependent Emirate of Al-Andalus?",
+    "options": { "A": "700–750", "B": "711–756", "C": "756–929", "D": "929–1031" },
+    "answer": "B"
+  },
+  {
+    "id": 21,
+    "question": "Who proclaimed himself independent emir of Al-Andalus in 756?",
+    "options": { "A": "Hisham II", "B": "Almanzor", "C": "Abd al-Rahman I", "D": "Musa" },
+    "answer": "C"
+  },
+  {
+    "id": 22,
+    "question": "Why did Abd al-Rahman I flee to Al-Andalus?",
+    "options": {
+      "A": "He was exiled by the Umayyad caliph",
+      "B": "He was defeated in battle",
+      "C": "He sought new lands to conquer",
+      "D": "He fled the Abbasid rebellion that killed his family"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 23,
+    "question": "Who were the Muladi?",
+    "options": {
+      "A": "North African Berbers",
+      "B": "Arab traders",
+      "C": "Native Iberian converts to Islam",
+      "D": "Byzantine soldiers"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 24,
+    "question": "In what year did the Caliphate of Córdoba begin?",
+    "options": { "A": "756", "B": "850", "C": "929", "D": "1031" },
+    "answer": "C"
+  },
+  {
+    "id": 25,
+    "question": "Who proclaimed himself caliph in 929, breaking from Abbasid authority?",
+    "options": { "A": "Abd al-Rahman I", "B": "Al-Hakam II", "C": "Almanzor", "D": "Abd al-Rahman III" },
+    "answer": "D"
+  },
+  {
+    "id": 26,
+    "question": "What palace did Abd al-Rahman III build near Córdoba?",
+    "options": { "A": "Alhambra", "B": "Medina Azahara", "C": "Alcázar", "D": "El Escorial" },
+    "answer": "B"
+  },
+  {
+    "id": 27,
+    "question": "With which empires did Abd al-Rahman III establish diplomatic relations?",
+    "options": {
+      "A": "Ottoman and Persian Empires",
+      "B": "Byzantine Empire and Holy Roman Empire",
+      "C": "Abbasid Caliphate and Frankish Empire",
+      "D": "Egyptian and Moroccan kingdoms"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 28,
+    "question": "Who was Almanzor?",
+    "options": {
+      "A": "The last caliph of Córdoba",
+      "B": "The founder of the Nasrid Kingdom",
+      "C": "The governor of the Dependent Emirate",
+      "D": "The most important general during the reign of Hisham II"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 29,
+    "question": "How many raids did Almanzor carry out on Christian lands and cities?",
+    "options": { "A": "32", "B": "42", "C": "52", "D": "62" },
+    "answer": "C"
+  },
+  {
+    "id": 30,
+    "question": "What does the nickname \"al-Mansur\" mean?",
+    "options": { "A": "The Great", "B": "The Victorious", "C": "The Wise", "D": "The Defender" },
+    "answer": "B"
+  },
+  {
+    "id": 31,
+    "question": "What did Almanzor do to the cathedral of Santiago de Compostela?",
+    "options": {
+      "A": "He rebuilt it in Muslim style",
+      "B": "He converted it into a mosque",
+      "C": "He destroyed it",
+      "D": "He taxed its pilgrims heavily"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 32,
+    "question": "What did Almanzor force Christian slaves to carry to Córdoba as trophies?",
+    "options": { "A": "Gold and silver from the altar", "B": "Sacred manuscripts", "C": "The church's stained-glass windows", "D": "The church bells of Santiago de Compostela" },
+    "answer": "D"
+  },
+  {
+    "id": 33,
+    "question": "In what year did the Taifa Kingdoms period begin?",
+    "options": { "A": "929", "B": "985", "C": "1031", "D": "1085" },
+    "answer": "C"
+  },
+  {
+    "id": 34,
+    "question": "What were \"parias\"?",
+    "options": {
+      "A": "Religious ceremonies in Al-Andalus",
+      "B": "Military units of the Taifa kings",
+      "C": "Tribute payments by Taifa kingdoms to Christian kingdoms",
+      "D": "Trade agreements between Muslims and Christians"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 35,
+    "question": "Who conquered Toledo in 1085?",
+    "options": { "A": "Fernando III", "B": "Alfonso VIII", "C": "Alfonso VI", "D": "Sancho III" },
+    "answer": "C"
+  },
+  {
+    "id": 36,
+    "question": "What did the Almoravids seek to do in Al-Andalus?",
+    "options": {
+      "A": "Expand trade with Europe",
+      "B": "Ally with the Christian kingdoms",
+      "C": "Restore the purity of Islam by radicalizing its precepts",
+      "D": "Create a secular state"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 37,
+    "question": "In what year did the Battle of Sagrajas take place?",
+    "options": { "A": "1085", "B": "1086", "C": "1095", "D": "1125" },
+    "answer": "B"
+  },
+  {
+    "id": 38,
+    "question": "Who were the Mozarabs?",
+    "options": {
+      "A": "Muslim converts to Christianity",
+      "B": "Jewish traders living in Al-Andalus",
+      "C": "Christians living under Muslim rule",
+      "D": "Berber soldiers who converted to Christianity"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 39,
+    "question": "Who defeated the Almoravids at the Battle of Lucena (1125)?",
+    "options": { "A": "Alfonso VI", "B": "Fernando III", "C": "Alfonso I the Battler", "D": "Pelayo" },
+    "answer": "C"
+  },
+  {
+    "id": 40,
+    "question": "In what year did the Almohads invade Al-Andalus?",
+    "options": { "A": "1085", "B": "1125", "C": "1145", "D": "1195" },
+    "answer": "C"
+  },
+  {
+    "id": 41,
+    "question": "In what year was the Battle of Alarcos fought?",
+    "options": { "A": "1085", "B": "1125", "C": "1145", "D": "1195" },
+    "answer": "D"
+  },
+  {
+    "id": 42,
+    "question": "Who won the Battle of Alarcos (1195)?",
+    "options": { "A": "Castile", "B": "Aragon", "C": "The Almohads", "D": "Navarre" },
+    "answer": "C"
+  },
+  {
+    "id": 43,
+    "question": "In what year was the Battle of Las Navas de Tolosa fought?",
+    "options": { "A": "1085", "B": "1195", "C": "1212", "D": "1238" },
+    "answer": "C"
+  },
+  {
+    "id": 44,
+    "question": "Who was the Castilian king at the Battle of Las Navas de Tolosa?",
+    "options": { "A": "Alfonso VI", "B": "Fernando III", "C": "Alfonso X", "D": "Alfonso VIII" },
+    "answer": "D"
+  },
+  {
+    "id": 45,
+    "question": "Which military orders participated in the Battle of Las Navas de Tolosa?",
+    "options": {
+      "A": "Teutonic and Dominican",
+      "B": "Franciscan and Augustinian",
+      "C": "Templars, Hospitallers, Santiago, and Calatrava",
+      "D": "Benedictine and Cistercian"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 46,
+    "question": "The Nasrid Kingdom of Granada lasted until what year?",
+    "options": { "A": "1212", "B": "1350", "C": "1450", "D": "1492" },
+    "answer": "D"
+  },
+  {
+    "id": 47,
+    "question": "Who was the last king of the Nasrid Kingdom of Granada?",
+    "options": { "A": "Almanzor", "B": "Abd al-Rahman III", "C": "Hisham II", "D": "Boabdil" },
+    "answer": "D"
+  },
+  {
+    "id": 48,
+    "question": "On what date did Boabdil surrender Granada to the Christians?",
+    "options": { "A": "December 25, 1491", "B": "January 2, 1492", "C": "March 15, 1492", "D": "October 12, 1492" },
+    "answer": "B"
+  },
+  {
+    "id": 49,
+    "question": "What does the term \"Reconquista\" refer to?",
+    "options": {
+      "A": "The Muslim conquest of the Iberian Peninsula",
+      "B": "The unification of the Christian kingdoms",
+      "C": "The Christian reconquest of lands occupied by the Muslims",
+      "D": "The expulsion of Jews from Iberia"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 50,
+    "question": "The Reconquista lasted from which years?",
+    "options": { "A": "507–1212", "B": "711–1492", "C": "722–1085", "D": "756–1238" },
+    "answer": "B"
+  },
+  {
+    "id": 51,
+    "question": "Who was the first king of the Kingdom of Asturias?",
+    "options": { "A": "Alfonso I", "B": "Alfonso II", "C": "Ordoño II", "D": "Pelayo" },
+    "answer": "D"
+  },
+  {
+    "id": 52,
+    "question": "What was the original capital of the Kingdom of Asturias?",
+    "options": { "A": "Oviedo", "B": "León", "C": "Burgos", "D": "Cangas de Onís" },
+    "answer": "D"
+  },
+  {
+    "id": 53,
+    "question": "Which Asturian king extended his domains into Galicia?",
+    "options": { "A": "Pelayo", "B": "Alfonso I", "C": "Alfonso II", "D": "Alfonso III" },
+    "answer": "B"
+  },
+  {
+    "id": 54,
+    "question": "During whose reign were the remains of the Apostle James discovered in Compostela?",
+    "options": { "A": "Alfonso I", "B": "Alfonso III", "C": "Alfonso II", "D": "Ordoño II" },
+    "answer": "C"
+  },
+  {
+    "id": 55,
+    "question": "What did Alfonso II order to be built after the discovery of St. James's remains?",
+    "options": { "A": "A castle to defend the tomb", "B": "A university", "C": "A church to venerate the apostle's tomb", "D": "A royal palace" },
+    "answer": "C"
+  },
+  {
+    "id": 56,
+    "question": "Which Asturian king conquered Coimbra and Porto?",
+    "options": { "A": "Alfonso I", "B": "Alfonso II", "C": "Ordoño II", "D": "Alfonso III" },
+    "answer": "D"
+  },
+  {
+    "id": 57,
+    "question": "Who moved the capital from Oviedo to León?",
+    "options": { "A": "Alfonso I", "B": "Alfonso II", "C": "Alfonso III", "D": "Ordoño II" },
+    "answer": "D"
+  },
+  {
+    "id": 58,
+    "question": "Why was the eastern territory of the Kingdom of León called \"Castile\"?",
+    "options": {
+      "A": "It had many rivers",
+      "B": "Its founder was named Castillo",
+      "C": "It had a large number of castles built for defence",
+      "D": "It was the centre of trade"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 59,
+    "question": "Who unified the Castilian counties to create the County of Castile?",
+    "options": { "A": "Sancho III", "B": "Ferdinand I", "C": "Alfonso VI", "D": "Count Fernán González" },
+    "answer": "D"
+  },
+  {
+    "id": 60,
+    "question": "Between which years did Count Fernán González rule?",
+    "options": { "A": "891–930", "B": "931–970", "C": "970–1010", "D": "1010–1050" },
+    "answer": "B"
+  },
+  {
+    "id": 61,
+    "question": "Who appointed Ferdinand as Count of Castile in 1035?",
+    "options": { "A": "Alfonso VI", "B": "Ordoño II", "C": "Almanzor", "D": "Sancho III of Navarre" },
+    "answer": "D"
+  },
+  {
+    "id": 62,
+    "question": "Who was the first king of Castile and León?",
+    "options": { "A": "Alfonso VI", "B": "Fernando III", "C": "Sancho III", "D": "Ferdinand I" },
+    "answer": "D"
+  },
+  {
+    "id": 63,
+    "question": "Who was described as the first woman in all of Europe to reign in her own right?",
+    "options": { "A": "Isabella of Castile", "B": "Jimena", "C": "Queen Urraca", "D": "Sancha" },
+    "answer": "C"
+  },
+  {
+    "id": 64,
+    "question": "In what year did Portugal gain its independence?",
+    "options": { "A": "1085", "B": "1112", "C": "1128", "D": "1145" },
+    "answer": "C"
+  },
+  {
+    "id": 65,
+    "question": "Who led Portugal to independence?",
+    "options": { "A": "Fernando III", "B": "Sancho VII", "C": "Alfonso VIII", "D": "Alfonso Enríquez" },
+    "answer": "D"
+  },
+  {
+    "id": 66,
+    "question": "In what year was the Battle of Roncesvalles fought?",
+    "options": { "A": "711", "B": "722", "C": "778", "D": "824" },
+    "answer": "C"
+  },
+  {
+    "id": 67,
+    "question": "Who defeated Charlemagne at the Battle of Roncesvalles?",
+    "options": { "A": "Muslims", "B": "Visigoths", "C": "Basques", "D": "Berbers" },
+    "answer": "C"
+  },
+  {
+    "id": 68,
+    "question": "Which poem immortalised the Battle of Roncesvalles?",
+    "options": {
+      "A": "El Cantar de Mio Cid",
+      "B": "The Iliad",
+      "C": "The Song of the Nibelungs",
+      "D": "The Song of Roland (La Chanson de Roland)"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 69,
+    "question": "What was the Marca Hispanica?",
+    "options": {
+      "A": "A Muslim trade route through the Pyrenees",
+      "B": "A Visigothic border fortress",
+      "C": "A defensive zone created by Charlemagne to protect his southern border",
+      "D": "The pilgrim road to Santiago de Compostela"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 70,
+    "question": "In what year was the Kingdom of Pamplona formed?",
+    "options": { "A": "778", "B": "800", "C": "824", "D": "850" },
+    "answer": "C"
+  },
+  {
+    "id": 71,
+    "question": "In what year did the Kingdom of Pamplona become the Kingdom of Navarre?",
+    "options": { "A": "1085", "B": "1118", "C": "1145", "D": "1162" },
+    "answer": "D"
+  },
+  {
+    "id": 72,
+    "question": "Under which king did the Kingdom of Pamplona rename itself the Kingdom of Navarre?",
+    "options": { "A": "Sancho III", "B": "Garcia Sánchez", "C": "Sancho VII", "D": "Sancho VI the Wise" },
+    "answer": "D"
+  },
+  {
+    "id": 73,
+    "question": "Who was the most powerful king of early Navarre, effectively ruling all the Hispanic kingdoms?",
+    "options": { "A": "Sancho VI", "B": "Garcia Sánchez", "C": "Sancho VII", "D": "Sancho III" },
+    "answer": "D"
+  },
+  {
+    "id": 74,
+    "question": "How did Sancho III of Navarre gain control of the County of Castile?",
+    "options": {
+      "A": "By military conquest",
+      "B": "He inherited it from his father",
+      "C": "Through his marriage to the heiress Sancha",
+      "D": "He purchased it from the King of León"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 75,
+    "question": "Who conquered the city of Zaragoza in 1118?",
+    "options": { "A": "Fernando III", "B": "Alfonso VI", "C": "Sancho III", "D": "Alfonso I the Battler" },
+    "answer": "D"
+  },
+  {
+    "id": 76,
+    "question": "Where was the original capital of the Kingdom of Aragon?",
+    "options": { "A": "Zaragoza", "B": "Pamplona", "C": "Barcelona", "D": "Jaca" },
+    "answer": "D"
+  },
+  {
+    "id": 77,
+    "question": "What happened after Alfonso I the Battler died without an heir?",
+    "options": {
+      "A": "Fernando III inherited Aragon",
+      "B": "Castile absorbed Aragon",
+      "C": "The Almohads conquered Aragon",
+      "D": "Navarre and Aragon separated"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 78,
+    "question": "What was El Cid's full name?",
+    "options": { "A": "Fernando de Castilla", "B": "Rodrigo Díaz de Vivar", "C": "Alfonso de León", "D": "Sancho de Navarre" },
+    "answer": "B"
+  },
+  {
+    "id": 79,
+    "question": "Which poem immortalised El Cid's deeds?",
+    "options": { "A": "The Song of Roland", "B": "The Iliad", "C": "El Cantar de Mio Cid", "D": "The Aeneid" },
+    "answer": "C"
+  },
+  {
+    "id": 80,
+    "question": "What did El Cid conquer in 1094?",
+    "options": { "A": "Toledo", "B": "Córdoba", "C": "Zaragoza", "D": "Valencia" },
+    "answer": "D"
+  },
+  {
+    "id": 81,
+    "question": "Who ruled the Taifa of Valencia after El Cid died?",
+    "options": { "A": "Alfonso VI", "B": "His son Rodrigo", "C": "His wife Jimena", "D": "The Almohads" },
+    "answer": "C"
+  },
+  {
+    "id": 82,
+    "question": "Until what year did Jimena rule Valencia?",
+    "options": { "A": "1094", "B": "1098", "C": "1101", "D": "1112" },
+    "answer": "C"
+  },
+  {
+    "id": 83,
+    "question": "Who won the Battle of Simancas (939)?",
+    "options": {
+      "A": "Abd al-Rahman III",
+      "B": "Almanzor",
+      "C": "King Ramiro II of León",
+      "D": "Fernando III"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 84,
+    "question": "Which king was Fernando III the Saint's son, famous for cultural achievements?",
+    "options": { "A": "Alfonso VI", "B": "Alfonso VIII", "C": "Alfonso X the Wise", "D": "Ferdinand I" },
+    "answer": "C"
+  },
+  {
+    "id": 85,
+    "question": "Which cities did Fernando III conquer as he advanced through the Guadalquivir Valley?",
+    "options": { "A": "Toledo and Seville", "B": "Granada and Córdoba", "C": "Salamanca and Ávila", "D": "Córdoba and Seville" },
+    "answer": "D"
+  },
+  {
+    "id": 86,
+    "question": "Who was the King of Aragon at the Battle of Las Navas de Tolosa (1212)?",
+    "options": { "A": "Alfonso I the Battler", "B": "Ramiro I", "C": "Peter II", "D": "Sancho III" },
+    "answer": "C"
+  },
+  {
+    "id": 87,
+    "question": "Who was the King of Navarre at the Battle of Las Navas de Tolosa (1212)?",
+    "options": { "A": "Sancho III", "B": "Sancho VI", "C": "Garcia Sánchez", "D": "Sancho VII" },
+    "answer": "D"
+  },
+  {
+    "id": 88,
+    "question": "Why was the Muslim conquest of Iberia so swift?",
+    "options": {
+      "A": "The Franks actively supported the invasion",
+      "B": "Byzantine forces aided the Muslims",
+      "C": "The disintegration of the Visigothic army after Guadalete and Muslim tolerant policies",
+      "D": "The Visigoths voluntarily surrendered"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 89,
+    "question": "What made Córdoba the most important city in Western Europe during the Caliphate?",
+    "options": {
+      "A": "It was the headquarters of the Catholic Church",
+      "B": "It had the largest army in Europe",
+      "C": "Increased trade with Africa and Europe generated immense wealth",
+      "D": "It was protected by the strongest walls in the world"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 90,
+    "question": "Why did the Caliphate of Córdoba fall?",
+    "options": {
+      "A": "The Christian kingdoms conquered it directly in battle",
+      "B": "Almanzor turned the caliph into a puppet, provoking civil wars when he tried to ensure his son's succession",
+      "C": "The Almoravids overthrew it",
+      "D": "Economic collapse caused by trade disruption"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 91,
+    "question": "How did parias payments ultimately help the Christian kingdoms?",
+    "options": {
+      "A": "They caused revolts within the Taifa kingdoms",
+      "B": "The wealth allowed Christians to become more powerful than their Muslim enemies",
+      "C": "The money was used to build churches",
+      "D": "They helped fund the Crusades in the Holy Land"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 92,
+    "question": "What allowed the Nasrid Kingdom of Granada to survive until 1492?",
+    "options": {
+      "A": "It had the most powerful army in Iberia",
+      "B": "It allied with the Ottoman Empire",
+      "C": "Christians were not interested in it",
+      "D": "Payment of tribute and natural borders in the Baetic mountain system"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 93,
+    "question": "Who permanently united the crowns of Castile and León?",
+    "options": { "A": "Alfonso VIII", "B": "Alfonso X", "C": "Ferdinand I", "D": "Fernando III the Saint" },
+    "answer": "D"
+  },
+  {
+    "id": 94,
+    "question": "What role did the Camino de Santiago play under Sancho III of Navarre?",
+    "options": {
+      "A": "It was used to move armies against Al-Andalus",
+      "B": "It was a trade route to Africa",
+      "C": "It helped establish contact with other European powers",
+      "D": "It was a military road built by the Romans"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 95,
+    "question": "Which Visigothic kings did the Byzantine Empire most influence at court?",
+    "options": { "A": "Witiza and Rodrigo", "B": "Alaric II and Reccared", "C": "Leovigild and Reccared", "D": "Leovigild and Witiza" },
+    "answer": "C"
+  },
+  {
+    "id": 96,
+    "question": "What role did the Banu Qasi play in early Navarre?",
+    "options": {
+      "A": "They were Arab merchants who funded the Arista dynasty",
+      "B": "They were Berber soldiers who helped the Franks",
+      "C": "They were a Muladi family ruling the Ebro region who allied with the Arista dynasty to expel the Carolingians",
+      "D": "They were Jewish scholars at the Pamplona court"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 97,
+    "question": "What was the Caliphate of Córdoba period (929–1031) often called?",
+    "options": {
+      "A": "The Age of Conquest",
+      "B": "The Dark Age of Al-Andalus",
+      "C": "The Golden Age of Al-Andalus",
+      "D": "The Age of the Crusades"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 98,
+    "question": "What kingdoms did Fernando III inherit to create the Crown of Castile?",
+    "options": {
+      "A": "Castile from his father, León from his mother",
+      "B": "Castile from his mother, León from his father",
+      "C": "Aragon and Castile",
+      "D": "León and Navarre"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 99,
+    "question": "Why were relations between the Berbers and Arabs in Al-Andalus often strained?",
+    "options": {
+      "A": "They followed different versions of Islam",
+      "B": "The Berbers wanted to return to North Africa",
+      "C": "They argued over control of trade routes",
+      "D": "The Arabs looked down on the Berbers, leading to civil wars"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 100,
+    "question": "From which area did the Christian kingdoms of the east (Pamplona, Aragon, Catalan Counties) originally emerge?",
+    "options": { "A": "The Cantabrian Mountains", "B": "The Meseta Central", "C": "The Pyrenees", "D": "The Guadalquivir Valley" },
+    "answer": "C"
+  }
+]
+;
