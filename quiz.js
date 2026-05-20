@@ -77,32 +77,40 @@
     return new TextDecoder().decode(bytes);
   }
 
-  /* ── Validation / sanitisation ────────────────────────────── */
+  /* ── Zod schemas ────────────────────────────────────────────── */
+  const z = window.Zod.z;
 
-  // Strip HTML tags and control characters from any string before display.
-  function sanitizeText(raw) {
-    return String(raw)
-      .replace(/[\x00-\x1F\x7F]/g, '')   // strip control chars
-      .replace(/<[^>]*>/g, '')             // strip any HTML tags
-      .slice(0, 500);                      // hard length cap
-  }
+  // Accepts any value → string, strips HTML & control chars, caps length.
+  const safeStr = function (maxLen) {
+    return z.unknown().transform(function (v) {
+      return String(v == null ? '' : v)
+        .replace(/[\x00-\x1F\x7F]/g, '')
+        .replace(/<[^>]*>/g, '')
+        .slice(0, maxLen || 500);
+    });
+  };
 
-  // Validate that a value is a safe finite integer in [0, max].
-  function validateInt(v, max) {
-    const n = Number(v);
-    return Number.isFinite(n) && Number.isInteger(n) && n >= 0 && n <= max ? n : 0;
-  }
+  // Answer key must be exactly one of A–D; anything else becomes '?'.
+  const answerKeySchema = z.string().regex(/^[ABCD]$/).catch('?');
 
-  // Validate an ISO date string; returns a Date or null.
-  function validateDate(s) {
-    const d = new Date(s);
-    return (typeof s === 'string' && !isNaN(d.getTime())) ? d : null;
-  }
+  // Shape of one wrong-answer entry.
+  const wrongAnswerSchema = z.object({
+    question:    safeStr(500),
+    yourKey:     answerKeySchema,
+    yourText:    safeStr(200),
+    correctKey:  answerKeySchema,
+    correctText: safeStr(200),
+  });
 
-  // Validate an answer key is exactly one of A–D.
-  function validateKey(k) {
-    return /^[ABCD]$/.test(String(k)) ? String(k) : '?';
-  }
+  // Shape of one complete result record (corrupt rows fail safeParse → skipped).
+  const resultSchema = z.object({
+    name:      safeStr(60),
+    started:   z.string().datetime({ offset: true }),
+    completed: z.string().datetime({ offset: true }),
+    score:     z.number().int().min(0).max(100),
+    total:     z.number().int().min(1).max(100),
+    wrong:     z.array(wrongAnswerSchema).default([]),
+  });
 
   /* ── CSV helpers ────────────────────────────────────────────── */
 
@@ -133,24 +141,22 @@
     const header = ['Name', 'Date', 'Time Started', 'Time Completed', 'Score', 'Out Of', 'Percentage', 'Wrong Questions'];
     const lines  = [header.join(',')];
     rows.forEach(function (r) {
-      // Validate every field before writing to CSV
-      const started   = validateDate(r.started);
-      const completed = validateDate(r.completed);
-      if (!started || !completed) return; // skip corrupt rows
-      const sc    = validateInt(r.score, 100);
-      const total = validateInt(r.total, 100) || QUESTIONS_PER_QUIZ;
-      const wrongSummary = (Array.isArray(r.wrong) ? r.wrong : []).map(function (w) {
-        return sanitizeText(w.question) +
-          ' [Correct: ' + validateKey(w.correctKey) + ') ' + sanitizeText(w.correctText) + ']';
+      const parsed = resultSchema.safeParse(r);
+      if (!parsed.success) return; // skip corrupt rows
+      const { name, started, completed, score, total, wrong } = parsed.data;
+      const startedDate   = new Date(started);
+      const completedDate = new Date(completed);
+      const wrongSummary  = wrong.map(function (w) {
+        return w.question + ' [Correct: ' + w.correctKey + ') ' + w.correctText + ']';
       }).join(' | ');
       lines.push([
-        csvCell(sanitizeText(r.name || 'Anonymous')),
-        csvCell(started.toLocaleDateString()),
-        csvCell(started.toLocaleTimeString()),
-        csvCell(completed.toLocaleTimeString()),
-        csvCell(sc),
+        csvCell(name || 'Anonymous'),
+        csvCell(startedDate.toLocaleDateString()),
+        csvCell(startedDate.toLocaleTimeString()),
+        csvCell(completedDate.toLocaleTimeString()),
+        csvCell(score),
         csvCell(total),
-        csvCell(Math.round(sc / total * 100) + '%'),
+        csvCell(Math.round(score / total * 100) + '%'),
         csvCell(wrongSummary || 'None'),
       ].join(','));
     });
@@ -352,27 +358,24 @@
     wrongList.innerHTML = '';
     if (wrongAnswers.length > 0) {
       wrongAnswers.forEach(function (w) {
-        // Validate every field before touching the DOM
-        const qText      = sanitizeText(w.question);
-        const yourKey    = validateKey(w.yourKey);
-        const yourText   = sanitizeText(w.yourText);
-        const correctKey = validateKey(w.correctKey);
-        const correctText = sanitizeText(w.correctText);
+        const parsed = wrongAnswerSchema.safeParse(w);
+        if (!parsed.success) return;
+        const d = parsed.data;
 
         const li = document.createElement('li');
         li.className = 'wrong-item';
 
         const qSpan = document.createElement('span');
         qSpan.className = 'wrong-q';
-        qSpan.textContent = qText;
+        qSpan.textContent = d.question;
 
         const yourSpan = document.createElement('span');
         yourSpan.className = 'wrong-ans';
-        yourSpan.textContent = 'Your answer: ' + yourKey + ') ' + yourText;
+        yourSpan.textContent = 'Your answer: ' + d.yourKey + ') ' + d.yourText;
 
         const correctSpan = document.createElement('span');
         correctSpan.className = 'correct-ans';
-        correctSpan.textContent = 'Correct answer: ' + correctKey + ') ' + correctText;
+        correctSpan.textContent = 'Correct answer: ' + d.correctKey + ') ' + d.correctText;
 
         li.appendChild(qSpan);
         li.appendChild(yourSpan);
@@ -392,27 +395,19 @@
         : 'linear-gradient(90deg, #e05b5b, #e0933a)';
     });
 
-    /* persist to localStorage — validate fields before storing */
-    const entry = {
-      name:      sanitizeText(playerName).slice(0, 60) || 'Anonymous',
+    /* parse + sanitise through Zod before storing/pushing */
+    const parsed = resultSchema.safeParse({
+      name:      playerName,
       started:   startTime.toISOString(),
       completed: endTime.toISOString(),
-      score:     validateInt(score, QUESTIONS_PER_QUIZ),
+      score:     score,
       total:     QUESTIONS_PER_QUIZ,
-      wrong:     wrongAnswers.map(function (w) {
-        return {
-          question:    sanitizeText(w.question),
-          yourKey:     validateKey(w.yourKey),
-          yourText:    sanitizeText(w.yourText),
-          correctKey:  validateKey(w.correctKey),
-          correctText: sanitizeText(w.correctText),
-        };
-      }),
-    };
-    saveResult(entry);
-
-    /* push to GitHub (async, non-blocking) */
-    pushResultToGitHub(entry);
+      wrong:     wrongAnswers,
+    });
+    if (parsed.success) {
+      saveResult(parsed.data);
+      pushResultToGitHub(parsed.data);
+    }
 
     /* expose final state for tests */
     window._quizState = { score: score, total: QUESTIONS_PER_QUIZ, passed: passed };
