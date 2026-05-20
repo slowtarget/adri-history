@@ -10,7 +10,8 @@
       "entity": "Visigoths",
       "topic": "historical_context",
       "theme": "migration"
-    }
+    },
+    "source_line": 7
   },
   {
     "id": "F002",
@@ -23,7 +24,8 @@
       "entity": "Battle_of_Vouille",
       "topic": "military",
       "theme": "battle"
-    }
+    },
+    "source_line": 8
   },
   {
     "id": "F003",
@@ -36,7 +38,8 @@
       "entity": "Visigoths",
       "topic": "political",
       "theme": "capital_city"
-    }
+    },
+    "source_line": 9
   },
   {
     "id": "F004",
@@ -49,7 +52,8 @@
       "entity": "Visigoths",
       "topic": "religious",
       "theme": "heresy"
-    }
+    },
+    "source_line": 19
   },
   {
     "id": "F005",
@@ -62,7 +66,8 @@
       "entity": "Reccared",
       "topic": "religious",
       "theme": "conversion"
-    }
+    },
+    "source_line": 20
   },
   {
     "id": "F006",
@@ -75,7 +80,8 @@
       "entity": "Visigoths",
       "topic": "political",
       "theme": "succession"
-    }
+    },
+    "source_line": 24
   },
   {
     "id": "F007",
@@ -88,7 +94,8 @@
       "entity": "Witiza",
       "topic": "political",
       "theme": "succession"
-    }
+    },
+    "source_line": 28
   },
   {
     "id": "F008",
@@ -101,7 +108,8 @@
       "entity": "Battle_of_Guadalete",
       "topic": "military",
       "theme": "battle"
-    }
+    },
+    "source_line": 30
   },
   {
     "id": "F009",
@@ -114,7 +122,8 @@
       "entity": "Al-Andalus",
       "topic": "political",
       "theme": "state_formation"
-    }
+    },
+    "source_line": 32
   },
   {
     "id": "F010",
@@ -127,7 +136,8 @@
       "entity": "Muslim_Conquest",
       "topic": "military",
       "theme": "conquest"
-    }
+    },
+    "source_line": 43
   },
   {
     "id": "F011",
@@ -140,7 +150,8 @@
       "entity": "Battle_of_Covadonga",
       "topic": "military",
       "theme": "battle"
-    }
+    },
+    "source_line": 46
   },
   {
     "id": "F012",
@@ -153,7 +164,8 @@
       "entity": "Battle_of_Poitiers",
       "topic": "military",
       "theme": "battle"
-    }
+    },
+    "source_line": 51
   },
   {
     "id": "F013",
@@ -166,7 +178,8 @@
       "entity": "Muslim_Conquest",
       "topic": "political",
       "theme": "causes_of_conquest"
-    }
+    },
+    "source_line": 52
   },
   {
     "id": "F014",
@@ -179,7 +192,8 @@
       "entity": "Umayyad_Caliphate",
       "topic": "political",
       "theme": "governance"
-    }
+    },
+    "source_line": 63
   },
   {
     "id": "F015",
@@ -192,7 +206,8 @@
       "entity": "Muslim_Society",
       "topic": "social",
       "theme": "ethnic_conflict"
-    }
+    },
+    "source_line": 67
   },
   {
     "id": "F016",
@@ -205,7 +220,8 @@
       "entity": "Abd_al-Rahman_I",
       "topic": "political",
       "theme": "succession"
-    }
+    },
+    "source_line": 76
   },
   {
     "id": "F017",
@@ -218,7 +234,8 @@
       "entity": "Abd_al-Rahman_I",
       "topic": "political",
       "theme": "independence_declaration"
-    }
+    },
+    "source_line": 77
   },
   {
     "id": "F018",
@@ -231,7 +248,8 @@
       "entity": "Abd_al-Rahman_I",
       "topic": "political",
       "theme": "governance"
-    }
+    },
+    "source_line": 82
   },
   {
     "id": "F019",
@@ -244,7 +262,8 @@
       "entity": "Abd_al-Rahman_III",
       "topic": "political",
       "theme": "independence_declaration"
-    }
+    },
+    "source_line": 98
   },
   {
     "id": "F020",
@@ -257,7 +276,8 @@
       "entity": "Abd_al-Rahman_III",
       "topic": "biographical",
       "theme": "parentage"
-    }
+    },
+    "source_line": 100
   },
   {
     "id": "F021",
@@ -270,7 +290,8 @@
       "entity": "Abd_al-Rahman_III",
       "topic": "political",
       "theme": "diplomacy"
-    }
+    },
+    "source_line": 101
   },
   {
     "id": "F022",
@@ -283,7 +304,8 @@
       "entity": "Cordoba",
       "topic": "economic",
       "theme": "trade"
-    }
+    },
+    "source_line": 107
   },
   {
     "id": "F023",
@@ -296,7 +318,8 @@
       "entity": "Abd_al-Rahman_III",
       "topic": "cultural",
       "theme": "architecture"
-    }
+    },
+    "source_line": 103
   },
   {
     "id": "F024",
@@ -309,7 +332,8 @@
       "entity": "Almanzor",
       "topic": "political",
       "theme": "power_struggle"
-    }
+    },
+    "source_line": 112
   },
   {
     "id": "F025",
@@ -322,7 +346,8 @@
       "entity": "Almanzor",
       "topic": "military",
       "theme": "raids"
-    }
+    },
+    "source_line": 114
   },
   {
     "id": "F026",
@@ -335,7 +360,8 @@
       "entity": "Almanzor",
       "topic": "biographical",
       "theme": "title_or_name"
-    }
+    },
+    "source_line": 115
   },
   {
     "id": "F027",
@@ -348,7 +374,8 @@
       "entity": "Almanzor",
       "topic": "military",
       "theme": "raid"
-    }
+    },
+    "source_line": 116
   },
   {
     "id": "F028",
@@ -361,7 +388,8 @@
       "entity": "Almanzor",
       "topic": "political",
       "theme": "decline"
-    }
+    },
+    "source_line": 121
   },
   {
     "id": "F029",
@@ -374,7 +402,8 @@
       "entity": "Taifas",
       "topic": "political",
       "theme": "fragmentation"
-    }
+    },
+    "source_line": 127
   },
   {
     "id": "F030",
@@ -387,7 +416,8 @@
       "entity": "Taifas",
       "topic": "political",
       "theme": "tribute"
-    }
+    },
+    "source_line": 131
   },
   {
     "id": "F031",
@@ -400,7 +430,8 @@
       "entity": "Christian_Kingdoms",
       "topic": "political",
       "theme": "tribute_consequences"
-    }
+    },
+    "source_line": 133
   },
   {
     "id": "F032",
@@ -413,7 +444,8 @@
       "entity": "Alfonso_VI",
       "topic": "military",
       "theme": "conquest"
-    }
+    },
+    "source_line": 134
   },
   {
     "id": "F033",
@@ -426,7 +458,8 @@
       "entity": "Almoravids",
       "topic": "religious",
       "theme": "ideology"
-    }
+    },
+    "source_line": 141
   },
   {
     "id": "F034",
@@ -439,7 +472,8 @@
       "entity": "Almoravids",
       "topic": "military",
       "theme": "battle"
-    }
+    },
+    "source_line": 142
   },
   {
     "id": "F035",
@@ -452,7 +486,8 @@
       "entity": "Mozarabs",
       "topic": "religious",
       "theme": "persecution"
-    }
+    },
+    "source_line": 143
   },
   {
     "id": "F036",
@@ -465,7 +500,8 @@
       "entity": "Alfonso_I_the_Battler",
       "topic": "military",
       "theme": "battle"
-    }
+    },
+    "source_line": 145
   },
   {
     "id": "F037",
@@ -478,7 +514,8 @@
       "entity": "Almohads",
       "topic": "military",
       "theme": "invasion"
-    }
+    },
+    "source_line": 150
   },
   {
     "id": "F038",
@@ -491,7 +528,8 @@
       "entity": "Almohads",
       "topic": "military",
       "theme": "battle"
-    }
+    },
+    "source_line": 151
   },
   {
     "id": "F039",
@@ -504,7 +542,8 @@
       "entity": "Battle_of_Las_Navas_de_Tolosa",
       "topic": "military",
       "theme": "battle"
-    }
+    },
+    "source_line": 152
   },
   {
     "id": "F040",
@@ -517,7 +556,8 @@
       "entity": "Battle_of_Las_Navas_de_Tolosa",
       "topic": "military",
       "theme": "coalition"
-    }
+    },
+    "source_line": 301
   },
   {
     "id": "F041",
@@ -530,7 +570,8 @@
       "entity": "Battle_of_Las_Navas_de_Tolosa",
       "topic": "religious",
       "theme": "crusade"
-    }
+    },
+    "source_line": 303
   },
   {
     "id": "F042",
@@ -543,7 +584,8 @@
       "entity": "Nasrid_Kingdom_of_Granada",
       "topic": "political",
       "theme": "survival"
-    }
+    },
+    "source_line": 159
   },
   {
     "id": "F043",
@@ -556,7 +598,8 @@
       "entity": "Boabdil",
       "topic": "political",
       "theme": "surrender"
-    }
+    },
+    "source_line": 161
   },
   {
     "id": "F044",
@@ -569,7 +612,8 @@
       "entity": "Reconquista",
       "topic": "historical_context",
       "theme": "definition"
-    }
+    },
+    "source_line": 183
   },
   {
     "id": "F045",
@@ -582,7 +626,8 @@
       "entity": "Kingdom_of_Asturias",
       "topic": "political",
       "theme": "capital_city"
-    }
+    },
+    "source_line": 193
   },
   {
     "id": "F046",
@@ -595,7 +640,8 @@
       "entity": "Alfonso_I_of_Asturias",
       "topic": "military",
       "theme": "expansion"
-    }
+    },
+    "source_line": 198
   },
   {
     "id": "F047",
@@ -608,7 +654,8 @@
       "entity": "Alfonso_II",
       "topic": "religious",
       "theme": "pilgrimage_site"
-    }
+    },
+    "source_line": 200
   },
   {
     "id": "F048",
@@ -621,7 +668,8 @@
       "entity": "Alfonso_III",
       "topic": "military",
       "theme": "expansion"
-    }
+    },
+    "source_line": 207
   },
   {
     "id": "F049",
@@ -634,7 +682,8 @@
       "entity": "Ordono_II",
       "topic": "political",
       "theme": "capital_city"
-    }
+    },
+    "source_line": 211
   },
   {
     "id": "F050",
@@ -647,7 +696,8 @@
       "entity": "Castile",
       "topic": "geographic",
       "theme": "place_name_origin"
-    }
+    },
+    "source_line": 221
   },
   {
     "id": "F051",
@@ -660,7 +710,8 @@
       "entity": "Ramiro_II",
       "topic": "military",
       "theme": "battle"
-    }
+    },
+    "source_line": 219
   },
   {
     "id": "F052",
@@ -673,7 +724,8 @@
       "entity": "Fernan_Gonzalez",
       "topic": "political",
       "theme": "state_formation"
-    }
+    },
+    "source_line": 228
   },
   {
     "id": "F053",
@@ -686,7 +738,8 @@
       "entity": "Sancho_III_of_Navarre",
       "topic": "political",
       "theme": "succession"
-    }
+    },
+    "source_line": 237
   },
   {
     "id": "F054",
@@ -699,7 +752,8 @@
       "entity": "Ferdinand_I",
       "topic": "political",
       "theme": "marriage_union"
-    }
+    },
+    "source_line": 238
   },
   {
     "id": "F055",
@@ -712,7 +766,8 @@
       "entity": "Queen_Urraca",
       "topic": "political",
       "theme": "succession"
-    }
+    },
+    "source_line": 246
   },
   {
     "id": "F056",
@@ -725,7 +780,8 @@
       "entity": "Alfonso_Enriquez",
       "topic": "political",
       "theme": "independence_declaration"
-    }
+    },
+    "source_line": 250
   },
   {
     "id": "F057",
@@ -738,7 +794,8 @@
       "entity": "Fernando_III",
       "topic": "military",
       "theme": "conquest"
-    }
+    },
+    "source_line": 308
   },
   {
     "id": "F058",
@@ -751,7 +808,8 @@
       "entity": "Alfonso_X",
       "topic": "cultural",
       "theme": "patronage"
-    }
+    },
+    "source_line": 311
   },
   {
     "id": "F059",
@@ -764,7 +822,8 @@
       "entity": "Charlemagne",
       "topic": "military",
       "theme": "defensive_zone"
-    }
+    },
+    "source_line": 321
   },
   {
     "id": "F060",
@@ -777,7 +836,8 @@
       "entity": "Battle_of_Roncesvalles",
       "topic": "military",
       "theme": "battle"
-    }
+    },
+    "source_line": 331
   },
   {
     "id": "F061",
@@ -790,7 +850,8 @@
       "entity": "Battle_of_Roncesvalles",
       "topic": "cultural",
       "theme": "epic_poem"
-    }
+    },
+    "source_line": 253
   },
   {
     "id": "F062",
@@ -803,7 +864,8 @@
       "entity": "Kingdom_of_Pamplona",
       "topic": "political",
       "theme": "state_formation"
-    }
+    },
+    "source_line": 255
   },
   {
     "id": "F063",
@@ -816,7 +878,8 @@
       "entity": "Sancho_VI_the_Wise",
       "topic": "political",
       "theme": "renaming"
-    }
+    },
+    "source_line": 255
   },
   {
     "id": "F064",
@@ -829,7 +892,8 @@
       "entity": "Sancho_III_of_Navarre",
       "topic": "political",
       "theme": "marriage_union"
-    }
+    },
+    "source_line": 259
   },
   {
     "id": "F065",
@@ -842,7 +906,8 @@
       "entity": "Alfonso_I_the_Battler",
       "topic": "military",
       "theme": "conquest"
-    }
+    },
+    "source_line": 290
   },
   {
     "id": "F066",
@@ -855,7 +920,8 @@
       "entity": "Kingdom_of_Aragon",
       "topic": "political",
       "theme": "capital_city"
-    }
+    },
+    "source_line": 288
   },
   {
     "id": "F067",
@@ -868,7 +934,8 @@
       "entity": "Alfonso_I_the_Battler",
       "topic": "political",
       "theme": "succession"
-    }
+    },
+    "source_line": 272
   },
   {
     "id": "F068",
@@ -881,7 +948,8 @@
       "entity": "El_Cid",
       "topic": "cultural",
       "theme": "epic_poem"
-    }
+    },
+    "source_line": 337
   },
   {
     "id": "F069",
@@ -894,7 +962,8 @@
       "entity": "El_Cid",
       "topic": "military",
       "theme": "conquest"
-    }
+    },
+    "source_line": 341
   },
   {
     "id": "F070",
@@ -907,7 +976,8 @@
       "entity": "Jimena",
       "topic": "political",
       "theme": "succession"
-    }
+    },
+    "source_line": 343
   },
   {
     "id": "F071",
@@ -920,7 +990,8 @@
       "entity": "Visigoths",
       "topic": "political",
       "theme": "Byzantine_influence"
-    }
+    },
+    "source_line": 13
   },
   {
     "id": "F072",
@@ -933,7 +1004,8 @@
       "entity": "Banu_Qasi",
       "topic": "political",
       "theme": "alliance"
-    }
+    },
+    "source_line": 254
   },
   {
     "id": "F073",
@@ -946,7 +1018,8 @@
       "entity": "Marca_Hispanica",
       "topic": "political",
       "theme": "independence_declaration"
-    }
+    },
+    "source_line": 324
   },
   {
     "id": "F074",
@@ -959,7 +1032,8 @@
       "entity": "Sancho_III_of_Navarre",
       "topic": "political",
       "theme": "diplomacy"
-    }
+    },
+    "source_line": 263
   },
   {
     "id": "F075",
@@ -972,7 +1046,8 @@
       "entity": "Battle_of_Las_Navas_de_Tolosa",
       "topic": "military",
       "theme": "battle_tactics"
-    }
+    },
+    "source_line": 302
   },
   {
     "id": "F076",
@@ -985,7 +1060,8 @@
       "entity": "Ferdinand_I",
       "topic": "military",
       "theme": "conquest"
-    }
+    },
+    "source_line": 239
   },
   {
     "id": "F077",
@@ -998,7 +1074,8 @@
       "entity": "Alfonso_VI",
       "topic": "political",
       "theme": "succession"
-    }
+    },
+    "source_line": 245
   },
   {
     "id": "F078",
@@ -1011,6 +1088,399 @@
       "entity": "Sancho_III_of_Navarre",
       "topic": "political",
       "theme": "succession"
+    },
+    "source_line": 266
+  },
+  {
+    "id": "F079",
+    "source_line": 29,
+    "fact": "In the civil war following Witiza's reign, Witiza's faction sought the help of a foreign power (the Muslims); the discontented nobles requested military aid, leading to Tariq's invasion.",
+    "source_quote": "In the civil war, Witiza sought the help of a foreign power, and therefore, General Tariq defeated Roderic at the Battle of Guadalete (711).",
+    "explanation": "The Muslim invasion was not unprovoked — it was invited by one side of an internal Visigothic power struggle, which is why it succeeded so quickly.",
+    "labels": {
+      "era": "Visigothic",
+      "period": "End_of_Visigothic_Kingdom",
+      "entity": "Witiza",
+      "topic": "political",
+      "theme": "civil_war"
+    }
+  },
+  {
+    "id": "F080",
+    "source_line": 41,
+    "fact": "King Roderic (the Visigothic king) lost his life at the Battle of Guadalete (711).",
+    "source_quote": "Guadalete (711), defeating the Visigothic king, who lost his life in the battle.",
+    "explanation": "Roderic's death in the battle meant there was no surviving Visigothic king to rally resistance, which is why the kingdom collapsed so completely.",
+    "labels": {
+      "era": "Visigothic",
+      "period": "End_of_Visigothic_Kingdom",
+      "entity": "Roderic",
+      "topic": "military",
+      "theme": "battle"
+    }
+  },
+  {
+    "id": "F081",
+    "source_line": 62,
+    "fact": "After the defeat at Poitiers, the Muslims focused on controlling the Iberian Peninsula and occupied the entire territory except the Cantabrian Mountains and the Pyrenees.",
+    "source_quote": "After the defeat at Poitiers, the Muslims focused on controlling the Iberian Peninsula. They occupied the entire territory except for the Cantabrian Mountains and the Pyrenees.",
+    "explanation": "The two mountain ranges that escaped Muslim control — the Cantabrian Mountains and the Pyrenees — became the refuge zones from which the Christian Reconquista would eventually emerge.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Dependent_Emirate",
+      "entity": "Muslim_Conquest",
+      "topic": "military",
+      "theme": "territorial_control"
+    }
+  },
+  {
+    "id": "F082",
+    "source_line": 69,
+    "fact": "Encouraged by Christian successes in the north, some native Iberians started revolts in Muslim-held areas, putting the Dependent Emirate on the verge of collapse before Abd al-Rahman I arrived.",
+    "source_quote": "Furthermore, encouraged by the successes in the north of the Peninsula, some natives started revolts in Muslim-held areas. The Emirate was on the verge of collapse, but the arrival of Abd al-Rahman I consolidated Islamic power in the Iberian Peninsula.",
+    "explanation": "Internal revolts by native Iberians combined with Arab-Berber tensions nearly destroyed the Dependent Emirate; it was Abd al-Rahman I's arrival that saved it.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Dependent_Emirate",
+      "entity": "Muslim_Society",
+      "topic": "political",
+      "theme": "revolt"
+    }
+  },
+  {
+    "id": "F083",
+    "source_line": 82,
+    "fact": "Abd al-Rahman I consolidated his power by placing relatives in key positions, allying with the Muladi, maintaining a mercenary army, establishing strong administration, and using Islam as a unifying element amid the ethnic diversity of Al-Andalus.",
+    "source_quote": "His power in al-Andalus resulted from placing his living relatives in positions of power and allying himself with Muladi... managed to pacify the interior and secure the borders thanks to his mercenary army, strong administration, and the use of Islam as a unifying element amidst the ethnic diversity of Al-Andalus.",
+    "explanation": "Abd al-Rahman I's multi-pronged approach to power — family loyalty, local alliances, military force, bureaucratic efficiency, and religious identity — created a stable, independent emirate from a near-collapsed province.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Independent_Emirate",
+      "entity": "Abd_al-Rahman_I",
+      "topic": "political",
+      "theme": "governance"
+    }
+  },
+  {
+    "id": "F084",
+    "source_line": 101,
+    "fact": "Abd al-Rahman III halted the Reconquista during the Caliphate of Córdoba period.",
+    "source_quote": "Although he had to face many revolts, he was able to halt the Reconquista.",
+    "explanation": "The Caliphate was militarily powerful enough to stop Christian southward expansion — a reversal of the momentum that had been building since Covadonga.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Caliphate_of_Cordoba",
+      "entity": "Abd_al-Rahman_III",
+      "topic": "military",
+      "theme": "halt_of_reconquista"
+    }
+  },
+  {
+    "id": "F085",
+    "source_line": 102,
+    "fact": "Abd al-Rahman III patronized the arts and sciences and expanded the Great Mosque of Córdoba.",
+    "source_quote": "He also patronized the arts and sciences, expanded the Great Mosque of Córdoba.",
+    "explanation": "Under Abd al-Rahman III, Córdoba became not only a political but also a cultural and intellectual capital, with the expanded Great Mosque as its most visible symbol.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Caliphate_of_Cordoba",
+      "entity": "Abd_al-Rahman_III",
+      "topic": "cultural",
+      "theme": "patronage"
+    }
+  },
+  {
+    "id": "F086",
+    "source_line": 112,
+    "fact": "Abd al-Rahman III was succeeded by the caliphs Al-Hakam II and then Hisham II.",
+    "source_quote": "Abd al-Rahman III was succeeded by the caliphs Al-Hakam II and Hisham II.",
+    "explanation": "The succession Al-Hakam II → Hisham II is critical because Hisham II's minority allowed Almanzor to seize power and eventually undermine the Caliphate.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Caliphate_of_Cordoba",
+      "entity": "Al-Hakam_II",
+      "topic": "political",
+      "theme": "succession"
+    }
+  },
+  {
+    "id": "F087",
+    "source_line": 116,
+    "fact": "Almanzor was known for his extreme cruelty and Islamic fanaticism.",
+    "source_quote": "He is known for his extreme cruelty and Islamic fanaticism.",
+    "explanation": "Almanzor's ruthlessness and religious zeal made him feared across Christian Iberia and partly explain the systematic destruction he wrought, including the sack of Santiago de Compostela.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Caliphate_of_Cordoba",
+      "entity": "Almanzor",
+      "topic": "biographical",
+      "theme": "character"
+    }
+  },
+  {
+    "id": "F088",
+    "source_line": 129,
+    "fact": "The taifa kingdoms were weak and often at war with each other.",
+    "source_quote": "These weak and small kingdoms were often at war with each other.",
+    "explanation": "The mutual warfare of the taifas prevented any unified Muslim resistance and made it easier for Christian kingdoms — enriched by parias — to advance.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Taifa_Kingdoms",
+      "entity": "Taifas",
+      "topic": "military",
+      "theme": "internal_conflict"
+    }
+  },
+  {
+    "id": "F089",
+    "source_line": 143,
+    "fact": "The Andalusians were unhappy with the Almoravid rulers, who brought an open and cruel persecution of Christians to Al-Andalus.",
+    "source_quote": "the Andalusians were unhappy with their new rulers, who brought with them an open and cruel persecution of Christians.",
+    "explanation": "The Almoravids' religious intolerance alienated the multicultural Andalusian population that had grown accustomed to relative coexistence under previous rulers.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "North_African_Empires",
+      "entity": "Almoravids",
+      "topic": "social",
+      "theme": "persecution"
+    }
+  },
+  {
+    "id": "F090",
+    "source_line": 158,
+    "fact": "A few years after the Battle of Las Navas de Tolosa (1212), only one Muslim territory remained on the Iberian Peninsula: the Nasrid Kingdom of Granada (established circa 1238).",
+    "source_quote": "A few years after Las Navas de Tolosa, only one Muslim territory remained on the Iberian Peninsula: the Nasrid Kingdom of Granada.",
+    "explanation": "The rapid collapse of Al-Andalus after 1212 reduced eight centuries of Muslim presence to a single kingdom, isolated in the southeast.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Nasrid_Kingdom",
+      "entity": "Nasrid_Kingdom_of_Granada",
+      "topic": "political",
+      "theme": "state_formation"
+    }
+  },
+  {
+    "id": "F091",
+    "source_line": 166,
+    "fact": "After the Muslim victory at Guadalete, part of the Visigothic population took refuge in the mountainous regions of northern Iberia; pockets of resistance there gave rise to the Christian kingdoms.",
+    "source_quote": "After the Muslim victory at the Battle of Guadalete (711), the Visigothic kingdom disappeared, and part of its population took refuge in the mountainous regions of northern Iberia. It was there that pockets of resistance arose, which would later give rise to the Christian kingdoms.",
+    "explanation": "The northern mountain refuges were the seed of the Reconquista — geographical barriers that the Muslims did not fully control became the cradles of the Christian kingdoms.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Overview",
+      "entity": "Christian_Kingdoms",
+      "topic": "political",
+      "theme": "origins"
+    }
+  },
+  {
+    "id": "F092",
+    "source_line": 171,
+    "fact": "Relations between the Christian kingdoms varied over the years; alliances constantly shifted — they fought among themselves, against Al-Andalus, and sometimes allied with Muslims to fight other Christians.",
+    "source_quote": "relations between these kingdoms varied over the years; there were periods of peace and others of war, each acting according to its own interests, with alliances that constantly shifted. They fought among themselves and against Al-Andalus, and sometimes some of them joined forces with the Muslims to wage war against them.",
+    "explanation": "The Christian Reconquista was not a simple unified crusade — it was a complex web of shifting alliances driven by political self-interest as much as religion.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Overview",
+      "entity": "Christian_Kingdoms",
+      "topic": "political",
+      "theme": "inter-kingdom_relations"
+    }
+  },
+  {
+    "id": "F093",
+    "source_line": 177,
+    "fact": "The monarchs of the Christian kingdoms were considered owners of their territories; upon a monarch's death it was common to divide the kingdom among their children.",
+    "source_quote": "The monarchs who ruled these kingdoms were considered the owners of the territories, so when a monarch died and left several children, it was not uncommon for the kingdom to be divided among them so they could inherit it.",
+    "explanation": "This inheritance practice — treating kingdoms as personal property — explains the repeated divisions and reunifications that characterised the history of Castile, León, Navarre, and Aragon.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Overview",
+      "entity": "Christian_Kingdoms",
+      "topic": "political",
+      "theme": "succession"
+    }
+  },
+  {
+    "id": "F094",
+    "source_line": 197,
+    "fact": "The Asturian kings took advantage of periods when the Muslim territory suffered internal problems to expand their territories.",
+    "source_quote": "The Asturian kings took advantage of periods when the Muslim territory suffered internal problems to expand their territories.",
+    "explanation": "Asturian expansion was opportunistic — the kings timed their campaigns to coincide with Muslim civil wars or crises, a pattern repeated throughout the Reconquista.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Asturias",
+      "entity": "Kingdom_of_Asturias",
+      "topic": "military",
+      "theme": "expansion"
+    }
+  },
+  {
+    "id": "F095",
+    "source_line": 200,
+    "fact": "Alfonso II of Asturias (791–842) strengthened the king's power against the nobles.",
+    "source_quote": "Alfonso II (791-842) strengthened the king's power against the nobles.",
+    "explanation": "Strengthening royal authority against the nobility was a key political achievement of Alfonso II alongside the cultural significance of his discovery of St. James's tomb.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Asturias",
+      "entity": "Alfonso_II",
+      "topic": "political",
+      "theme": "royal_authority"
+    }
+  },
+  {
+    "id": "F096",
+    "source_line": 215,
+    "fact": "In the 10th century, the proclamation of the Caliphate of Córdoba made southward expansion more difficult for the Kingdom of León, especially due to the strength of war generals like Almanzor.",
+    "source_quote": "In the 10th century, with the proclamation of the Caliphate, conquering lands in the south became more difficult for the Kingdom of León, especially due to the strength and violence of war generals like Almanzor.",
+    "explanation": "The Caliphate's military power temporarily reversed the momentum of Christian expansion and forced the Kingdom of León onto the defensive.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Leon",
+      "entity": "Kingdom_of_Leon",
+      "topic": "military",
+      "theme": "caliphate_pressure"
+    }
+  },
+  {
+    "id": "F097",
+    "source_line": 226,
+    "fact": "The castle-owning counts of the eastern frontier were responsible for protecting the Kingdom of León from Muslim invasions; their distance from royal authority led them to gradually gain more independence.",
+    "source_quote": "The owners of these castles were counts, and they were responsible for protecting the Kingdom of León from Muslim invasions. Since they were far from the king's authority, they gradually gained more independence.",
+    "explanation": "The geographic distance between the frontier counts and the Leonese court created the political space for Castile's gradual autonomy — a classic frontier dynamic.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "County_of_Castile",
+      "entity": "Castile",
+      "topic": "political",
+      "theme": "frontier_autonomy"
+    }
+  },
+  {
+    "id": "F098",
+    "source_line": 233,
+    "fact": "The County of Castile was strengthened because it was a borderland territory between the Christian and Muslim kingdoms.",
+    "source_quote": "This territory was strengthened because it was a borderland between the Christian and Muslim kingdoms.",
+    "explanation": "Frontier regions developed distinctive cultures of military hardiness and gradual independence; Castile's borderland position made it both vulnerable and ultimately powerful.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "County_of_Castile",
+      "entity": "Castile",
+      "topic": "geographic",
+      "theme": "frontier"
+    }
+  },
+  {
+    "id": "F099",
+    "source_line": 245,
+    "fact": "The arrival of the Almoravids halted Castilian expansion after Alfonso VI's conquest of Toledo.",
+    "source_quote": "However, the arrival of the Almoravids halted Castilian expansion.",
+    "explanation": "Just as Castile was poised to dominate Iberia after Toledo's fall in 1085, the Almoravid intervention restored the military balance and stopped further Christian advances for decades.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Castile_and_Leon",
+      "entity": "Almoravids",
+      "topic": "military",
+      "theme": "halted_expansion"
+    }
+  },
+  {
+    "id": "F100",
+    "source_line": 250,
+    "fact": "The Kingdom of León faced conflicts with the Muslims, with Castile, and with Portugal throughout this period.",
+    "source_quote": "The Kingdom of León faced conflicts with the Muslims, with Castile, and with Portugal.",
+    "explanation": "León's wars on three fronts — against Muslims, its own former territory Castile, and the newly independent Portugal — illustrate the complexity of Christian Iberian politics.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Leon",
+      "entity": "Kingdom_of_Leon",
+      "topic": "military",
+      "theme": "multi-front_conflict"
+    }
+  },
+  {
+    "id": "F101",
+    "source_line": 270,
+    "fact": "After Sancho III's death, the territories of Aragon, Navarre, Sobrarbe, and Ribagorza were later reunited under a single monarch; during their union the Ebro Valley was dominated.",
+    "source_quote": "Years later, the territories of Aragon, Navarra, and the counties of Sobrarbe and Ribagorza were reunited under a single monarch, and during the period of their union, the Ebro Valley was dominated.",
+    "explanation": "This reunification — leading to Alfonso I the Battler's reign — created the military power needed to conquer Zaragoza and dominate the Ebro Valley.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Aragon",
+      "entity": "Kingdom_of_Aragon",
+      "topic": "political",
+      "theme": "reunification"
+    }
+  },
+  {
+    "id": "F102",
+    "source_line": 276,
+    "fact": "In later years, the Kingdom of Navarre's expansion slowed; for decades its kings belonged to French dynasties, distancing Navarre from the political evolution of the Iberian Peninsula.",
+    "source_quote": "In later years, the Kingdom of Navarre, situated between Castile and Aragon, saw its expansion slowed. For decades, the kings of Navarre belonged to French dynasties, distancing themselves from the political evolution of the Iberian Peninsula to follow French authority.",
+    "explanation": "Navarre's shift to French dynastic rule effectively sidelined it from the Reconquista, leaving Castile and Aragon as the dominant forces of Iberian Christian expansion.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Navarre",
+      "entity": "Kingdom_of_Navarre",
+      "topic": "political",
+      "theme": "french_dynasties"
+    }
+  },
+  {
+    "id": "F103",
+    "source_line": 283,
+    "fact": "The area below the Pyrenees that became Aragon was divided into three regions (Sobrarbe, Ribagorza, and Aragon) and was under the political influence of the Carolingians.",
+    "source_quote": "The central area below the Pyrenees was divided into three regions (Sobrarbe, Ribagorza, and Aragon) and was under the political influence of the Carolingians.",
+    "explanation": "Aragon's origins lie in three Carolingian-influenced Pyrenean counties that gradually consolidated into a single kingdom.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Aragon",
+      "entity": "Kingdom_of_Aragon",
+      "topic": "political",
+      "theme": "carolingian_origins"
+    }
+  },
+  {
+    "id": "F104",
+    "source_line": 284,
+    "fact": "The future Kingdom of Aragon gradually sought independence from the Franks, looked towards Pamplona, and through strategic marriages with Sancho III of Pamplona in the 11th century became an independent kingdom with its capital in Jaca.",
+    "source_quote": "Gradually, they attempted to gain independence from the Franks and began to look towards Pamplona. Through strategic marriages in the 11th century (with Sancho III of Pamplona), Aragon would eventually become an independent kingdom and establish its capital in Jaca.",
+    "explanation": "Aragon's path to independence was diplomatic and marital as much as military — the Pamplona connection gave it legitimacy and resources.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Aragon",
+      "entity": "Kingdom_of_Aragon",
+      "topic": "political",
+      "theme": "independence_declaration"
+    }
+  },
+  {
+    "id": "F105",
+    "source_line": 314,
+    "fact": "By the end of the 13th century, Muslim territory in Iberia was limited to the Nasrid Kingdom of Granada.",
+    "source_quote": "By the end of the 13th century, Muslim territory was limited to the Nasrid Kingdom of Granada.",
+    "explanation": "This marks the practical completion of the Reconquista as a territorial process — over 80% of the Peninsula had been recovered by Christian kingdoms by 1300.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Late_Reconquista",
+      "entity": "Reconquista",
+      "topic": "historical_context",
+      "theme": "territorial_summary"
+    }
+  },
+  {
+    "id": "F106",
+    "source_line": 318,
+    "fact": "Christians found refuge in the Pyrenees, where they had to fight both the Franks in the north and the Muslims in the south; Charlemagne fought Muslims to defend his southern border and conquered territories in the Pyrenees.",
+    "source_quote": "Christians also found refuge in the Pyrenees. In this territory, they had to fight against the Franks in the north and the Muslims in the south. Charlemagne had to fight the Muslims to defend his southern border, and while doing so, he also conquered many territories in the Pyrenees.",
+    "explanation": "The Pyrenean Christians were caught between two great powers; Charlemagne's campaigns there, though partly defensive, created the political landscape from which the eastern Christian kingdoms emerged.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Eastern_Kingdoms_Origins",
+      "entity": "Charlemagne",
+      "topic": "military",
+      "theme": "pyrenean_refuge"
     }
   }
 ]
