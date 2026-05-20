@@ -15,5 +15,5 @@ var QUIZ_CONFIG = {
   GITHUB_OWNER: 'slowtarget',
   GITHUB_REPO:  'adri-quiz-results',   // separate repo — token can only touch this
   RESULTS_FILE: 'results.csv',
-  GITHUB_TOKEN: '',   // ← paste your fine-grained PAT here
+  GITHUB_TOKEN: '',   // ← injected by GitHub Actions from repo secret QUIZ_RESULTS_TOKEN
 };
