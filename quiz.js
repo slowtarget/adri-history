@@ -15,6 +15,8 @@
   let startTime = null;
   let wrongAnswers = [];  // { question, yourKey, yourText, correctKey, correctText }
   let playerName   = '';
+  let currentChoices = {};    // { A: text, B: text, C: text, D: text } — set each render
+  let currentCorrectKey = ''; // which key holds the correct answer this render
 
   /* ── DOM refs ───────────────────────────────────────────────── */
   const screens = {
@@ -102,7 +104,7 @@
   };
 
   // Answer key must be exactly one of A–D; anything else becomes '?'.
-  const answerKeySchema = z.string().regex(/^[ABCD]$/).catch('?');
+  const answerKeySchema = z ? z.string().regex(/^[ABCD]$/).catch('?') : null;
 
   // Shape of one wrong-answer entry.
   const wrongAnswerSchema = z.object({
@@ -307,13 +309,19 @@
     /* question */
     questionText.textContent = q.question;
 
-    /* options */
+    /* options — pick 3 random distractors, add correct answer, shuffle */
     const keys = ['A', 'B', 'C', 'D'];
+    const pickedDistractors = shuffle(q.distractors).slice(0, 3);
+    const choiceTexts = shuffle([q.answer].concat(pickedDistractors));
+    currentChoices = {};
+    keys.forEach(function (key, i) { currentChoices[key] = choiceTexts[i]; });
+    currentCorrectKey = keys.find(function (key) { return currentChoices[key] === q.answer; });
+
     keys.forEach(function (key) {
       const btn = document.querySelector('.option[data-key="' + key + '"]');
       btn.className = 'option';
       btn.disabled = false;
-      document.getElementById('text-' + key).textContent = q.options[key];
+      document.getElementById('text-' + key).textContent = currentChoices[key];
     });
 
     nextBtn.classList.add('hidden');
@@ -321,7 +329,7 @@
     // expose state for tests
     window._quizState = {
       currentQuestion: q,
-      correctAnswer: q.answer,
+      correctAnswer: currentCorrectKey,
       currentIndex: currentIndex,
       score: score,
     };
@@ -332,14 +340,14 @@
     answered = true;
 
     const q = selectedQuestions[currentIndex];
-    const isCorrect = selectedKey === q.answer;
+    const isCorrect = selectedKey === currentCorrectKey;
 
     if (isCorrect) score++;
 
     /* style all option buttons */
     optionBtns.forEach(function (btn) {
       btn.disabled = true;
-      if (btn.dataset.key === q.answer) {
+      if (btn.dataset.key === currentCorrectKey) {
         btn.classList.add('correct');
       } else if (btn.dataset.key === selectedKey && !isCorrect) {
         btn.classList.add('wrong');
@@ -361,9 +369,9 @@
       wrongAnswers.push({
         question:    q.question,
         yourKey:     selectedKey,
-        yourText:    q.options[selectedKey],
-        correctKey:  q.answer,
-        correctText: q.options[q.answer],
+        yourText:    currentChoices[selectedKey],
+        correctKey:  currentCorrectKey,
+        correctText: q.answer,
         quote:       q.quote       || '',
         explanation: q.explanation || '',
       });
