@@ -89,3 +89,25 @@ npx playwright test
 3. Christian Kingdoms — Asturias/León, Castile, Pamplona/Navarre, Aragon, El Cid
 4. Key battles: Guadalete, Covadonga, Poitiers, Sagrajas, Lucena, Alarcos, Las Navas de Tolosa
 5. Reconquista concept and timeline
+
+
+todo - consider adding a subject area field to each question 
+
+we can then ensure that each quiz has questions from a wide range of subject areas
+
+also add some guidance on potentially weak areas in the results page
+
+we may want to ask essentially the same question in multiple ways - where questions are very close in topic area, such that one may give the hint to the answer of the other, we should make them exclusive, perhaps we can do this by tagging questions and not allow questions with duplicate tags to arrive in the same set of 20 quiz questions
+
+so I guess add a list of tags to each question could be a first step.
+
+maybe better a heirarchy of subject areas ... -- like in 1-5 above -- then subdivide  
+
+use genetic naming? for heirarchy levels
+family class etc? another suggestion?
+
+then ensure questions from all top level areas appear in the quiz, and none that share the lowest level.
+
+
+
+

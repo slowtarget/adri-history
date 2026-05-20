@@ -1301,5 +1301,135 @@ var QUIZ_QUESTIONS =
     "answer": "C",
     "quote": "Christians also found refuge in the Pyrenees. In this territory, they had to fight against the Franks in the north and the Muslims in the south.",
     "explanation": "The eastern Christian kingdoms (Pamplona/Navarre, Aragon, and the Catalan Counties) all originated in the Pyrenees — a mountainous refuge that provided natural protection from both Muslim forces to the south and Frankish pressure from the north."
+  },
+  {
+    "id": 101,
+    "question": "Into which three kingdoms did Alfonso III divide his realm upon his death?",
+    "options": {
+      "A": "Castile, León, and Navarre",
+      "B": "León, Portugal, and Galicia",
+      "C": "Asturias, Galicia, and León",
+      "D": "Castile, Galicia, and Aragon"
+    },
+    "answer": "C",
+    "quote": "upon his death, divided his possessions into three kingdoms for his three sons: Asturias, Galicia, and León.",
+    "explanation": "When Alfonso III died he split his realm among his three sons — Asturias, Galicia, and León — a practice common among medieval Iberian monarchs who treated their kingdom as personal property to be inherited."
+  },
+  {
+    "id": 102,
+    "question": "Why were the Christians able to defeat the Almohads at Las Navas de Tolosa despite being outnumbered?",
+    "options": {
+      "A": "The Almohads were weakened by a plague",
+      "B": "They bribed senior Almohad commanders before the battle",
+      "C": "They possessed heavy cavalry and religious motivation",
+      "D": "They attacked at night, catching the Almohads off guard"
+    },
+    "answer": "C",
+    "quote": "Though vastly outnumbered, the Christians were able to defeat the Muslims because they possessed heavy cavalry and religious motivation.",
+    "explanation": "The source attributes the Christian victory at Las Navas de Tolosa (1212) specifically to two advantages: superior heavy cavalry and the crusading religious fervour following Pope Innocent III's call to arms."
+  },
+  {
+    "id": 103,
+    "question": "Which territories did Ferdinand I conquer during his reign as King of Castile and León?",
+    "options": {
+      "A": "Córdoba, Seville, and Toledo",
+      "B": "Zaragoza, Pamplona, and Barcelona",
+      "C": "Salamanca, Ávila, and Galicia",
+      "D": "Coimbra, Porto, and Oviedo"
+    },
+    "answer": "C",
+    "quote": "During his reign, he conquered Salamanca, Avila, and Galicia.",
+    "explanation": "Ferdinand I, the first King of Castile and León, extended Christian territory by conquering Salamanca, Ávila, and Galicia — pushing the frontier southward and westward during his reign."
+  },
+  {
+    "id": 104,
+    "question": "What did the counts of the Marca Hispanica do after Charlemagne's death?",
+    "options": {
+      "A": "They remained loyal to the Franks for centuries",
+      "B": "They allied with the Muslims against León",
+      "C": "They converted to Islam and integrated into Al-Andalus",
+      "D": "They distanced themselves from Frankish authority and became increasingly independent"
+    },
+    "answer": "D",
+    "quote": "After Charlemagne's death, the counts of the Marca Hispanica began to distance themselves from Frankish authority and become increasingly independent. This led to the creation of the Kingdom of Pamplona, the Counties of Aragon, and the Catalan Counties.",
+    "explanation": "The fragmentation of Carolingian authority after Charlemagne's death allowed the Marca Hispanica's counts to break free from Frankish control, ultimately giving rise to the Kingdom of Pamplona, the Counties of Aragon, and the Catalan Counties."
+  },
+  {
+    "id": 105,
+    "question": "How far south did Alfonso I the Battler expand the Kingdom of Aragon after conquering Zaragoza?",
+    "options": {
+      "A": "As far as Valencia",
+      "B": "As far as Almería",
+      "C": "As far as Córdoba",
+      "D": "As far as Teruel"
+    },
+    "answer": "D",
+    "quote": "Later, in 1118, Alfonso I the Battler conquered the city of Zaragoza and made it his capital, expanding his territory as far as Teruel.",
+    "explanation": "After making Zaragoza his new capital in 1118, Alfonso I the Battler continued his southward push, expanding Aragonese territory as far as Teruel — a significant advance into former Muslim lands."
+  },
+  {
+    "id": 106,
+    "question": "What happened to León and Castile after the death of Alfonso VI?",
+    "options": {
+      "A": "They were permanently united under a single crown",
+      "B": "They were conquered by the Almohads",
+      "C": "They separated",
+      "D": "They were absorbed into the Kingdom of Portugal"
+    },
+    "answer": "C",
+    "quote": "Upon the death of Alfonso VI, León and Castile separated.",
+    "explanation": "Despite Alfonso VI having ruled both León and Castile, they separated again on his death. It was not until Fernando III the Saint in the 13th century that the two crowns were definitively and permanently united."
+  },
+  {
+    "id": 107,
+    "question": "How did Sancho III of Navarre divide his territories among his sons?",
+    "options": {
+      "A": "Kingdom of Navarre for Ferdinand, Kingdom of Aragon for Garcia Sánchez, County of Castile for Ramiro I",
+      "B": "Kingdom of León for Ferdinand, Kingdom of Pamplona for Ramiro I, Kingdom of Aragon for Garcia Sánchez",
+      "C": "Kingdom of Castile and León for Ferdinand, Kingdom of Pamplona for Garcia Sánchez, Kingdom of Aragon for Ramiro I",
+      "D": "Kingdom of Aragon for Ferdinand, Kingdom of Navarre for Garcia Sánchez, Kingdom of Castile for Ramiro I"
+    },
+    "answer": "C",
+    "quote": "When he died, his sons divided the territories into three: the Kingdom of Castile and León for Ferdinand, the Kingdom of Pamplona for Garcia Sanchez, and the Kingdom of Aragon for Ramiro I.",
+    "explanation": "Sancho III's death fractured his vast domain into three separate kingdoms: Castile and León went to Ferdinand (who became Ferdinand I), Pamplona to Garcia Sánchez, and Aragon to Ramiro I — reversing his life's work of unification."
+  },
+  {
+    "id": 108,
+    "question": "From which century were pilgrimage routes from across Europe to Santiago de Compostela established?",
+    "options": {
+      "A": "From the 9th century onwards",
+      "B": "From the 10th century onwards",
+      "C": "From the 11th century onwards",
+      "D": "From the 12th century onwards"
+    },
+    "answer": "C",
+    "quote": "from the 11th century onwards, pilgrimage routes were established leading from various points in Europe to Santiago de Compostela.",
+    "explanation": "Although the discovery of St. James's tomb was made during Alfonso II's reign in the 9th century, it was from the 11th century onwards that formal pilgrimage routes — the Camino de Santiago — were established connecting various European cities to Compostela."
+  },
+  {
+    "id": 109,
+    "question": "Of which caliphate was Al-Andalus a province during the Dependent Emirate?",
+    "options": {
+      "A": "The Abbasid Caliphate of Baghdad",
+      "B": "The Fatimid Caliphate of Cairo",
+      "C": "The Ottoman Caliphate of Constantinople",
+      "D": "The Umayyad Caliphate of Damascus"
+    },
+    "answer": "D",
+    "quote": "Al-Andalus became a province of the Umayyad Caliphate of Damascus, governed by an emir and with its capital in Cordoba.",
+    "explanation": "During the Dependent Emirate (711–756), Al-Andalus was a province of the Umayyad Caliphate, whose capital was Damascus. It was the Abbasid revolution of 750 that overthrew the Umayyads in Damascus and prompted Abd al-Rahman I to flee west."
+  },
+  {
+    "id": 110,
+    "question": "How did Abd al-Rahman I consolidate his power in Al-Andalus after becoming independent emir?",
+    "options": {
+      "A": "He formed a military alliance with the Franks and the Byzantine Empire",
+      "B": "He conquered North Africa to secure reinforcements",
+      "C": "He converted to Christianity to gain support from Iberian nobles",
+      "D": "He placed relatives in positions of power, allied with the Muladi, used a mercenary army, and used Islam as a unifying element"
+    },
+    "answer": "D",
+    "quote": "His power in al-Andalus resulted from placing his living relatives in positions of power and allying himself with Muladi...He also managed to pacify the interior and secure the borders thanks to his mercenary army, a strong administration, and the use of Islam as a unifying element amidst the ethnic diversity of Al-Andalus.",
+    "explanation": "Abd al-Rahman I built a stable independent emirate through a four-part strategy: dynastic appointments, alliance with native Iberian converts (Muladi), a professional mercenary army, and Islam as a common identity across the ethnically diverse population of Al-Andalus."
   }
 ];
