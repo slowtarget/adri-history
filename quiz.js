@@ -100,6 +100,8 @@
     yourText:    safeStr(200),
     correctKey:  answerKeySchema,
     correctText: safeStr(200),
+    quote:       safeStr(500).optional().default(''),
+    explanation: safeStr(600).optional().default(''),
   });
 
   // Shape of one complete result record (corrupt rows fail safeParse → skipped).
@@ -315,6 +317,8 @@
         yourText:    q.options[selectedKey],
         correctKey:  q.answer,
         correctText: q.options[q.answer],
+        quote:       q.quote       || '',
+        explanation: q.explanation || '',
       });
     }
 
@@ -380,6 +384,37 @@
         li.appendChild(qSpan);
         li.appendChild(yourSpan);
         li.appendChild(correctSpan);
+
+        if (d.quote || d.explanation) {
+          const toggleBtn = document.createElement('button');
+          toggleBtn.className = 'explain-btn';
+          toggleBtn.textContent = '📖 Show source';
+
+          const explainDiv = document.createElement('div');
+          explainDiv.className = 'explain-box hidden';
+
+          if (d.quote) {
+            const quoteP = document.createElement('p');
+            quoteP.className = 'explain-quote';
+            quoteP.textContent = '\u201c' + d.quote + '\u201d';
+            explainDiv.appendChild(quoteP);
+          }
+          if (d.explanation) {
+            const explainP = document.createElement('p');
+            explainP.className = 'explain-text';
+            explainP.textContent = d.explanation;
+            explainDiv.appendChild(explainP);
+          }
+
+          toggleBtn.addEventListener('click', function () {
+            const hidden = explainDiv.classList.toggle('hidden');
+            toggleBtn.textContent = hidden ? '📖 Show source' : '📖 Hide source';
+          });
+
+          li.appendChild(toggleBtn);
+          li.appendChild(explainDiv);
+        }
+
         wrongList.appendChild(li);
       });
       wrongSection.classList.remove('hidden');

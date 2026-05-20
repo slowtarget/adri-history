@@ -378,6 +378,48 @@ h1 {
   color: #6bcf97;
 }
 
+.explain-btn {
+  margin-top: 6px;
+  align-self: flex-start;
+  background: none;
+  border: 1px solid rgba(201,168,76,0.4);
+  color: var(--accent);
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.explain-btn:hover { background: rgba(201,168,76,0.12); border-color: var(--accent); }
+
+.explain-box {
+  margin-top: 8px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 6px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.explain-box.hidden { display: none; }
+
+.explain-quote {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--muted);
+  border-left: 2px solid var(--accent);
+  padding-left: 8px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.explain-text {
+  font-size: 0.82rem;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.5;
+}
+
 /* ─── Results actions row ───────────────────────────────────────── */
 .results-actions {
   display: flex;
