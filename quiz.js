@@ -77,9 +77,41 @@
     return new TextDecoder().decode(bytes);
   }
 
+  /* ── Validation / sanitisation ────────────────────────────── */
+
+  // Strip HTML tags and control characters from any string before display.
+  function sanitizeText(raw) {
+    return String(raw)
+      .replace(/[\x00-\x1F\x7F]/g, '')   // strip control chars
+      .replace(/<[^>]*>/g, '')             // strip any HTML tags
+      .slice(0, 500);                      // hard length cap
+  }
+
+  // Validate that a value is a safe finite integer in [0, max].
+  function validateInt(v, max) {
+    const n = Number(v);
+    return Number.isFinite(n) && Number.isInteger(n) && n >= 0 && n <= max ? n : 0;
+  }
+
+  // Validate an ISO date string; returns a Date or null.
+  function validateDate(s) {
+    const d = new Date(s);
+    return (typeof s === 'string' && !isNaN(d.getTime())) ? d : null;
+  }
+
+  // Validate an answer key is exactly one of A–D.
+  function validateKey(k) {
+    return /^[ABCD]$/.test(String(k)) ? String(k) : '?';
+  }
+
   /* ── CSV helpers ────────────────────────────────────────────── */
+
+  // Wrap a cell value in quotes if needed AND neutralise spreadsheet
+  // formula-injection (= + - @ \t \r prefixes used by Excel/Sheets).
   function csvCell(v) {
-    const s = String(v);
+    let s = String(v).replace(/[\x00-\x1F\x7F]/g, ' '); // strip control chars
+    // Prefix dangerous lead characters so spreadsheets treat as text
+    if (/^[=+\-@\t\r]/.test(s)) s = '\'' + s;
     return s.includes(',') || s.includes('"') || s.includes('\n')
       ? '"' + s.replace(/"/g, '""') + '"'
       : s;
@@ -101,19 +133,24 @@
     const header = ['Name', 'Date', 'Time Started', 'Time Completed', 'Score', 'Out Of', 'Percentage', 'Wrong Questions'];
     const lines  = [header.join(',')];
     rows.forEach(function (r) {
-      const started   = new Date(r.started);
-      const completed = new Date(r.completed);
-      const wrongSummary = r.wrong.map(function (w) {
-        return w.question + ' [Correct: ' + w.correctKey + ') ' + w.correctText + ']';
+      // Validate every field before writing to CSV
+      const started   = validateDate(r.started);
+      const completed = validateDate(r.completed);
+      if (!started || !completed) return; // skip corrupt rows
+      const sc    = validateInt(r.score, 100);
+      const total = validateInt(r.total, 100) || QUESTIONS_PER_QUIZ;
+      const wrongSummary = (Array.isArray(r.wrong) ? r.wrong : []).map(function (w) {
+        return sanitizeText(w.question) +
+          ' [Correct: ' + validateKey(w.correctKey) + ') ' + sanitizeText(w.correctText) + ']';
       }).join(' | ');
       lines.push([
-        csvCell(r.name || 'Anonymous'),
+        csvCell(sanitizeText(r.name || 'Anonymous')),
         csvCell(started.toLocaleDateString()),
         csvCell(started.toLocaleTimeString()),
         csvCell(completed.toLocaleTimeString()),
-        csvCell(r.score),
-        csvCell(r.total),
-        csvCell(Math.round(r.score / r.total * 100) + '%'),
+        csvCell(sc),
+        csvCell(total),
+        csvCell(Math.round(sc / total * 100) + '%'),
         csvCell(wrongSummary || 'None'),
       ].join(','));
     });
@@ -311,16 +348,35 @@
     /* timing */
     timingInfo.textContent = 'Started: ' + fmtDate(startTime) + '   ·   Finished: ' + fmtDate(endTime);
 
-    /* wrong answers list */
+    /* wrong answers list — built with textContent only (no innerHTML) */
     wrongList.innerHTML = '';
     if (wrongAnswers.length > 0) {
       wrongAnswers.forEach(function (w) {
+        // Validate every field before touching the DOM
+        const qText      = sanitizeText(w.question);
+        const yourKey    = validateKey(w.yourKey);
+        const yourText   = sanitizeText(w.yourText);
+        const correctKey = validateKey(w.correctKey);
+        const correctText = sanitizeText(w.correctText);
+
         const li = document.createElement('li');
         li.className = 'wrong-item';
-        li.innerHTML =
-          '<span class="wrong-q">' + w.question + '</span>' +
-          '<span class="wrong-ans">Your answer: <em>' + w.yourKey + ') ' + w.yourText + '</em></span>' +
-          '<span class="correct-ans">Correct answer: <strong>' + w.correctKey + ') ' + w.correctText + '</strong></span>';
+
+        const qSpan = document.createElement('span');
+        qSpan.className = 'wrong-q';
+        qSpan.textContent = qText;
+
+        const yourSpan = document.createElement('span');
+        yourSpan.className = 'wrong-ans';
+        yourSpan.textContent = 'Your answer: ' + yourKey + ') ' + yourText;
+
+        const correctSpan = document.createElement('span');
+        correctSpan.className = 'correct-ans';
+        correctSpan.textContent = 'Correct answer: ' + correctKey + ') ' + correctText;
+
+        li.appendChild(qSpan);
+        li.appendChild(yourSpan);
+        li.appendChild(correctSpan);
         wrongList.appendChild(li);
       });
       wrongSection.classList.remove('hidden');
@@ -336,14 +392,22 @@
         : 'linear-gradient(90deg, #e05b5b, #e0933a)';
     });
 
-    /* persist to localStorage */
+    /* persist to localStorage — validate fields before storing */
     const entry = {
-      name:      playerName,
+      name:      sanitizeText(playerName).slice(0, 60) || 'Anonymous',
       started:   startTime.toISOString(),
       completed: endTime.toISOString(),
-      score:     score,
+      score:     validateInt(score, QUESTIONS_PER_QUIZ),
       total:     QUESTIONS_PER_QUIZ,
-      wrong:     wrongAnswers,
+      wrong:     wrongAnswers.map(function (w) {
+        return {
+          question:    sanitizeText(w.question),
+          yourKey:     validateKey(w.yourKey),
+          yourText:    sanitizeText(w.yourText),
+          correctKey:  validateKey(w.correctKey),
+          correctText: sanitizeText(w.correctText),
+        };
+      }),
     };
     saveResult(entry);
 

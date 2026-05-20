@@ -13,7 +13,7 @@
 // eslint-disable-next-line no-var
 var QUIZ_CONFIG = {
   GITHUB_OWNER: 'slowtarget',
-  GITHUB_REPO:  'adri-history',
+  GITHUB_REPO:  'adri-quiz-results',   // separate repo — token can only touch this
   RESULTS_FILE: 'results.csv',
   GITHUB_TOKEN: '',   // ← paste your fine-grained PAT here
 };
