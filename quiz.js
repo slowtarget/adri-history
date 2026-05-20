@@ -100,8 +100,8 @@
     yourText:    safeStr(200),
     correctKey:  answerKeySchema,
     correctText: safeStr(200),
-    quote:       safeStr(500).optional().default(''),
-    explanation: safeStr(600).optional().default(''),
+    quote:       safeStr(500),
+    explanation: safeStr(600),
   });
 
   // Shape of one complete result record (corrupt rows fail safeParse → skipped).
