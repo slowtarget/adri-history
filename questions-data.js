@@ -13,7 +13,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "The Visigoths arrived in Europe in the 5th century, at the same time as the other Germanic peoples.",
-    "explanation": "The source directly states that the Visigoths arrived in Europe during the 5th century, alongside other Germanic peoples such as the Franks and Ostrogoths."
+    "explanation": "The source directly states that the Visigoths arrived in Europe during the 5th century, alongside other Germanic peoples such as the Franks and Ostrogoths.",
+    "fact_ids": [
+      "F001"
+    ]
   },
   {
     "id": 2,
@@ -26,7 +29,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "B",
     "quote": "They first settled in southeastern Gaul, until the Battle of Vouillé (507), when King Alaric II was defeated by King Clovis I.",
-    "explanation": "At Vouillé in 507, the Frankish king Clovis I defeated Visigothic king Alaric II, forcing the Visigoths to abandon Gaul and move permanently to the Iberian Peninsula."
+    "explanation": "At Vouillé in 507, the Frankish king Clovis I defeated Visigothic king Alaric II, forcing the Visigoths to abandon Gaul and move permanently to the Iberian Peninsula.",
+    "fact_ids": [
+      "F002"
+    ]
   },
   {
     "id": 3,
@@ -39,7 +45,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "From then on, the Visigoths settled in the Iberian Peninsula, with their capital in Toledo.",
-    "explanation": "After being expelled from Gaul by the Franks, the Visigoths established their kingdom in the Iberian Peninsula and chose Toledo as their capital city."
+    "explanation": "After being expelled from Gaul by the Franks, the Visigoths established their kingdom in the Iberian Peninsula and chose Toledo as their capital city.",
+    "fact_ids": [
+      "F003"
+    ]
   },
   {
     "id": 4,
@@ -52,7 +61,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "However, with King Reccared and the Third Council of Toledo (589), the kingdom converted to Catholicism.",
-    "explanation": "It was King Reccared — not Leovigild or any other king — who presided over the Third Council of Toledo in 589 and led the official conversion from Arianism to Catholicism."
+    "explanation": "It was King Reccared — not Leovigild or any other king — who presided over the Third Council of Toledo in 589 and led the official conversion from Arianism to Catholicism.",
+    "fact_ids": [
+      "F005"
+    ]
   },
   {
     "id": 5,
@@ -65,7 +77,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "However, with King Reccared and the Third Council of Toledo (589), the kingdom converted to Catholicism.",
-    "explanation": "The Third Council of Toledo (589) was the historic council at which the Visigothic kingdom officially abandoned Arianism and adopted Catholicism under King Reccared."
+    "explanation": "The Third Council of Toledo (589) was the historic council at which the Visigothic kingdom officially abandoned Arianism and adopted Catholicism under King Reccared.",
+    "fact_ids": [
+      "F005"
+    ]
   },
   {
     "id": 6,
@@ -78,7 +93,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "B",
     "quote": "They initially believed in Arianism, a heresy that rejects the Holy Trinity.",
-    "explanation": "The source defines Arianism precisely as 'a heresy that rejects the Holy Trinity' — the Christian doctrine that God exists as Father, Son, and Holy Spirit."
+    "explanation": "The source defines Arianism precisely as 'a heresy that rejects the Holy Trinity' — the Christian doctrine that God exists as Father, Son, and Holy Spirit.",
+    "fact_ids": [
+      "F004"
+    ]
   },
   {
     "id": 7,
@@ -91,7 +109,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "Unlike other kingdoms, the Visigothic kingship was elective, not hereditary; that is, it did not pass from father to son.",
-    "explanation": "The Visigoths elected their kings by noble vote rather than passing the crown from father to son. The source notes this was the root cause of their frequent civil wars."
+    "explanation": "The Visigoths elected their kings by noble vote rather than passing the crown from father to son. The source notes this was the root cause of their frequent civil wars.",
+    "fact_ids": [
+      "F006"
+    ]
   },
   {
     "id": 8,
@@ -104,7 +125,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "During the reign of Witiza (702-710), a crisis arose that affected the economy and agriculture, and as a result, another king was elected: Rodrigo.",
-    "explanation": "The economic and agricultural crisis during Witiza's reign (702–710) destabilised the kingdom and led to the election of Rodrigo — setting the stage for the Muslim invasion."
+    "explanation": "The economic and agricultural crisis during Witiza's reign (702–710) destabilised the kingdom and led to the election of Rodrigo — setting the stage for the Muslim invasion.",
+    "fact_ids": [
+      "F007"
+    ]
   },
   {
     "id": 9,
@@ -117,7 +141,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "General Tariq defeated Roderic at the Battle of Guadalete (711).",
-    "explanation": "The Battle of Guadalete in 711 was the decisive confrontation that ended the Visigothic Kingdom. Tariq's forces defeated and killed King Roderic, opening the Peninsula to Muslim conquest."
+    "explanation": "The Battle of Guadalete in 711 was the decisive confrontation that ended the Visigothic Kingdom. Tariq's forces defeated and killed King Roderic, opening the Peninsula to Muslim conquest.",
+    "fact_ids": [
+      "F008"
+    ]
   },
   {
     "id": 10,
@@ -130,7 +157,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "Musa, the governor of the Umayyad Caliphate in North Africa, sent a Berber army to the Iberian Peninsula under the command of Tariq, who confronted Roderic at the Battle of Guadalete (711).",
-    "explanation": "Musa organised and dispatched the expedition, but it was his general Tariq who actually commanded the army that crossed the strait and fought at Guadalete."
+    "explanation": "Musa organised and dispatched the expedition, but it was his general Tariq who actually commanded the army that crossed the strait and fought at Guadalete.",
+    "fact_ids": [
+      "F008"
+    ]
   },
   {
     "id": 11,
@@ -143,7 +173,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "B",
     "quote": "Musa, the governor of the Umayyad Caliphate in North Africa, sent a Berber army to the Iberian Peninsula under the command of Tariq.",
-    "explanation": "Musa ibn Nusayr was the Umayyad governor of North Africa who sent Tariq's army across to Iberia. It was Musa who gave the order; Tariq who carried it out."
+    "explanation": "Musa ibn Nusayr was the Umayyad governor of North Africa who sent Tariq's army across to Iberia. It was Musa who gave the order; Tariq who carried it out.",
+    "fact_ids": [
+      "F008"
+    ]
   },
   {
     "id": 12,
@@ -156,7 +189,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "From then on, the Visigothic Kingdom would disappear, and Al-Andalus would be established.",
-    "explanation": "The Battle of Guadalete (711) was so decisive that the entire Visigothic Kingdom collapsed. The Muslim-controlled territory that replaced it on the Peninsula became known as Al-Andalus."
+    "explanation": "The Battle of Guadalete (711) was so decisive that the entire Visigothic Kingdom collapsed. The Muslim-controlled territory that replaced it on the Peninsula became known as Al-Andalus.",
+    "fact_ids": [
+      "F009"
+    ]
   },
   {
     "id": 13,
@@ -169,7 +205,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "B",
     "quote": "the Battle of Covadonga (722) took place between the Astures, led by the Visigoth Pelayo, and a group of Muslim soldiers.",
-    "explanation": "The Battle of Covadonga took place in 722, eleven years after the Muslim conquest began, in the mountains of the northwest where the Muslims had not managed to consolidate control."
+    "explanation": "The Battle of Covadonga took place in 722, eleven years after the Muslim conquest began, in the mountains of the northwest where the Muslims had not managed to consolidate control.",
+    "fact_ids": [
+      "F011"
+    ]
   },
   {
     "id": 14,
@@ -182,7 +221,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "the Battle of Covadonga (722) took place between the Astures, led by the Visigoth Pelayo, and a group of Muslim soldiers.",
-    "explanation": "The source is explicit that Pelayo led the Astures at Covadonga. His victory founded the Kingdom of Asturias and is traditionally seen as the start of the Reconquista."
+    "explanation": "The source is explicit that Pelayo led the Astures at Covadonga. His victory founded the Kingdom of Asturias and is traditionally seen as the start of the Reconquista.",
+    "fact_ids": [
+      "F011"
+    ]
   },
   {
     "id": 15,
@@ -195,7 +237,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "the Astures, led by the Visigoth Pelayo",
-    "explanation": "The source specifically calls Pelayo 'the Visigoth', meaning he was of Visigothic origin even though he led the Astures. His Visigothic heritage gave his kingship legitimacy."
+    "explanation": "The source specifically calls Pelayo 'the Visigoth', meaning he was of Visigothic origin even though he led the Astures. His Visigothic heritage gave his kingship legitimacy.",
+    "fact_ids": [
+      "F011"
+    ]
   },
   {
     "id": 16,
@@ -208,7 +253,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "B",
     "quote": "they attempted to move south into France but were defeated by the Franks at the Battle of Poitiers (732).",
-    "explanation": "After abandoning the Cantabrian northwest, the Muslims tried to expand into France but were stopped by the Franks at the Battle of Poitiers in 732, halting their advance into Western Europe."
+    "explanation": "After abandoning the Cantabrian northwest, the Muslims tried to expand into France but were stopped by the Franks at the Battle of Poitiers in 732, halting their advance into Western Europe.",
+    "fact_ids": [
+      "F012"
+    ]
   },
   {
     "id": 17,
@@ -221,7 +269,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "they attempted to move south into France but were defeated by the Franks at the Battle of Poitiers (732).",
-    "explanation": "The Franks, under Charles Martel, defeated the Muslim force at Poitiers in 732, preventing the conquest of France and effectively setting the northern boundary of Muslim expansion in Europe."
+    "explanation": "The Franks, under Charles Martel, defeated the Muslim force at Poitiers in 732, preventing the conquest of France and effectively setting the northern boundary of Muslim expansion in Europe.",
+    "fact_ids": [
+      "F012"
+    ]
   },
   {
     "id": 18,
@@ -234,7 +285,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "Al-Andalus became a province of the Umayyad Caliphate of Damascus, governed by an emir and with its capital in Cordoba.",
-    "explanation": "From the very beginning of the Dependent Emirate period, Córdoba was chosen as the capital of Al-Andalus. It would remain the capital and eventually become the most important city in Western Europe."
+    "explanation": "From the very beginning of the Dependent Emirate period, Córdoba was chosen as the capital of Al-Andalus. It would remain the capital and eventually become the most important city in Western Europe.",
+    "fact_ids": [
+      "F014"
+    ]
   },
   {
     "id": 19,
@@ -247,7 +301,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "The invaders belonged to two different groups: the Berbers and the Arabs.",
-    "explanation": "The source makes clear the Muslim invaders were not a single group — they consisted of Berbers from North Africa and Arabs, whose mutual tensions would cause instability in early Al-Andalus."
+    "explanation": "The source makes clear the Muslim invaders were not a single group — they consisted of Berbers from North Africa and Arabs, whose mutual tensions would cause instability in early Al-Andalus.",
+    "fact_ids": [
+      "F015"
+    ]
   },
   {
     "id": 20,
@@ -260,7 +317,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "B",
     "quote": "Dependent Emirate (711-756)",
-    "explanation": "The source labels this period 'Dependent Emirate (711–756)'. It began with the Muslim conquest in 711 and ended when Abd al-Rahman I declared political independence from Baghdad in 756."
+    "explanation": "The source labels this period 'Dependent Emirate (711–756)'. It began with the Muslim conquest in 711 and ended when Abd al-Rahman I declared political independence from Baghdad in 756.",
+    "fact_ids": [
+      "F014"
+    ]
   },
   {
     "id": 21,
@@ -273,7 +333,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "in 756 proclaimed himself independent emir. This meant that, politically, he separated from the Abbasid emir of Baghdad but continued to recognize his religious authority.",
-    "explanation": "Abd al-Rahman I declared himself independent emir in 756, creating political separation from the Abbasid caliphate in Baghdad while still recognising its religious authority."
+    "explanation": "Abd al-Rahman I declared himself independent emir in 756, creating political separation from the Abbasid caliphate in Baghdad while still recognising its religious authority.",
+    "fact_ids": [
+      "F017"
+    ]
   },
   {
     "id": 22,
@@ -286,7 +349,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "In 750, a rebellion by the Abbasids resulted in the deaths of all members of the Umayyad family except one: Abd al-Rahman. He fled to al-Andalus, where he had support.",
-    "explanation": "The Abbasid revolution of 750 massacred almost the entire Umayyad dynasty. Abd al-Rahman I was the sole survivor, escaping to Al-Andalus where Umayyad loyalists gave him support and power."
+    "explanation": "The Abbasid revolution of 750 massacred almost the entire Umayyad dynasty. Abd al-Rahman I was the sole survivor, escaping to Al-Andalus where Umayyad loyalists gave him support and power.",
+    "fact_ids": [
+      "F016"
+    ]
   },
   {
     "id": 23,
@@ -299,7 +365,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "allying himself with Muladi, that is, native converts from the Iberian Peninsula.",
-    "explanation": "The source defines Muladi as 'native converts from the Iberian Peninsula' — that is, people of Iberian (Christian or other) origin who converted to Islam. Abd al-Rahman I relied on their support."
+    "explanation": "The source defines Muladi as 'native converts from the Iberian Peninsula' — that is, people of Iberian (Christian or other) origin who converted to Islam. Abd al-Rahman I relied on their support.",
+    "fact_ids": [
+      "F018"
+    ]
   },
   {
     "id": 24,
@@ -312,7 +381,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "In 929, Emir Abd al-Rahman III proclaimed himself caliph, the highest political and religious authority of Al-Andalus.",
-    "explanation": "The Caliphate of Córdoba began in 929 when Abd al-Rahman III elevated his title from emir to caliph — the highest religious and political authority — definitively breaking from Abbasid Baghdad."
+    "explanation": "The Caliphate of Córdoba began in 929 when Abd al-Rahman III elevated his title from emir to caliph — the highest religious and political authority — definitively breaking from Abbasid Baghdad.",
+    "fact_ids": [
+      "F019"
+    ]
   },
   {
     "id": 25,
@@ -325,7 +397,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "In 929, Emir Abd al-Rahman III proclaimed himself caliph, the highest political and religious authority of Al-Andalus, thus definitively breaking away from the Abbasid power of Baghdad.",
-    "explanation": "Abd al-Rahman III proclaimed himself caliph in 929, the most significant title in Islam, claiming supremacy over all Muslims in the west and completing the break from Baghdad."
+    "explanation": "Abd al-Rahman III proclaimed himself caliph in 929, the most significant title in Islam, claiming supremacy over all Muslims in the west and completing the break from Baghdad.",
+    "fact_ids": [
+      "F019"
+    ]
   },
   {
     "id": 26,
@@ -338,7 +413,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "B",
     "quote": "He also patronized the arts and sciences, expanded the Great Mosque of Córdoba, and built the palace of Medina Azahara.",
-    "explanation": "Medina Azahara was a magnificent palace-city built by Abd al-Rahman III outside Córdoba. It served as his seat of government and symbolised the wealth and power of the Caliphate at its height."
+    "explanation": "Medina Azahara was a magnificent palace-city built by Abd al-Rahman III outside Córdoba. It served as his seat of government and symbolised the wealth and power of the Caliphate at its height.",
+    "fact_ids": [
+      "F023"
+    ]
   },
   {
     "id": 27,
@@ -351,7 +429,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "B",
     "quote": "he was able to halt the Reconquista and established diplomatic relations with the Byzantine Empire and the Holy Roman Empire.",
-    "explanation": "Abd al-Rahman III's diplomatic reach extended to both great Christian empires of the time — the Byzantine in the east and the Holy Roman in the north — reflecting Al-Andalus's standing as a major power."
+    "explanation": "Abd al-Rahman III's diplomatic reach extended to both great Christian empires of the time — the Byzantine in the east and the Holy Roman in the north — reflecting Al-Andalus's standing as a major power.",
+    "fact_ids": [
+      "F021"
+    ]
   },
   {
     "id": 28,
@@ -364,7 +445,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "When the latter [Hisham II] was a child, the power of the caliphate fell into the hands of Almanzor, the most important general of the time.",
-    "explanation": "Almanzor was not the caliph — he was the real ruler who seized power while the legitimate Caliph Hisham II was still a child, making the caliph a powerless figurehead."
+    "explanation": "Almanzor was not the caliph — he was the real ruler who seized power while the legitimate Caliph Hisham II was still a child, making the caliph a powerless figurehead.",
+    "fact_ids": [
+      "F024"
+    ]
   },
   {
     "id": 29,
@@ -377,7 +461,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "He reformed the army of Al-Andalus and carried out 52 raids on Christian lands and cities such as Salamanca, Barcelona, Coimbra, and Zaragoza.",
-    "explanation": "The source records exactly 52 raids by Almanzor on Christian territories across the Peninsula. The cities listed — Salamanca, Barcelona, Coimbra, Zaragoza — show how far and wide his campaigns ranged."
+    "explanation": "The source records exactly 52 raids by Almanzor on Christian territories across the Peninsula. The cities listed — Salamanca, Barcelona, Coimbra, Zaragoza — show how far and wide his campaigns ranged.",
+    "fact_ids": [
+      "F025"
+    ]
   },
   {
     "id": 30,
@@ -390,7 +477,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "B",
     "quote": "In fact, the nickname 'al-Mansur' means 'the victorious.'",
-    "explanation": "The Arabic word al-Mansur translates as 'the victorious'. His unbroken military record against the Christian kingdoms made this epithet appropriate, though his real name was Muhammad ibn Abi Amir."
+    "explanation": "The Arabic word al-Mansur translates as 'the victorious'. His unbroken military record against the Christian kingdoms made this epithet appropriate, though his real name was Muhammad ibn Abi Amir.",
+    "fact_ids": [
+      "F026"
+    ]
   },
   {
     "id": 31,
@@ -403,7 +493,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "which led him to destroy the cathedral of Santiago de Compostela and force Christian slaves to carry the church bells as trophies to Córdoba.",
-    "explanation": "Almanzor's sack of Santiago de Compostela in 997 was his most devastating raid — he destroyed Christianity's most sacred Iberian pilgrimage site, though he reportedly left the tomb of St. James untouched."
+    "explanation": "Almanzor's sack of Santiago de Compostela in 997 was his most devastating raid — he destroyed Christianity's most sacred Iberian pilgrimage site, though he reportedly left the tomb of St. James untouched.",
+    "fact_ids": [
+      "F027"
+    ]
   },
   {
     "id": 32,
@@ -416,7 +509,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "force Christian slaves to carry the church bells as trophies to Córdoba.",
-    "explanation": "As a deliberate symbol of humiliation, Almanzor forced enslaved Christians to carry the bells of the Santiago de Compostela cathedral all the way to Córdoba to be displayed as war trophies."
+    "explanation": "As a deliberate symbol of humiliation, Almanzor forced enslaved Christians to carry the bells of the Santiago de Compostela cathedral all the way to Córdoba to be displayed as war trophies.",
+    "fact_ids": [
+      "F027"
+    ]
   },
   {
     "id": 33,
@@ -429,7 +525,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "With the death of Almanzor, power struggles began among governors and military leaders, and in 1031 the last caliph was deposed. al-Andalus fragmented into small, independent kingdoms called taifas.",
-    "explanation": "After Almanzor's death the civil wars he had set in motion finally destroyed the Caliphate. In 1031 the last caliph was deposed and Al-Andalus shattered into dozens of small taifa kingdoms."
+    "explanation": "After Almanzor's death the civil wars he had set in motion finally destroyed the Caliphate. In 1031 the last caliph was deposed and Al-Andalus shattered into dozens of small taifa kingdoms.",
+    "fact_ids": [
+      "F029"
+    ]
   },
   {
     "id": 34,
@@ -442,7 +541,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "formed alliances with Christian kingdoms, which imposed tribute payments called parias in exchange for not being attacked.",
-    "explanation": "Parias were tribute payments — essentially protection money — that the weak taifa kingdoms paid to Christian kingdoms to avoid attack. This transfer of wealth dramatically shifted the balance of power."
+    "explanation": "Parias were tribute payments — essentially protection money — that the weak taifa kingdoms paid to Christian kingdoms to avoid attack. This transfer of wealth dramatically shifted the balance of power.",
+    "fact_ids": [
+      "F030"
+    ]
   },
   {
     "id": 35,
@@ -455,7 +557,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "In 1085, Alfonso VI of León and Castile conquered Toledo, forcing the Taifa kings to seek help from the Almoravid Empire.",
-    "explanation": "Alfonso VI's conquest of Toledo in 1085 was a turning point in the Reconquista — the first major city retaken, it shocked the taifa kings into calling for North African military help."
+    "explanation": "Alfonso VI's conquest of Toledo in 1085 was a turning point in the Reconquista — the first major city retaken, it shocked the taifa kings into calling for North African military help.",
+    "fact_ids": [
+      "F032"
+    ]
   },
   {
     "id": 36,
@@ -468,7 +573,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "The Almoravids, a religious movement that sought to restore the purity of Islam by radicalizing the precepts of the Quran, had established an empire in northwest Africa.",
-    "explanation": "The Almoravids were not just a military force but a puritanical religious movement. Their strict interpretation of Islam made them intolerant of the Christians living under Muslim rule (the Mozarabs)."
+    "explanation": "The Almoravids were not just a military force but a puritanical religious movement. Their strict interpretation of Islam made them intolerant of the Christians living under Muslim rule (the Mozarabs).",
+    "fact_ids": [
+      "F033"
+    ]
   },
   {
     "id": 37,
@@ -481,7 +589,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "B",
     "quote": "In 1086, they defeated Alfonso VI at the Battle of Sagrajas.",
-    "explanation": "Just one year after Alfonso VI took Toledo, the Almoravids crossed from North Africa and defeated his forces at Sagrajas in 1086, immediately halting the Christian advance."
+    "explanation": "Just one year after Alfonso VI took Toledo, the Almoravids crossed from North Africa and defeated his forces at Sagrajas in 1086, immediately halting the Christian advance.",
+    "fact_ids": [
+      "F034"
+    ]
   },
   {
     "id": 38,
@@ -494,7 +605,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "the Andalusians were unhappy with their new rulers, who brought with them an open and cruel persecution of Christians. The Mozarabs appealed to Alfonso I the Battler, King of Aragon, for help.",
-    "explanation": "Mozarabs were Christians living under Muslim rule in Al-Andalus. When the Almoravids began persecuting them, they appealed to the Christian king Alfonso I the Battler for military help."
+    "explanation": "Mozarabs were Christians living under Muslim rule in Al-Andalus. When the Almoravids began persecuting them, they appealed to the Christian king Alfonso I the Battler for military help.",
+    "fact_ids": [
+      "F035"
+    ]
   },
   {
     "id": 39,
@@ -507,7 +621,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "He united thousands of Christians into a single army and they succeeded in defeating the Almoravids at the Battle of Lucena (1125).",
-    "explanation": "Alfonso I the Battler responded to the Mozarabs' plea by assembling a large coalition army. His victory over the Almoravids at Lucena in 1125 began the unravelling of Almoravid power in Al-Andalus."
+    "explanation": "Alfonso I the Battler responded to the Mozarabs' plea by assembling a large coalition army. His victory over the Almoravids at Lucena in 1125 began the unravelling of Almoravid power in Al-Andalus.",
+    "fact_ids": [
+      "F036"
+    ]
   },
   {
     "id": 40,
@@ -520,7 +637,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "This led to a new North African invasion in 1145: the Almohads, who seized control of most of al-Andalus.",
-    "explanation": "Following the weakening of the Almoravids, an even stricter North African Muslim movement — the Almohads — invaded Al-Andalus in 1145 and took control of most of the remaining Muslim territory."
+    "explanation": "Following the weakening of the Almoravids, an even stricter North African Muslim movement — the Almohads — invaded Al-Andalus in 1145 and took control of most of the remaining Muslim territory.",
+    "fact_ids": [
+      "F037"
+    ]
   },
   {
     "id": 41,
@@ -533,7 +653,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "the Christians, whom they defeated at the Battle of Alarcos (1195).",
-    "explanation": "The Almohads defeated the Christian forces, led by Alfonso VIII of Castile, at the Battle of Alarcos in 1195. This was near Ciudad Real and temporarily reversed Christian gains."
+    "explanation": "The Almohads defeated the Christian forces, led by Alfonso VIII of Castile, at the Battle of Alarcos in 1195. This was near Ciudad Real and temporarily reversed Christian gains.",
+    "fact_ids": [
+      "F038"
+    ]
   },
   {
     "id": 42,
@@ -546,7 +669,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "they were not well received by either the Andalusians or the Christians, whom they defeated at the Battle of Alarcos (1195).",
-    "explanation": "Despite being unpopular even with their fellow Muslims in Al-Andalus, the Almohads proved militarily formidable, defeating the Christian army at Alarcos (1195) and temporarily halting the Reconquista."
+    "explanation": "Despite being unpopular even with their fellow Muslims in Al-Andalus, the Almohads proved militarily formidable, defeating the Christian army at Alarcos (1195) and temporarily halting the Reconquista.",
+    "fact_ids": [
+      "F038"
+    ]
   },
   {
     "id": 43,
@@ -559,7 +685,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "they were defeated at the Battle of Las Navas de Tolosa (1212). This battle marked the final decline of al-Andalus.",
-    "explanation": "Las Navas de Tolosa (1212) was the decisive battle that broke Almohad power. The source explicitly states it 'marked the final decline of al-Andalus', opening the south to rapid Christian conquest."
+    "explanation": "Las Navas de Tolosa (1212) was the decisive battle that broke Almohad power. The source explicitly states it 'marked the final decline of al-Andalus', opening the south to rapid Christian conquest.",
+    "fact_ids": [
+      "F039"
+    ]
   },
   {
     "id": 44,
@@ -572,7 +701,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "At the Battle of Las Navas de Tolosa, Alfonso VIII of Castile was joined by Kings Peter II of Aragon and Sancho VII of Navarre.",
-    "explanation": "Alfonso VIII of Castile organised and led the Christian coalition at Las Navas de Tolosa. He had suffered a humiliating defeat at Alarcos in 1195, making this victory a personal as well as strategic triumph."
+    "explanation": "Alfonso VIII of Castile organised and led the Christian coalition at Las Navas de Tolosa. He had suffered a humiliating defeat at Alarcos in 1195, making this victory a personal as well as strategic triumph.",
+    "fact_ids": [
+      "F040"
+    ]
   },
   {
     "id": 45,
@@ -585,7 +717,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "Pope Innocent III had called for a crusade to expel the Almohads, and members of various military orders joined them: Templars, Hospitallers, Santiago, and Calatrava.",
-    "explanation": "Las Navas de Tolosa had the character of a crusade. Four military orders participated: the international Templars and Hospitallers, and the Iberian orders of Santiago and Calatrava."
+    "explanation": "Las Navas de Tolosa had the character of a crusade. Four military orders participated: the international Templars and Hospitallers, and the Iberian orders of Santiago and Calatrava.",
+    "fact_ids": [
+      "F041"
+    ]
   },
   {
     "id": 46,
@@ -598,7 +733,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "The payment of tribute to the Christians and its natural border in the Baetic System allowed it to survive until 1492.",
-    "explanation": "After the fall of all other Muslim kingdoms, the Nasrid Kingdom of Granada survived alone from 1238 to 1492 — nearly 250 years — by paying tribute and relying on natural mountain defences."
+    "explanation": "After the fall of all other Muslim kingdoms, the Nasrid Kingdom of Granada survived alone from 1238 to 1492 — nearly 250 years — by paying tribute and relying on natural mountain defences.",
+    "fact_ids": [
+      "F042"
+    ]
   },
   {
     "id": 47,
@@ -611,7 +749,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "on January 2, 1492, the last king, Boabdil, surrendered and handed over the keys to the city.",
-    "explanation": "Boabdil (Muhammad XII) was the last Muslim ruler in the Iberian Peninsula. His personal surrender of Granada's keys on 2 January 1492 ended over 780 years of Muslim rule in Iberia."
+    "explanation": "Boabdil (Muhammad XII) was the last Muslim ruler in the Iberian Peninsula. His personal surrender of Granada's keys on 2 January 1492 ended over 780 years of Muslim rule in Iberia.",
+    "fact_ids": [
+      "F043"
+    ]
   },
   {
     "id": 48,
@@ -624,7 +765,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "B",
     "quote": "on January 2, 1492, the last king, Boabdil, surrendered and handed over the keys to the city.",
-    "explanation": "The precise date — 2 January 1492 — marks the definitive end of the Reconquista and of Al-Andalus. Coincidentally, Columbus would sail for the Americas later that same year."
+    "explanation": "The precise date — 2 January 1492 — marks the definitive end of the Reconquista and of Al-Andalus. Coincidentally, Columbus would sail for the Americas later that same year.",
+    "fact_ids": [
+      "F043"
+    ]
   },
   {
     "id": 49,
@@ -637,7 +781,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "The term 'Reconquista' refers to the process of Christian reconquest of the lands occupied by the Muslims after the destruction of the Visigothic Kingdom of Toledo.",
-    "explanation": "Reconquista (literally 're-conquest') is the historical term for the centuries-long process by which Christian kingdoms gradually recovered Iberia from Muslim rule, from 711 to 1492."
+    "explanation": "Reconquista (literally 're-conquest') is the historical term for the centuries-long process by which Christian kingdoms gradually recovered Iberia from Muslim rule, from 711 to 1492.",
+    "fact_ids": [
+      "F044"
+    ]
   },
   {
     "id": 50,
@@ -650,7 +797,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "B",
     "quote": "This process lasts from 711 to 1492, although it was practically completed in the 13th century with the Battle of Las Navas de Tolosa.",
-    "explanation": "The Reconquista spanned nearly 800 years, beginning with the Muslim conquest in 711 and ending with the fall of Granada in 1492, though most territory was recovered by the 13th century."
+    "explanation": "The Reconquista spanned nearly 800 years, beginning with the Muslim conquest in 711 and ending with the fall of Granada in 1492, though most territory was recovered by the 13th century.",
+    "fact_ids": [
+      "F044"
+    ]
   },
   {
     "id": 51,
@@ -663,7 +813,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "The Christian victory gave rise to the Kingdom of Asturias, with Pelayo, the victor, as its first monarch.",
-    "explanation": "Pelayo's victory at the Battle of Covadonga (722) was the founding moment of the Kingdom of Asturias. He became its first king, and the kingdom would eventually evolve into the Kingdom of León."
+    "explanation": "Pelayo's victory at the Battle of Covadonga (722) was the founding moment of the Kingdom of Asturias. He became its first king, and the kingdom would eventually evolve into the Kingdom of León.",
+    "fact_ids": [
+      "F011"
+    ]
   },
   {
     "id": 52,
@@ -676,7 +829,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "The capital was in Cangas de Onis, although it was soon moved to Oviedo.",
-    "explanation": "The Kingdom of Asturias started small, with Cangas de Onís as its first capital. As it grew stronger and expanded, the capital was moved to Oviedo before eventually shifting further south to León."
+    "explanation": "The Kingdom of Asturias started small, with Cangas de Onís as its first capital. As it grew stronger and expanded, the capital was moved to Oviedo before eventually shifting further south to León.",
+    "fact_ids": [
+      "F045"
+    ]
   },
   {
     "id": 53,
@@ -689,7 +845,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "B",
     "quote": "Three monarchs stood out: Alfonso I (739-757), who extended his domains into Galicia and began to occupy the northern part of the Duero Basin.",
-    "explanation": "Alfonso I (739–757) was the first great expansionist king of Asturias, pushing the kingdom westward into Galicia and beginning to move south toward the Duero River."
+    "explanation": "Alfonso I (739–757) was the first great expansionist king of Asturias, pushing the kingdom westward into Galicia and beginning to move south toward the Duero River.",
+    "fact_ids": [
+      "F046"
+    ]
   },
   {
     "id": 54,
@@ -702,7 +861,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "Alfonso II (791-842) strengthened the king's power against the nobles. During his reign, the remains of the Apostle James were discovered in Compostela.",
-    "explanation": "The discovery of what were believed to be the remains of St. James the Apostle in Compostela during Alfonso II's reign was hugely significant — it transformed the site into one of Christendom's greatest pilgrimage destinations."
+    "explanation": "The discovery of what were believed to be the remains of St. James the Apostle in Compostela during Alfonso II's reign was hugely significant — it transformed the site into one of Christendom's greatest pilgrimage destinations.",
+    "fact_ids": [
+      "F047"
+    ]
   },
   {
     "id": 55,
@@ -715,7 +877,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "Following this discovery, the king ordered the construction of a church to venerate the apostle's tomb.",
-    "explanation": "Alfonso II's response to the discovery of St. James's remains was to order a church built on the site. This was the forerunner of the great Santiago de Compostela Cathedral that pilgrims still visit today."
+    "explanation": "Alfonso II's response to the discovery of St. James's remains was to order a church built on the site. This was the forerunner of the great Santiago de Compostela Cathedral that pilgrims still visit today.",
+    "fact_ids": [
+      "F047"
+    ]
   },
   {
     "id": 56,
@@ -728,7 +893,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "Alfonso III (866-910) conquered Coimbra and Porto.",
-    "explanation": "Alfonso III (866–910) significantly expanded the Kingdom of Asturias southward into what is now Portugal, capturing Coimbra and Porto — territories that would later form the independent Kingdom of Portugal."
+    "explanation": "Alfonso III (866–910) significantly expanded the Kingdom of Asturias southward into what is now Portugal, capturing Coimbra and Porto — territories that would later form the independent Kingdom of Portugal.",
+    "fact_ids": [
+      "F048"
+    ]
   },
   {
     "id": 57,
@@ -741,7 +909,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "His second son, Ordoño II (910-924), who inherited Galicia, reunited the kingdoms and moved the capital to León.",
-    "explanation": "After Alfonso III divided his kingdom among three sons, it was Ordoño II who reunited them and transferred the capital from Oviedo to León, giving the kingdom its new name."
+    "explanation": "After Alfonso III divided his kingdom among three sons, it was Ordoño II who reunited them and transferred the capital from Oviedo to León, giving the kingdom its new name.",
+    "fact_ids": [
+      "F049"
+    ]
   },
   {
     "id": 58,
@@ -754,7 +925,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "Because of the large number of castles, this land would come to be known as Castile.",
-    "explanation": "The eastern frontier of the Kingdom of León needed so many fortresses to defend against Muslim raids that the region became known as 'Castile' — from the Spanish word for castle, castillo."
+    "explanation": "The eastern frontier of the Kingdom of León needed so many fortresses to defend against Muslim raids that the region became known as 'Castile' — from the Spanish word for castle, castillo.",
+    "fact_ids": [
+      "F050"
+    ]
   },
   {
     "id": 59,
@@ -767,7 +941,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "Count Fernán González (931-970) unified all the counties and created the County of Castile, with himself as its ruler.",
-    "explanation": "Fernán González united the scattered Castilian counties under one rule between 931 and 970, creating the County of Castile as a unified political entity, though still nominally part of the Kingdom of León."
+    "explanation": "Fernán González united the scattered Castilian counties under one rule between 931 and 970, creating the County of Castile as a unified political entity, though still nominally part of the Kingdom of León.",
+    "fact_ids": [
+      "F052"
+    ]
   },
   {
     "id": 60,
@@ -780,7 +957,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "B",
     "quote": "Count Fernán González (931-970) unified all the counties and created the County of Castile.",
-    "explanation": "The source gives the precise dates of Fernán González's rule as 931 to 970. During this period he transformed Castile from a collection of separate counties into a single unified county."
+    "explanation": "The source gives the precise dates of Fernán González's rule as 931 to 970. During this period he transformed Castile from a collection of separate counties into a single unified county.",
+    "fact_ids": [
+      "F052"
+    ]
   },
   {
     "id": 61,
@@ -793,7 +973,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "In the 11th century, Sancho III of Navarre added the County of Castile to his kingdom and appointed his son Ferdinand as count in 1035.",
-    "explanation": "It was Sancho III of Navarre who made Ferdinand the Count of Castile in 1035 — not Alfonso VI or any León king. Ferdinand would go on to become the first King of Castile and León."
+    "explanation": "It was Sancho III of Navarre who made Ferdinand the Count of Castile in 1035 — not Alfonso VI or any León king. Ferdinand would go on to become the first King of Castile and León.",
+    "fact_ids": [
+      "F053"
+    ]
   },
   {
     "id": 62,
@@ -806,7 +989,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "When Ferdinand I married a princess from León, he became the first king of Castile and León.",
-    "explanation": "Ferdinand I's marriage to a Leonese princess gave him a claim to that kingdom. Uniting both crowns made him the first person to hold the joint title of King of Castile and León."
+    "explanation": "Ferdinand I's marriage to a Leonese princess gave him a claim to that kingdom. Uniting both crowns made him the first person to hold the joint title of King of Castile and León.",
+    "fact_ids": [
+      "F054"
+    ]
   },
   {
     "id": 63,
@@ -819,7 +1005,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "His successor was Queen Urraca, the first woman in all of Europe to reign in her own right.",
-    "explanation": "Queen Urraca succeeded Alfonso VI, becoming — according to the source — the first woman in all of Europe to rule a kingdom in her own right, rather than as a regent or queen consort."
+    "explanation": "Queen Urraca succeeded Alfonso VI, becoming — according to the source — the first woman in all of Europe to rule a kingdom in her own right, rather than as a regent or queen consort.",
+    "fact_ids": [
+      "F055"
+    ]
   },
   {
     "id": 64,
@@ -832,7 +1021,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "Portugal, which had gained its independence in 1128 under Alfonso Enriquez.",
-    "explanation": "Portugal emerged as an independent kingdom in 1128 when Alfonso Enríquez broke away from the crown of León and Castile, founding what would become one of Europe's oldest nation-states."
+    "explanation": "Portugal emerged as an independent kingdom in 1128 when Alfonso Enríquez broke away from the crown of León and Castile, founding what would become one of Europe's oldest nation-states.",
+    "fact_ids": [
+      "F056"
+    ]
   },
   {
     "id": 65,
@@ -845,7 +1037,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "Portugal, which had gained its independence in 1128 under Alfonso Enriquez.",
-    "explanation": "Alfonso Henriques (Alfonso Enríquez) was the founder and first king of Portugal. In 1128 he successfully asserted independence from León and Castile, establishing a separate Portuguese kingdom."
+    "explanation": "Alfonso Henriques (Alfonso Enríquez) was the founder and first king of Portugal. In 1128 he successfully asserted independence from León and Castile, establishing a separate Portuguese kingdom.",
+    "fact_ids": [
+      "F056"
+    ]
   },
   {
     "id": 66,
@@ -858,7 +1053,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "they defeated Charlemagne at the Battle of Roncesvalles (778) and managed to remain independent from the Franks.",
-    "explanation": "In 778, Charlemagne led a Frankish force into Iberia, but on the retreat through the Pyrenees his rearguard was destroyed at Roncesvalles — in 778 — by the Basques."
+    "explanation": "In 778, Charlemagne led a Frankish force into Iberia, but on the retreat through the Pyrenees his rearguard was destroyed at Roncesvalles — in 778 — by the Basques.",
+    "fact_ids": [
+      "F060"
+    ]
   },
   {
     "id": 67,
@@ -871,7 +1069,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "Originally formed by tribes of Basque origin, they defeated Charlemagne at the Battle of Roncesvalles (778) and managed to remain independent from the Franks.",
-    "explanation": "The source explicitly states that Basque-origin tribes defeated Charlemagne at Roncesvalles in 778, helping them maintain their independence from the Frankish Empire."
+    "explanation": "The source explicitly states that Basque-origin tribes defeated Charlemagne at Roncesvalles in 778, helping them maintain their independence from the Frankish Empire.",
+    "fact_ids": [
+      "F060"
+    ]
   },
   {
     "id": 68,
@@ -884,7 +1085,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "The battle was so important that it was immortalized in the epic poem The Song of Roland (La Chanson de Roland).",
-    "explanation": "The Battle of Roncesvalles became the subject of La Chanson de Roland (The Song of Roland), one of the greatest medieval epic poems, which glorified the Frankish knights who died there."
+    "explanation": "The Battle of Roncesvalles became the subject of La Chanson de Roland (The Song of Roland), one of the greatest medieval epic poems, which glorified the Frankish knights who died there.",
+    "fact_ids": [
+      "F061"
+    ]
   },
   {
     "id": 69,
@@ -897,7 +1101,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "to strengthen the border, he created a defensive zone called the Marca Hispanica.",
-    "explanation": "Charlemagne created the Marca Hispanica ('Spanish March') as a fortified buffer zone in the Pyrenean region to protect his empire from Muslim incursions. It would eventually become the seed of new Christian kingdoms."
+    "explanation": "Charlemagne created the Marca Hispanica ('Spanish March') as a fortified buffer zone in the Pyrenean region to protect his empire from Muslim incursions. It would eventually become the seed of new Christian kingdoms.",
+    "fact_ids": [
+      "F059"
+    ]
   },
   {
     "id": 70,
@@ -910,7 +1117,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "In 824, the Kingdom of Pamplona was formed.",
-    "explanation": "Building on Basque independence from the Franks, the Kingdom of Pamplona was formally established in 824 under the Arista dynasty — the political ancestor of the later Kingdom of Navarre."
+    "explanation": "Building on Basque independence from the Franks, the Kingdom of Pamplona was formally established in 824 under the Arista dynasty — the political ancestor of the later Kingdom of Navarre.",
+    "fact_ids": [
+      "F062"
+    ]
   },
   {
     "id": 71,
@@ -923,7 +1133,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "which later, in 1162 under the reign of Sancho VI the Wise, changed its name to the Kingdom of Navarre.",
-    "explanation": "The Kingdom of Pamplona officially renamed itself the Kingdom of Navarre in 1162 under Sancho VI the Wise, reflecting its expansion and evolution over the preceding three centuries."
+    "explanation": "The Kingdom of Pamplona officially renamed itself the Kingdom of Navarre in 1162 under Sancho VI the Wise, reflecting its expansion and evolution over the preceding three centuries.",
+    "fact_ids": [
+      "F063"
+    ]
   },
   {
     "id": 72,
@@ -936,7 +1149,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "which later, in 1162 under the reign of Sancho VI the Wise, changed its name to the Kingdom of Navarre.",
-    "explanation": "Sancho VI the Wise — not Sancho III or Sancho VII — was the king who oversaw the renaming of Pamplona to Navarre in 1162, also working to strengthen the kingdom's laws and international standing."
+    "explanation": "Sancho VI the Wise — not Sancho III or Sancho VII — was the king who oversaw the renaming of Pamplona to Navarre in 1162, also working to strengthen the kingdom's laws and international standing.",
+    "fact_ids": [
+      "F063"
+    ]
   },
   {
     "id": 73,
@@ -949,7 +1165,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "Sancho III inherited the kingdom. Thanks to his military and matrimonial policies, he was the most important king of his time, managing to control the counties of Sobrarbe, Ribagorza, and Aragon, the County of Castile...and the Kingdom of León.",
-    "explanation": "At the height of his power, Sancho III of Navarre controlled virtually all the Christian kingdoms of Iberia through a combination of military force and strategic marriages, making him the dominant Christian ruler of his era."
+    "explanation": "At the height of his power, Sancho III of Navarre controlled virtually all the Christian kingdoms of Iberia through a combination of military force and strategic marriages, making him the dominant Christian ruler of his era.",
+    "fact_ids": [
+      "F064"
+    ]
   },
   {
     "id": 74,
@@ -962,7 +1181,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "the County of Castile (through his marriage to the heiress of the territory, Sancha)",
-    "explanation": "Sancho III did not conquer Castile by force — he gained it by marrying Sancha, the heiress to the County of Castile. This shows how crucial matrimonial politics were alongside military power in medieval Iberia."
+    "explanation": "Sancho III did not conquer Castile by force — he gained it by marrying Sancha, the heiress to the County of Castile. This shows how crucial matrimonial politics were alongside military power in medieval Iberia.",
+    "fact_ids": [
+      "F064"
+    ]
   },
   {
     "id": 75,
@@ -975,7 +1197,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "Later, in 1118, Alfonso I the Battler conquered the city of Zaragoza and made it his capital.",
-    "explanation": "Alfonso I the Battler's conquest of Zaragoza in 1118 was the greatest achievement of the Aragonese Reconquista. He moved his capital there from Jaca, making it the new heart of a greatly expanded Aragonese kingdom."
+    "explanation": "Alfonso I the Battler's conquest of Zaragoza in 1118 was the greatest achievement of the Aragonese Reconquista. He moved his capital there from Jaca, making it the new heart of a greatly expanded Aragonese kingdom.",
+    "fact_ids": [
+      "F065"
+    ]
   },
   {
     "id": 76,
@@ -988,7 +1213,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "Aragon would eventually become an independent kingdom and establish its capital in Jaca.",
-    "explanation": "Before the conquest of Zaragoza in 1118, the Kingdom of Aragon's capital was the small Pyrenean city of Jaca. As the kingdom expanded southward, Zaragoza became the strategically superior new capital."
+    "explanation": "Before the conquest of Zaragoza in 1118, the Kingdom of Aragon's capital was the small Pyrenean city of Jaca. As the kingdom expanded southward, Zaragoza became the strategically superior new capital.",
+    "fact_ids": [
+      "F066"
+    ]
   },
   {
     "id": 77,
@@ -1001,7 +1229,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "Upon his death without an heir, Navarre and Aragon separated.",
-    "explanation": "Alfonso I the Battler died in 1134 without a legitimate heir. This succession crisis dissolved the union between Navarre and Aragon that he had held together, with each kingdom going its own separate way."
+    "explanation": "Alfonso I the Battler died in 1134 without a legitimate heir. This succession crisis dissolved the union between Navarre and Aragon that he had held together, with each kingdom going its own separate way.",
+    "fact_ids": [
+      "F067"
+    ]
   },
   {
     "id": 78,
@@ -1014,7 +1245,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "B",
     "quote": "He was praised for his honor and bravery, qualities reflected in the epic poem El Cantar de Mio Cid, which immortalized his name and created his legend.",
-    "explanation": "El Cid's real name was Rodrigo Díaz de Vivar. The source refers to him through his legendary deeds and the poem El Cantar de Mio Cid. 'El Cid' was an Arabic honorific title meaning 'The Lord'."
+    "explanation": "El Cid's real name was Rodrigo Díaz de Vivar. The source refers to him through his legendary deeds and the poem El Cantar de Mio Cid. 'El Cid' was an Arabic honorific title meaning 'The Lord'.",
+    "fact_ids": [
+      "F068"
+    ]
   },
   {
     "id": 79,
@@ -1027,7 +1261,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "qualities reflected in the epic poem El Cantar de Mio Cid, which immortalized his name and created his legend.",
-    "explanation": "El Cantar de Mio Cid is the medieval Spanish epic poem that recorded El Cid's military exploits and moral virtues. It is one of the oldest and most important works of Spanish literature."
+    "explanation": "El Cantar de Mio Cid is the medieval Spanish epic poem that recorded El Cid's military exploits and moral virtues. It is one of the oldest and most important works of Spanish literature.",
+    "fact_ids": [
+      "F068"
+    ]
   },
   {
     "id": 80,
@@ -1040,7 +1277,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "In 1094, he conquered the Taifa of Valencia, establishing an independent dominion there that remained after his death.",
-    "explanation": "In 1094, El Cid captured the Taifa of Valencia and ruled it as an independent domain — loyal neither to the Christian kingdoms nor to the Almoravids. It was his greatest military achievement."
+    "explanation": "In 1094, El Cid captured the Taifa of Valencia and ruled it as an independent domain — loyal neither to the Christian kingdoms nor to the Almoravids. It was his greatest military achievement.",
+    "fact_ids": [
+      "F069"
+    ]
   },
   {
     "id": 81,
@@ -1053,7 +1293,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "remained after his death, ruled by his wife, Jimena, until 1101.",
-    "explanation": "After El Cid's death, his wife Jimena continued to rule the Taifa of Valencia in his name, maintaining his independent dominion there until 1101 when the Almoravids eventually captured the city."
+    "explanation": "After El Cid's death, his wife Jimena continued to rule the Taifa of Valencia in his name, maintaining his independent dominion there until 1101 when the Almoravids eventually captured the city.",
+    "fact_ids": [
+      "F070"
+    ]
   },
   {
     "id": 82,
@@ -1066,7 +1309,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "remained after his death, ruled by his wife, Jimena, until 1101.",
-    "explanation": "The source gives the precise end date of Jimena's rule as 1101. Valencia remained under her control from El Cid's death until the Almoravids finally took the city that year."
+    "explanation": "The source gives the precise end date of Jimena's rule as 1101. Valencia remained under her control from El Cid's death until the Almoravids finally took the city that year.",
+    "fact_ids": [
+      "F070"
+    ]
   },
   {
     "id": 83,
@@ -1079,7 +1325,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "the Battle of Simancas in 939, where King Ramiro II defeated the army of Abd al-Rahman III.",
-    "explanation": "The Battle of Simancas in 939 was a significant Christian victory — King Ramiro II of León defeated the army of Caliph Abd al-Rahman III, one of the few setbacks suffered by the powerful Caliphate of Córdoba."
+    "explanation": "The Battle of Simancas in 939 was a significant Christian victory — King Ramiro II of León defeated the army of Caliph Abd al-Rahman III, one of the few setbacks suffered by the powerful Caliphate of Córdoba.",
+    "fact_ids": [
+      "F051"
+    ]
   },
   {
     "id": 84,
@@ -1092,7 +1341,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "His son, Alfonso X, the Wise, reduced military activity.",
-    "explanation": "Alfonso X the Wise was the son of Fernando III the Saint. While his father was a great military king who conquered Córdoba and Seville, Alfonso X focused more on culture, law, and learning."
+    "explanation": "Alfonso X the Wise was the son of Fernando III the Saint. While his father was a great military king who conquered Córdoba and Seville, Alfonso X focused more on culture, law, and learning.",
+    "fact_ids": [
+      "F058"
+    ]
   },
   {
     "id": 85,
@@ -1105,7 +1357,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "Fernando III...took advantage of Almohad weakness to advance through the Guadalquivir Valley and conquer Córdoba and Seville.",
-    "explanation": "Fernando III the Saint exploited Almohad weakness after Las Navas de Tolosa to push deep into Andalusia, capturing the two greatest cities of Al-Andalus: Córdoba (1236) and Seville (1248)."
+    "explanation": "Fernando III the Saint exploited Almohad weakness after Las Navas de Tolosa to push deep into Andalusia, capturing the two greatest cities of Al-Andalus: Córdoba (1236) and Seville (1248).",
+    "fact_ids": [
+      "F057"
+    ]
   },
   {
     "id": 86,
@@ -1118,7 +1373,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "At the Battle of Las Navas de Tolosa, Alfonso VIII of Castile was joined by Kings Peter II of Aragon and Sancho VII of Navarre.",
-    "explanation": "Peter II of Aragon was one of three Christian kings at Las Navas de Tolosa. The coalition of Castile, Aragon, and Navarre — plus military orders — gave the Christians a decisive numerical and strategic advantage."
+    "explanation": "Peter II of Aragon was one of three Christian kings at Las Navas de Tolosa. The coalition of Castile, Aragon, and Navarre — plus military orders — gave the Christians a decisive numerical and strategic advantage.",
+    "fact_ids": [
+      "F040"
+    ]
   },
   {
     "id": 87,
@@ -1131,7 +1389,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "At the Battle of Las Navas de Tolosa, Alfonso VIII of Castile was joined by Kings Peter II of Aragon and Sancho VII of Navarre.",
-    "explanation": "Sancho VII of Navarre — not Sancho III or Sancho VI — was the Navarrese king at Las Navas de Tolosa. His participation was part of the broad Christian coalition assembled to fight the Almohads."
+    "explanation": "Sancho VII of Navarre — not Sancho III or Sancho VI — was the Navarrese king at Las Navas de Tolosa. His participation was part of the broad Christian coalition assembled to fight the Almohads.",
+    "fact_ids": [
+      "F040"
+    ]
   },
   {
     "id": 88,
@@ -1144,7 +1405,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "The disintegration of the Visigothic army after the Battle of Guadalete; the effectiveness of the Muslim soldiers, who were motivated by their faith; the Muslims' tolerant policies toward the Christian and Jewish populations; the alliance between the Muslims and some Visigothic nobles.",
-    "explanation": "The source lists four reasons for the swift Muslim conquest: the collapse of the Visigothic army, Muslim military motivation, tolerant policies toward existing populations, and the alliance with some Visigothic nobles who supported the invaders."
+    "explanation": "The source lists four reasons for the swift Muslim conquest: the collapse of the Visigothic army, Muslim military motivation, tolerant policies toward existing populations, and the alliance with some Visigothic nobles who supported the invaders.",
+    "fact_ids": [
+      "F013"
+    ]
   },
   {
     "id": 89,
@@ -1157,7 +1421,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "increased trade with Africa and Europe, which generated immense wealth. Cordoba, the capital, became the most important city in Western Europe.",
-    "explanation": "The source attributes Córdoba's rise to its position at the centre of booming trade with both Africa and Europe. The resulting wealth made it the largest and most sophisticated city in Western Europe during the Caliphate."
+    "explanation": "The source attributes Córdoba's rise to its position at the centre of booming trade with both Africa and Europe. The resulting wealth made it the largest and most sophisticated city in Western Europe during the Caliphate.",
+    "fact_ids": [
+      "F022"
+    ]
   },
   {
     "id": 90,
@@ -1170,7 +1437,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "B",
     "quote": "Almanzor is also one of those responsible for the fall of the Caliphate, since by turning the caliph into a puppet, he undermined the ruler's prestige, and by trying to ensure his son's succession, he provoked civil wars.",
-    "explanation": "The Caliphate fell not because of external conquest but from within. Almanzor made the caliph a powerless figurehead, undermining the institution's legitimacy, and his attempts to pass power to his son triggered devastating civil wars."
+    "explanation": "The Caliphate fell not because of external conquest but from within. Almanzor made the caliph a powerless figurehead, undermining the institution's legitimacy, and his attempts to pass power to his son triggered devastating civil wars.",
+    "fact_ids": [
+      "F028"
+    ]
   },
   {
     "id": 91,
@@ -1183,7 +1453,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "B",
     "quote": "The Christian kingdoms used this influx of money to become more powerful than their Muslim enemies and began to advance southward.",
-    "explanation": "The parias tribute payments from weak taifa kingdoms to Christian ones had an unintended consequence — they gave the Christian kingdoms the wealth needed to become militarily stronger than their Muslim neighbours."
+    "explanation": "The parias tribute payments from weak taifa kingdoms to Christian ones had an unintended consequence — they gave the Christian kingdoms the wealth needed to become militarily stronger than their Muslim neighbours.",
+    "fact_ids": [
+      "F031"
+    ]
   },
   {
     "id": 92,
@@ -1196,7 +1469,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "The payment of tribute to the Christians and its natural border in the Baetic System allowed it to survive until 1492.",
-    "explanation": "The Nasrid Kingdom of Granada survived as the last Muslim state in Iberia for over 250 years thanks to two factors: paying tribute to the Christians (as the taifas had done earlier) and the protection of the Baetic mountain range."
+    "explanation": "The Nasrid Kingdom of Granada survived as the last Muslim state in Iberia for over 250 years thanks to two factors: paying tribute to the Christians (as the taifas had done earlier) and the protection of the Baetic mountain range.",
+    "fact_ids": [
+      "F042"
+    ]
   },
   {
     "id": 93,
@@ -1209,7 +1485,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "Fernando III, the Saint, inherited the Kingdom of Castile from his mother and the Kingdom of Leon from his father, thus definitively uniting both kingdoms.",
-    "explanation": "Fernando III the Saint permanently united the crowns of Castile and León by inheriting them through two separate parental lines — Castile from his mother, León from his father — creating the Crown of Castile."
+    "explanation": "Fernando III the Saint permanently united the crowns of Castile and León by inheriting them through two separate parental lines — Castile from his mother, León from his father — creating the Crown of Castile.",
+    "fact_ids": [
+      "F057"
+    ]
   },
   {
     "id": 94,
@@ -1222,7 +1501,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "he ruled all the Hispanic Kingdoms and established contact with other European powers, utilizing the growing importance of the Camino de Santiago.",
-    "explanation": "Sancho III of Navarre used the Camino de Santiago — the great pilgrimage route — as a diplomatic and economic tool, connecting his kingdom to the wider European world and boosting his international standing."
+    "explanation": "Sancho III of Navarre used the Camino de Santiago — the great pilgrimage route — as a diplomatic and economic tool, connecting his kingdom to the wider European world and boosting his international standing.",
+    "fact_ids": [
+      "F074"
+    ]
   },
   {
     "id": 95,
@@ -1235,7 +1517,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "This is especially true of kings like Leovigild and Reccared.",
-    "explanation": "The source singles out Leovigild and Reccared as the Visigothic kings most influenced by Byzantine court culture. Both sought to consolidate royal power by modelling themselves on the Byzantine emperors."
+    "explanation": "The source singles out Leovigild and Reccared as the Visigothic kings most influenced by Byzantine court culture. Both sought to consolidate royal power by modelling themselves on the Byzantine emperors.",
+    "fact_ids": [
+      "F071"
+    ]
   },
   {
     "id": 96,
@@ -1248,7 +1533,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "The Arista dynasty, then Counts of Pamplona, expelled the Carolingians with the help of the Banu Qasi, a Muladi family that ruled the Ebro region.",
-    "explanation": "The Banu Qasi were a Muladi family (native Iberian converts to Islam) who controlled the Ebro Valley. They allied with the Arista dynasty of Pamplona to expel the Carolingians from the region in the 9th century."
+    "explanation": "The Banu Qasi were a Muladi family (native Iberian converts to Islam) who controlled the Ebro Valley. They allied with the Arista dynasty of Pamplona to expel the Carolingians from the region in the 9th century.",
+    "fact_ids": [
+      "F072"
+    ]
   },
   {
     "id": 97,
@@ -1261,7 +1549,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "This was the golden age of Al-Andalus, due to increased trade with Africa and Europe, which generated immense wealth.",
-    "explanation": "The source explicitly calls the Caliphate of Córdoba period (929–1031) 'the golden age of Al-Andalus', driven by trade wealth, artistic patronage, scientific advances, and the dominance of Córdoba as Europe's greatest city."
+    "explanation": "The source explicitly calls the Caliphate of Córdoba period (929–1031) 'the golden age of Al-Andalus', driven by trade wealth, artistic patronage, scientific advances, and the dominance of Córdoba as Europe's greatest city.",
+    "fact_ids": [
+      "F022"
+    ]
   },
   {
     "id": 98,
@@ -1274,7 +1565,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "B",
     "quote": "Fernando III, the Saint, inherited the Kingdom of Castile from his mother and the Kingdom of Leon from his father.",
-    "explanation": "The source is specific about the direction of inheritance: Castile came from Fernando III's mother, and León from his father. Getting this the wrong way round is a common error."
+    "explanation": "The source is specific about the direction of inheritance: Castile came from Fernando III's mother, and León from his father. Getting this the wrong way round is a common error.",
+    "fact_ids": [
+      "F057"
+    ]
   },
   {
     "id": 99,
@@ -1287,7 +1581,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "Relations between the two were strained; the Arabs despised the Berbers, and this led to numerous civil wars between them.",
-    "explanation": "The source directly states that 'the Arabs despised the Berbers' — ethnic and social snobbery from the Arab conquerors towards their Berber allies led to serious internal conflict that nearly destroyed the early Emirate."
+    "explanation": "The source directly states that 'the Arabs despised the Berbers' — ethnic and social snobbery from the Arab conquerors towards their Berber allies led to serious internal conflict that nearly destroyed the early Emirate.",
+    "fact_ids": [
+      "F015"
+    ]
   },
   {
     "id": 100,
@@ -1300,7 +1597,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "Christians also found refuge in the Pyrenees. In this territory, they had to fight against the Franks in the north and the Muslims in the south.",
-    "explanation": "The eastern Christian kingdoms (Pamplona/Navarre, Aragon, and the Catalan Counties) all originated in the Pyrenees — a mountainous refuge that provided natural protection from both Muslim forces to the south and Frankish pressure from the north."
+    "explanation": "The eastern Christian kingdoms (Pamplona/Navarre, Aragon, and the Catalan Counties) all originated in the Pyrenees — a mountainous refuge that provided natural protection from both Muslim forces to the south and Frankish pressure from the north.",
+    "fact_ids": [
+      "F073"
+    ]
   },
   {
     "id": 101,
@@ -1313,7 +1613,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "upon his death, divided his possessions into three kingdoms for his three sons: Asturias, Galicia, and León.",
-    "explanation": "When Alfonso III died he split his realm among his three sons — Asturias, Galicia, and León — a practice common among medieval Iberian monarchs who treated their kingdom as personal property to be inherited."
+    "explanation": "When Alfonso III died he split his realm among his three sons — Asturias, Galicia, and León — a practice common among medieval Iberian monarchs who treated their kingdom as personal property to be inherited.",
+    "fact_ids": [
+      "F048"
+    ]
   },
   {
     "id": 102,
@@ -1326,7 +1629,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "Though vastly outnumbered, the Christians were able to defeat the Muslims because they possessed heavy cavalry and religious motivation.",
-    "explanation": "The source attributes the Christian victory at Las Navas de Tolosa (1212) specifically to two advantages: superior heavy cavalry and the crusading religious fervour following Pope Innocent III's call to arms."
+    "explanation": "The source attributes the Christian victory at Las Navas de Tolosa (1212) specifically to two advantages: superior heavy cavalry and the crusading religious fervour following Pope Innocent III's call to arms.",
+    "fact_ids": [
+      "F075"
+    ]
   },
   {
     "id": 103,
@@ -1339,7 +1645,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "During his reign, he conquered Salamanca, Avila, and Galicia.",
-    "explanation": "Ferdinand I, the first King of Castile and León, extended Christian territory by conquering Salamanca, Ávila, and Galicia — pushing the frontier southward and westward during his reign."
+    "explanation": "Ferdinand I, the first King of Castile and León, extended Christian territory by conquering Salamanca, Ávila, and Galicia — pushing the frontier southward and westward during his reign.",
+    "fact_ids": [
+      "F076"
+    ]
   },
   {
     "id": 104,
@@ -1352,7 +1661,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "After Charlemagne's death, the counts of the Marca Hispanica began to distance themselves from Frankish authority and become increasingly independent. This led to the creation of the Kingdom of Pamplona, the Counties of Aragon, and the Catalan Counties.",
-    "explanation": "The fragmentation of Carolingian authority after Charlemagne's death allowed the Marca Hispanica's counts to break free from Frankish control, ultimately giving rise to the Kingdom of Pamplona, the Counties of Aragon, and the Catalan Counties."
+    "explanation": "The fragmentation of Carolingian authority after Charlemagne's death allowed the Marca Hispanica's counts to break free from Frankish control, ultimately giving rise to the Kingdom of Pamplona, the Counties of Aragon, and the Catalan Counties.",
+    "fact_ids": [
+      "F073"
+    ]
   },
   {
     "id": 105,
@@ -1365,7 +1677,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "Later, in 1118, Alfonso I the Battler conquered the city of Zaragoza and made it his capital, expanding his territory as far as Teruel.",
-    "explanation": "After making Zaragoza his new capital in 1118, Alfonso I the Battler continued his southward push, expanding Aragonese territory as far as Teruel — a significant advance into former Muslim lands."
+    "explanation": "After making Zaragoza his new capital in 1118, Alfonso I the Battler continued his southward push, expanding Aragonese territory as far as Teruel — a significant advance into former Muslim lands.",
+    "fact_ids": [
+      "F065"
+    ]
   },
   {
     "id": 106,
@@ -1378,7 +1693,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "Upon the death of Alfonso VI, León and Castile separated.",
-    "explanation": "Despite Alfonso VI having ruled both León and Castile, they separated again on his death. It was not until Fernando III the Saint in the 13th century that the two crowns were definitively and permanently united."
+    "explanation": "Despite Alfonso VI having ruled both León and Castile, they separated again on his death. It was not until Fernando III the Saint in the 13th century that the two crowns were definitively and permanently united.",
+    "fact_ids": [
+      "F077"
+    ]
   },
   {
     "id": 107,
@@ -1391,7 +1709,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "When he died, his sons divided the territories into three: the Kingdom of Castile and León for Ferdinand, the Kingdom of Pamplona for Garcia Sanchez, and the Kingdom of Aragon for Ramiro I.",
-    "explanation": "Sancho III's death fractured his vast domain into three separate kingdoms: Castile and León went to Ferdinand (who became Ferdinand I), Pamplona to Garcia Sánchez, and Aragon to Ramiro I — reversing his life's work of unification."
+    "explanation": "Sancho III's death fractured his vast domain into three separate kingdoms: Castile and León went to Ferdinand (who became Ferdinand I), Pamplona to Garcia Sánchez, and Aragon to Ramiro I — reversing his life's work of unification.",
+    "fact_ids": [
+      "F078"
+    ]
   },
   {
     "id": 108,
@@ -1404,7 +1725,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "C",
     "quote": "from the 11th century onwards, pilgrimage routes were established leading from various points in Europe to Santiago de Compostela.",
-    "explanation": "Although the discovery of St. James's tomb was made during Alfonso II's reign in the 9th century, it was from the 11th century onwards that formal pilgrimage routes — the Camino de Santiago — were established connecting various European cities to Compostela."
+    "explanation": "Although the discovery of St. James's tomb was made during Alfonso II's reign in the 9th century, it was from the 11th century onwards that formal pilgrimage routes — the Camino de Santiago — were established connecting various European cities to Compostela.",
+    "fact_ids": [
+      "F047"
+    ]
   },
   {
     "id": 109,
@@ -1417,7 +1741,10 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "Al-Andalus became a province of the Umayyad Caliphate of Damascus, governed by an emir and with its capital in Cordoba.",
-    "explanation": "During the Dependent Emirate (711–756), Al-Andalus was a province of the Umayyad Caliphate, whose capital was Damascus. It was the Abbasid revolution of 750 that overthrew the Umayyads in Damascus and prompted Abd al-Rahman I to flee west."
+    "explanation": "During the Dependent Emirate (711–756), Al-Andalus was a province of the Umayyad Caliphate, whose capital was Damascus. It was the Abbasid revolution of 750 that overthrew the Umayyads in Damascus and prompted Abd al-Rahman I to flee west.",
+    "fact_ids": [
+      "F014"
+    ]
   },
   {
     "id": 110,
@@ -1430,6 +1757,9 @@ var QUIZ_QUESTIONS =
     },
     "answer": "D",
     "quote": "His power in al-Andalus resulted from placing his living relatives in positions of power and allying himself with Muladi...He also managed to pacify the interior and secure the borders thanks to his mercenary army, a strong administration, and the use of Islam as a unifying element amidst the ethnic diversity of Al-Andalus.",
-    "explanation": "Abd al-Rahman I built a stable independent emirate through a four-part strategy: dynastic appointments, alliance with native Iberian converts (Muladi), a professional mercenary army, and Islam as a common identity across the ethnically diverse population of Al-Andalus."
+    "explanation": "Abd al-Rahman I built a stable independent emirate through a four-part strategy: dynastic appointments, alliance with native Iberian converts (Muladi), a professional mercenary army, and Islam as a common identity across the ethnically diverse population of Al-Andalus.",
+    "fact_ids": [
+      "F018"
+    ]
   }
-];
+]

@@ -250,11 +250,39 @@
     } catch (_) { /* fail silently — local results are already saved */ }
   }
 
+  /* ── Question selection (no two questions share a fact) ────── */
+  function selectQuestions(pool, count) {
+    const shuffled = shuffle(pool);
+    const selected = [];
+    const usedFacts = new Set();
+
+    for (const q of shuffled) {
+      const factIds = q.fact_ids || [];
+      if (factIds.every(fid => !usedFacts.has(fid))) {
+        selected.push(q);
+        factIds.forEach(fid => usedFacts.add(fid));
+        if (selected.length === count) break;
+      }
+    }
+
+    // Fallback: if not enough non-overlapping questions, fill from remainder
+    if (selected.length < count) {
+      for (const q of shuffled) {
+        if (!selected.includes(q)) {
+          selected.push(q);
+          if (selected.length === count) break;
+        }
+      }
+    }
+
+    return selected;
+  }
+
   /* ── Quiz flow ──────────────────────────────────────────────── */
   function startQuiz() {
     playerName = (playerNameInput.value || '').trim() || 'Anonymous';
     localStorage.setItem(NAME_KEY, playerName);
-    selectedQuestions = shuffle(QUIZ_QUESTIONS).slice(0, QUESTIONS_PER_QUIZ);
+    selectedQuestions = selectQuestions(QUIZ_QUESTIONS, QUESTIONS_PER_QUIZ);
     currentIndex = 0;
     score = 0;
     wrongAnswers = [];
