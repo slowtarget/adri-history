@@ -21,6 +21,7 @@
     start:   document.getElementById('start-screen'),
     quiz:    document.getElementById('quiz-screen'),
     results: document.getElementById('results-screen'),
+    signin:  document.getElementById('signin-screen'),
   };
 
   const startBtn      = document.getElementById('start-btn');
@@ -45,6 +46,13 @@
   const inlineExplain     = document.getElementById('inline-explain');
   const inlineQuote       = document.getElementById('inline-quote');
   const inlineExplanation = document.getElementById('inline-explanation');
+
+  const googleSigninBtn = document.getElementById('google-signin-btn');
+  const githubSigninBtn = document.getElementById('github-signin-btn');
+  const signinError     = document.getElementById('signin-error');
+  const signedInBanner  = document.getElementById('signed-in-banner');
+  const signedInName    = document.getElementById('signed-in-name');
+  const signoutBtn      = document.getElementById('signout-btn');
 
   /* ── Utility ────────────────────────────────────────────────── */
   function shuffle(arr) {
@@ -497,7 +505,7 @@
   });
 
   /* ── Init ───────────────────────────────────────────────────── */
-  // Restore last-used name
+  // Restore last-used name (may be overridden by auth callback)
   const savedName = localStorage.getItem(NAME_KEY);
   if (savedName) playerNameInput.value = savedName;
 
@@ -506,6 +514,48 @@
     if (e.key === 'Enter') startQuiz();
   });
 
-  showScreen('start');
+  // Sign-in button handlers
+  if (googleSigninBtn) {
+    googleSigninBtn.addEventListener('click', function () {
+      signinError.classList.add('hidden');
+      QuizAuth.signInWithGoogle().catch(function (err) {
+        signinError.textContent = err.message;
+        signinError.classList.remove('hidden');
+      });
+    });
+  }
+
+  if (githubSigninBtn) {
+    githubSigninBtn.addEventListener('click', function () {
+      signinError.classList.add('hidden');
+      QuizAuth.signInWithGitHub().catch(function (err) {
+        signinError.textContent = err.message;
+        signinError.classList.remove('hidden');
+      });
+    });
+  }
+
+  if (signoutBtn) {
+    signoutBtn.addEventListener('click', function () { QuizAuth.signOut(); });
+  }
+
+  // Auth state drives which screen is shown.
+  // When not configured (FIREBASE_CONFIG: {}), onReady fires synchronously
+  // with (null, false) so local dev and Playwright tests work without auth.
+  QuizAuth.init(function (user, configured) {
+    if (!configured) {
+      showScreen('start');
+      return;
+    }
+    if (user) {
+      if (user.displayName) playerNameInput.value = user.displayName;
+      signedInName.textContent = 'Signed in as ' + (user.displayName || user.email);
+      signedInBanner.classList.remove('hidden');
+      showScreen('start');
+    } else {
+      signedInBanner.classList.add('hidden');
+      showScreen('signin');
+    }
+  });
 
 }());

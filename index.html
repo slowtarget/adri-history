@@ -9,6 +9,20 @@
 <body>
   <div id="app">
 
+    <!-- ── SIGN-IN SCREEN ── -->
+    <div id="signin-screen" class="screen hidden" data-screen="signin">
+      <div class="card">
+        <div class="hero-icon">⚔️</div>
+        <h1>Iberian History Quiz</h1>
+        <p class="subtitle">Sign in to continue</p>
+        <div class="signin-buttons">
+          <button id="google-signin-btn" class="btn btn-signin btn-google">Sign in with Google</button>
+          <button id="github-signin-btn" class="btn btn-signin btn-github">Sign in with GitHub</button>
+        </div>
+        <p id="signin-error" class="signin-error hidden"></p>
+      </div>
+    </div>
+
     <!-- ── START SCREEN ── -->
     <div id="start-screen" class="screen" data-screen="start">
       <div class="card">
@@ -19,6 +33,10 @@
           Test your knowledge of Al-Andalus, the Reconquista, and the Christian Kingdoms.<br />
           You'll get <strong>20 random questions</strong> each time — aim for 90%!
         </p>
+        <div id="signed-in-banner" class="signed-in-banner hidden">
+          <span id="signed-in-name"></span>
+          <button id="signout-btn" class="btn-signout">Sign out</button>
+        </div>
         <div class="name-field">
           <label for="player-name">Your name</label>
           <input type="text" id="player-name" data-testid="player-name"
@@ -89,8 +107,15 @@
 
   </div><!-- /#app -->
 
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"
+          integrity="sha384-Yc8S7M5AqMxCsAWTOKsQjTJn1Mhqc2vEcupY/bqmpnh7R+LzTlvRd8qxOjPOIJd4"
+          crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"
+          integrity="sha384-FTb8gp2JGNvBUJyPPIUh8DurVAJz6Kn2JH+kcadHlV14aKXe7fYDW9PlZXqWykFd"
+          crossorigin="anonymous"></script>
   <script src="vendor/zod.umd.js"></script>
   <script src="config.js"></script>
+  <script src="auth.js"></script>
   <script src="questions-data.js"></script>
   <script src="quiz.js"></script>
 </body>
