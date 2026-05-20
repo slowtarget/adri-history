@@ -42,6 +42,9 @@
   const wrongSection  = document.getElementById('wrong-answers-section');
   const wrongList     = document.getElementById('wrong-answers-list');
   const downloadBtn   = document.getElementById('download-csv-btn');
+  const inlineExplain     = document.getElementById('inline-explain');
+  const inlineQuote       = document.getElementById('inline-quote');
+  const inlineExplanation = document.getElementById('inline-explanation');
 
   /* ── Utility ────────────────────────────────────────────────── */
   function shuffle(arr) {
