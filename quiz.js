@@ -78,7 +78,7 @@
   }
 
   /* ── Zod schemas ────────────────────────────────────────────── */
-  const z = window.Zod.z;
+  const z = (window.Zod && window.Zod.z) ? window.Zod.z : null;
 
   // Accepts any value → string, strips HTML & control chars, caps length.
   const safeStr = function (maxLen) {
@@ -254,6 +254,9 @@
 
   function renderQuestion() {
     answered = false;
+    inlineExplain.classList.add('hidden');
+    inlineQuote.textContent = '';
+    inlineExplanation.textContent = '';
     const q = selectedQuestions[currentIndex];
     const num = currentIndex + 1;
 
@@ -311,6 +314,11 @@
     window._quizState.lastAnswerCorrect = isCorrect;
 
     if (!isCorrect) {
+      if (q.quote || q.explanation) {
+        inlineQuote.textContent = q.quote ? '\u201c' + q.quote + '\u201d' : '';
+        inlineExplanation.textContent = q.explanation || '';
+        inlineExplain.classList.remove('hidden');
+      }
       wrongAnswers.push({
         question:    q.question,
         yourKey:     selectedKey,
@@ -360,62 +368,74 @@
 
     /* wrong answers list — built with textContent only (no innerHTML) */
     wrongList.innerHTML = '';
-    if (wrongAnswers.length > 0) {
-      wrongAnswers.forEach(function (w) {
-        const parsed = wrongAnswerSchema.safeParse(w);
-        if (!parsed.success) return;
-        const d = parsed.data;
 
-        const li = document.createElement('li');
-        li.className = 'wrong-item';
+    function renderWrongItem(d) {
+      const li = document.createElement('li');
+      li.className = 'wrong-item';
 
-        const qSpan = document.createElement('span');
-        qSpan.className = 'wrong-q';
-        qSpan.textContent = d.question;
+      const qSpan = document.createElement('span');
+      qSpan.className = 'wrong-q';
+      qSpan.textContent = d.question;
 
-        const yourSpan = document.createElement('span');
-        yourSpan.className = 'wrong-ans';
-        yourSpan.textContent = 'Your answer: ' + d.yourKey + ') ' + d.yourText;
+      const yourSpan = document.createElement('span');
+      yourSpan.className = 'wrong-ans';
+      yourSpan.textContent = 'Your answer: ' + d.yourKey + ') ' + d.yourText;
 
-        const correctSpan = document.createElement('span');
-        correctSpan.className = 'correct-ans';
-        correctSpan.textContent = 'Correct answer: ' + d.correctKey + ') ' + d.correctText;
+      const correctSpan = document.createElement('span');
+      correctSpan.className = 'correct-ans';
+      correctSpan.textContent = 'Correct answer: ' + d.correctKey + ') ' + d.correctText;
 
-        li.appendChild(qSpan);
-        li.appendChild(yourSpan);
-        li.appendChild(correctSpan);
+      li.appendChild(qSpan);
+      li.appendChild(yourSpan);
+      li.appendChild(correctSpan);
 
-        if (d.quote || d.explanation) {
-          const toggleBtn = document.createElement('button');
-          toggleBtn.className = 'explain-btn';
-          toggleBtn.textContent = '📖 Show source';
+      if (d.quote || d.explanation) {
+        const toggleBtn = document.createElement('button');
+        toggleBtn.className = 'explain-btn';
+        toggleBtn.textContent = '📖 Show source';
 
-          const explainDiv = document.createElement('div');
-          explainDiv.className = 'explain-box hidden';
+        const explainDiv = document.createElement('div');
+        explainDiv.className = 'explain-box hidden';
 
-          if (d.quote) {
-            const quoteP = document.createElement('p');
-            quoteP.className = 'explain-quote';
-            quoteP.textContent = '\u201c' + d.quote + '\u201d';
-            explainDiv.appendChild(quoteP);
-          }
-          if (d.explanation) {
-            const explainP = document.createElement('p');
-            explainP.className = 'explain-text';
-            explainP.textContent = d.explanation;
-            explainDiv.appendChild(explainP);
-          }
-
-          toggleBtn.addEventListener('click', function () {
-            const hidden = explainDiv.classList.toggle('hidden');
-            toggleBtn.textContent = hidden ? '📖 Show source' : '📖 Hide source';
-          });
-
-          li.appendChild(toggleBtn);
-          li.appendChild(explainDiv);
+        if (d.quote) {
+          const quoteP = document.createElement('p');
+          quoteP.className = 'explain-quote';
+          quoteP.textContent = '\u201c' + d.quote + '\u201d';
+          explainDiv.appendChild(quoteP);
+        }
+        if (d.explanation) {
+          const explainP = document.createElement('p');
+          explainP.className = 'explain-text';
+          explainP.textContent = d.explanation;
+          explainDiv.appendChild(explainP);
         }
 
-        wrongList.appendChild(li);
+        toggleBtn.addEventListener('click', function () {
+          const hidden = explainDiv.classList.toggle('hidden');
+          toggleBtn.textContent = hidden ? '📖 Show source' : '📖 Hide source';
+        });
+
+        li.appendChild(toggleBtn);
+        li.appendChild(explainDiv);
+      }
+
+      wrongList.appendChild(li);
+    }
+
+    if (wrongAnswers.length > 0) {
+      wrongAnswers.forEach(function (w) {
+        if (!z) {
+          /* Zod not available (file:// origin) — render without validation */
+          renderWrongItem(w);
+          return;
+        }
+        const parsed = wrongAnswerSchema.safeParse(w);
+        if (!parsed.success) {
+          console.warn('[quiz] wrongAnswer parse failed:', parsed.error?.issues);
+          return;
+        }
+        const d = parsed.data;
+        renderWrongItem(d);
       });
       wrongSection.classList.remove('hidden');
     } else {
