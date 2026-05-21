@@ -14,7 +14,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "3rd century",
       "4th century",
-      "6th century"
+      "6th century",
+      "7th century"
     ]
   },
   {
@@ -29,7 +30,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The Visigoths defeated the Franks",
       "The Byzantines defeated the Visigoths",
-      "The Visigoths conquered all of Gaul"
+      "The Visigoths conquered all of Gaul",
+      "The Visigoths and Franks agreed to share Gaul peacefully"
     ]
   },
   {
@@ -44,7 +46,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Seville",
       "Córdoba",
-      "Barcelona"
+      "Barcelona",
+      "Zaragoza"
     ]
   },
   {
@@ -59,7 +62,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Leovigild",
       "Alaric II",
-      "Witiza"
+      "Witiza",
+      "Rodrigo"
     ]
   },
   {
@@ -74,7 +78,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Electing a new Visigothic king",
       "Signing a peace treaty with the Franks",
-      "Establishing trade with the Byzantine Empire"
+      "Establishing trade with the Byzantine Empire",
+      "Establishing a new legal code for all Iberians"
     ]
   },
   {
@@ -89,7 +94,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "A form of Sunni Islam",
       "A branch of Judaism",
-      "A type of paganism"
+      "A type of paganism",
+      "A Christian sect that worshipped multiple gods"
     ]
   },
   {
@@ -104,7 +110,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Hereditary succession (father to son)",
       "Appointed by the Pope",
-      "Won by military conquest"
+      "Won by military conquest",
+      "Chosen by the Catholic Church"
     ]
   },
   {
@@ -119,7 +126,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Rodrigo",
       "Reccared",
-      "Leovigild"
+      "Leovigild",
+      "Alaric II"
     ]
   },
   {
@@ -134,7 +142,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "507",
       "589",
-      "722"
+      "722",
+      "700"
     ]
   },
   {
@@ -149,7 +158,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Musa",
       "Abd al-Rahman I",
-      "Almanzor"
+      "Almanzor",
+      "Abd al-Rahman III"
     ]
   },
   {
@@ -164,7 +174,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Tariq",
       "Abd al-Rahman I",
-      "Al-Hakam II"
+      "Al-Hakam II",
+      "Almanzor"
     ]
   },
   {
@@ -179,7 +190,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "It survived in the mountains of the north",
       "It became part of the Byzantine Empire",
-      "It merged with the Frankish Kingdom"
+      "It merged with the Frankish Kingdom",
+      "It was reorganised as a vassal state under Muslim rule"
     ]
   },
   {
@@ -194,7 +206,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "711",
       "732",
-      "756"
+      "756",
+      "718"
     ]
   },
   {
@@ -209,7 +222,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Alfonso I",
       "Tariq",
-      "Roderic"
+      "Roderic",
+      "Musa"
     ]
   },
   {
@@ -224,7 +238,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Berber",
       "Arab",
-      "Basque"
+      "Basque",
+      "Frankish"
     ]
   },
   {
@@ -239,7 +254,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "722",
       "756",
-      "778"
+      "778",
+      "742"
     ]
   },
   {
@@ -254,7 +270,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The Visigoths",
       "The Astures",
-      "The Byzantines"
+      "The Byzantines",
+      "The Normans"
     ]
   },
   {
@@ -269,7 +286,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Toledo",
       "Seville",
-      "Granada"
+      "Granada",
+      "Zaragoza"
     ]
   },
   {
@@ -284,7 +302,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Arabs and Turks",
       "Berbers and Persians",
-      "Moors and Saracens"
+      "Moors and Saracens",
+      "Egyptians and Syrians"
     ]
   },
   {
@@ -299,7 +318,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "700–750",
       "756–929",
-      "929–1031"
+      "929–1031",
+      "711–800"
     ]
   },
   {
@@ -314,7 +334,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Hisham II",
       "Almanzor",
-      "Musa"
+      "Musa",
+      "Al-Hakam II"
     ]
   },
   {
@@ -329,7 +350,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "He was exiled by the Umayyad caliph",
       "He was defeated in battle",
-      "He sought new lands to conquer"
+      "He sought new lands to conquer",
+      "He was invited by the Berbers of Al-Andalus to lead them"
     ]
   },
   {
@@ -344,7 +366,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "North African Berbers",
       "Arab traders",
-      "Byzantine soldiers"
+      "Byzantine soldiers",
+      "Jewish merchants who converted to Islam"
     ]
   },
   {
@@ -359,7 +382,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "756",
       "850",
-      "1031"
+      "1031",
+      "902"
     ]
   },
   {
@@ -374,7 +398,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Abd al-Rahman I",
       "Al-Hakam II",
-      "Almanzor"
+      "Almanzor",
+      "Hisham II"
     ]
   },
   {
@@ -389,7 +414,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Alhambra",
       "Alcázar",
-      "El Escorial"
+      "El Escorial",
+      "Giralda"
     ]
   },
   {
@@ -404,7 +430,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Ottoman and Persian Empires",
       "Abbasid Caliphate and Frankish Empire",
-      "Egyptian and Moroccan kingdoms"
+      "Egyptian and Moroccan kingdoms",
+      "Kingdom of France and Republic of Venice"
     ]
   },
   {
@@ -419,7 +446,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The last caliph of Córdoba",
       "The founder of the Nasrid Kingdom",
-      "The governor of the Dependent Emirate"
+      "The governor of the Dependent Emirate",
+      "The commander of the Almoravid armies"
     ]
   },
   {
@@ -434,7 +462,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "32",
       "42",
-      "62"
+      "62",
+      "72"
     ]
   },
   {
@@ -449,7 +478,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The Great",
       "The Wise",
-      "The Defender"
+      "The Defender",
+      "The Conqueror"
     ]
   },
   {
@@ -464,7 +494,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "He rebuilt it in Muslim style",
       "He converted it into a mosque",
-      "He taxed its pilgrims heavily"
+      "He taxed its pilgrims heavily",
+      "He stole its treasury and deported its clergy"
     ]
   },
   {
@@ -479,7 +510,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Gold and silver from the altar",
       "Sacred manuscripts",
-      "The church's stained-glass windows"
+      "The church's stained-glass windows",
+      "The carved stone columns of the cathedral"
     ]
   },
   {
@@ -494,7 +526,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "929",
       "985",
-      "1085"
+      "1085",
+      "1000"
     ]
   },
   {
@@ -509,7 +542,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Religious ceremonies in Al-Andalus",
       "Military units of the Taifa kings",
-      "Trade agreements between Muslims and Christians"
+      "Trade agreements between Muslims and Christians",
+      "Diplomatic gifts exchanged between Christian and Muslim rulers"
     ]
   },
   {
@@ -524,7 +558,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Fernando III",
       "Alfonso VIII",
-      "Sancho III"
+      "Sancho III",
+      "Fernán González"
     ]
   },
   {
@@ -539,7 +574,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Expand trade with Europe",
       "Ally with the Christian kingdoms",
-      "Create a secular state"
+      "Create a secular state",
+      "Establish an Iberian empire under direct caliphal authority from Marrakesh"
     ]
   },
   {
@@ -554,7 +590,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "1085",
       "1095",
-      "1125"
+      "1125",
+      "1090"
     ]
   },
   {
@@ -569,7 +606,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Muslim converts to Christianity",
       "Jewish traders living in Al-Andalus",
-      "Berber soldiers who converted to Christianity"
+      "Berber soldiers who converted to Christianity",
+      "Muslim scholars who studied in Christian monasteries"
     ]
   },
   {
@@ -584,7 +622,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Alfonso VI",
       "Fernando III",
-      "Pelayo"
+      "Pelayo",
+      "Alfonso VIII"
     ]
   },
   {
@@ -599,7 +638,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "1085",
       "1125",
-      "1195"
+      "1195",
+      "1150"
     ]
   },
   {
@@ -614,7 +654,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "1085",
       "1125",
-      "1145"
+      "1145",
+      "1200"
     ]
   },
   {
@@ -629,7 +670,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Castile",
       "Aragon",
-      "Navarre"
+      "Navarre",
+      "The Almoravids"
     ]
   },
   {
@@ -644,7 +686,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "1085",
       "1195",
-      "1238"
+      "1238",
+      "1225"
     ]
   },
   {
@@ -659,7 +702,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Alfonso VI",
       "Fernando III",
-      "Alfonso X"
+      "Alfonso X",
+      "Alfonso IX"
     ]
   },
   {
@@ -674,7 +718,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Teutonic and Dominican",
       "Franciscan and Augustinian",
-      "Benedictine and Cistercian"
+      "Benedictine and Cistercian",
+      "Hospitallers and Teutonic only"
     ]
   },
   {
@@ -689,7 +734,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "1212",
       "1350",
-      "1450"
+      "1450",
+      "1480"
     ]
   },
   {
@@ -704,7 +750,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Almanzor",
       "Abd al-Rahman III",
-      "Hisham II"
+      "Hisham II",
+      "Muhammad al-Zagal"
     ]
   },
   {
@@ -719,7 +766,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "December 25, 1491",
       "March 15, 1492",
-      "October 12, 1492"
+      "October 12, 1492",
+      "November 30, 1491"
     ]
   },
   {
@@ -734,7 +782,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The Muslim conquest of the Iberian Peninsula",
       "The unification of the Christian kingdoms",
-      "The expulsion of Jews from Iberia"
+      "The expulsion of Jews from Iberia",
+      "The papal crusade against the Moors ordered by Pope Urban II"
     ]
   },
   {
@@ -749,7 +798,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "507–1212",
       "722–1085",
-      "756–1238"
+      "756–1238",
+      "711–1350"
     ]
   },
   {
@@ -764,7 +814,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Alfonso I",
       "Alfonso II",
-      "Ordoño II"
+      "Ordoño II",
+      "Alfonso III"
     ]
   },
   {
@@ -779,7 +830,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Oviedo",
       "León",
-      "Burgos"
+      "Burgos",
+      "Santiago de Compostela"
     ]
   },
   {
@@ -794,7 +846,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Pelayo",
       "Alfonso II",
-      "Alfonso III"
+      "Alfonso III",
+      "Fernán González"
     ]
   },
   {
@@ -809,7 +862,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Alfonso I",
       "Alfonso III",
-      "Ordoño II"
+      "Ordoño II",
+      "Pelayo"
     ]
   },
   {
@@ -824,7 +878,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "A castle to defend the tomb",
       "A university",
-      "A royal palace"
+      "A royal palace",
+      "A monastery to house Benedictine monks"
     ]
   },
   {
@@ -839,7 +894,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Alfonso I",
       "Alfonso II",
-      "Ordoño II"
+      "Ordoño II",
+      "Ramiro II"
     ]
   },
   {
@@ -854,7 +910,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Alfonso I",
       "Alfonso II",
-      "Alfonso III"
+      "Alfonso III",
+      "Alfonso IV"
     ]
   },
   {
@@ -869,7 +926,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "It had many rivers",
       "Its founder was named Castillo",
-      "It was the centre of trade"
+      "It was the centre of trade",
+      "The land was first cultivated by Roman legions"
     ]
   },
   {
@@ -884,7 +942,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Sancho III",
       "Ferdinand I",
-      "Alfonso VI"
+      "Alfonso VI",
+      "Ordoño II"
     ]
   },
   {
@@ -899,7 +958,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "891–930",
       "970–1010",
-      "1010–1050"
+      "1010–1050",
+      "940–980"
     ]
   },
   {
@@ -914,7 +974,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Alfonso VI",
       "Ordoño II",
-      "Almanzor"
+      "Almanzor",
+      "Fernando III the Saint"
     ]
   },
   {
@@ -929,7 +990,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Alfonso VI",
       "Fernando III",
-      "Sancho III"
+      "Sancho III",
+      "Ordoño II"
     ]
   },
   {
@@ -944,7 +1006,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Isabella of Castile",
       "Jimena",
-      "Sancha"
+      "Sancha",
+      "Berenguela of Castile"
     ]
   },
   {
@@ -959,7 +1022,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "1085",
       "1112",
-      "1145"
+      "1145",
+      "1139"
     ]
   },
   {
@@ -974,7 +1038,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Fernando III",
       "Sancho VII",
-      "Alfonso VIII"
+      "Alfonso VIII",
+      "Alfonso IX of León"
     ]
   },
   {
@@ -989,7 +1054,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "711",
       "722",
-      "824"
+      "824",
+      "800"
     ]
   },
   {
@@ -1004,7 +1070,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Muslims",
       "Visigoths",
-      "Berbers"
+      "Berbers",
+      "Catalans"
     ]
   },
   {
@@ -1019,7 +1086,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "El Cantar de Mio Cid",
       "The Iliad",
-      "The Song of the Nibelungs"
+      "The Song of the Nibelungs",
+      "Beowulf"
     ]
   },
   {
@@ -1034,7 +1102,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "A Muslim trade route through the Pyrenees",
       "A Visigothic border fortress",
-      "The pilgrim road to Santiago de Compostela"
+      "The pilgrim road to Santiago de Compostela",
+      "A chain of fortified monasteries built by Benedict of Aniane"
     ]
   },
   {
@@ -1049,7 +1118,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "778",
       "800",
-      "850"
+      "850",
+      "831"
     ]
   },
   {
@@ -1064,7 +1134,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "1085",
       "1118",
-      "1145"
+      "1145",
+      "1200"
     ]
   },
   {
@@ -1079,7 +1150,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Sancho III",
       "Garcia Sánchez",
-      "Sancho VII"
+      "Sancho VII",
+      "Ramiro I of Navarre"
     ]
   },
   {
@@ -1094,7 +1166,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Sancho VI",
       "Garcia Sánchez",
-      "Sancho VII"
+      "Sancho VII",
+      "Ferdinand I of Castile"
     ]
   },
   {
@@ -1109,7 +1182,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "By military conquest",
       "He inherited it from his father",
-      "He purchased it from the King of León"
+      "He purchased it from the King of León",
+      "He was appointed regent by the Count of Castile on his deathbed"
     ]
   },
   {
@@ -1124,7 +1198,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Fernando III",
       "Alfonso VI",
-      "Sancho III"
+      "Sancho III",
+      "Pedro I of Aragon"
     ]
   },
   {
@@ -1139,7 +1214,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Zaragoza",
       "Pamplona",
-      "Barcelona"
+      "Barcelona",
+      "Huesca"
     ]
   },
   {
@@ -1154,7 +1230,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Fernando III inherited Aragon",
       "Castile absorbed Aragon",
-      "The Almohads conquered Aragon"
+      "The Almohads conquered Aragon",
+      "The Kingdom of Aragon was absorbed into the Crown of Castile"
     ]
   },
   {
@@ -1169,7 +1246,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Fernando de Castilla",
       "Alfonso de León",
-      "Sancho de Navarre"
+      "Sancho de Navarre",
+      "García de Burgos"
     ]
   },
   {
@@ -1184,7 +1262,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The Song of Roland",
       "The Iliad",
-      "The Aeneid"
+      "The Aeneid",
+      "The Divine Comedy"
     ]
   },
   {
@@ -1199,7 +1278,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Toledo",
       "Córdoba",
-      "Zaragoza"
+      "Zaragoza",
+      "Almería"
     ]
   },
   {
@@ -1214,7 +1294,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Alfonso VI",
       "His son Rodrigo",
-      "The Almohads"
+      "The Almohads",
+      "The Almoravids immediately took control"
     ]
   },
   {
@@ -1229,7 +1310,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "1094",
       "1098",
-      "1112"
+      "1112",
+      "1105"
     ]
   },
   {
@@ -1244,7 +1326,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Abd al-Rahman III",
       "Almanzor",
-      "Fernando III"
+      "Fernando III",
+      "Count Fernán González of Castile"
     ]
   },
   {
@@ -1259,7 +1342,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Alfonso VI",
       "Alfonso VIII",
-      "Ferdinand I"
+      "Ferdinand I",
+      "Alfonso IX of León"
     ]
   },
   {
@@ -1274,7 +1358,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Toledo and Seville",
       "Granada and Córdoba",
-      "Salamanca and Ávila"
+      "Salamanca and Ávila",
+      "Zaragoza and Pamplona"
     ]
   },
   {
@@ -1289,7 +1374,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Alfonso I the Battler",
       "Ramiro I",
-      "Sancho III"
+      "Sancho III",
+      "James I of Aragon"
     ]
   },
   {
@@ -1304,7 +1390,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Sancho III",
       "Sancho VI",
-      "Garcia Sánchez"
+      "Garcia Sánchez",
+      "Sancho IV"
     ]
   },
   {
@@ -1319,7 +1406,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The Franks actively supported the invasion",
       "Byzantine forces aided the Muslims",
-      "The Visigoths voluntarily surrendered"
+      "The Visigoths voluntarily surrendered",
+      "Famine had weakened the Visigothic population for years"
     ]
   },
   {
@@ -1334,7 +1422,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "It was the headquarters of the Catholic Church",
       "It had the largest army in Europe",
-      "It was protected by the strongest walls in the world"
+      "It was protected by the strongest walls in the world",
+      "It was the birthplace of Islam in the West"
     ]
   },
   {
@@ -1349,7 +1438,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The Christian kingdoms conquered it directly in battle",
       "The Almoravids overthrew it",
-      "Economic collapse caused by trade disruption"
+      "Economic collapse caused by trade disruption",
+      "The Abbasid caliph of Baghdad reasserted his authority and deposed the Cordoban caliph"
     ]
   },
   {
@@ -1364,7 +1454,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "They caused revolts within the Taifa kingdoms",
       "The money was used to build churches",
-      "They helped fund the Crusades in the Holy Land"
+      "They helped fund the Crusades in the Holy Land",
+      "It allowed Christian kings to hire mercenary armies from France"
     ]
   },
   {
@@ -1379,7 +1470,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "It had the most powerful army in Iberia",
       "It allied with the Ottoman Empire",
-      "Christians were not interested in it"
+      "Christians were not interested in it",
+      "Its population converted to Christianity en masse, making it unthreatening"
     ]
   },
   {
@@ -1394,7 +1486,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Alfonso VIII",
       "Alfonso X",
-      "Ferdinand I"
+      "Ferdinand I",
+      "Alfonso IX of León"
     ]
   },
   {
@@ -1409,7 +1502,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "It was used to move armies against Al-Andalus",
       "It was a trade route to Africa",
-      "It was a military road built by the Romans"
+      "It was a military road built by the Romans",
+      "It was used exclusively for transporting tribute gold from the Taifa kingdoms"
     ]
   },
   {
@@ -1424,7 +1518,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Witiza and Rodrigo",
       "Alaric II and Reccared",
-      "Leovigild and Witiza"
+      "Leovigild and Witiza",
+      "Alaric II and Leovigild"
     ]
   },
   {
@@ -1439,7 +1534,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "They were Arab merchants who funded the Arista dynasty",
       "They were Berber soldiers who helped the Franks",
-      "They were Jewish scholars at the Pamplona court"
+      "They were Jewish scholars at the Pamplona court",
+      "A dynasty of converted Franks who governed the upper Pyrenees"
     ]
   },
   {
@@ -1454,7 +1550,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The Age of Conquest",
       "The Dark Age of Al-Andalus",
-      "The Age of the Crusades"
+      "The Age of the Crusades",
+      "The Age of Taifas"
     ]
   },
   {
@@ -1469,7 +1566,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Castile from his father, León from his mother",
       "Aragon and Castile",
-      "León and Navarre"
+      "León and Navarre",
+      "Both Castile and León from his mother Queen Berenguela"
     ]
   },
   {
@@ -1484,7 +1582,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "They followed different versions of Islam",
       "The Berbers wanted to return to North Africa",
-      "They argued over control of trade routes"
+      "They argued over control of trade routes",
+      "The Berbers refused to follow Arab military commanders"
     ]
   },
   {
@@ -1499,7 +1598,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The Cantabrian Mountains",
       "The Meseta Central",
-      "The Guadalquivir Valley"
+      "The Guadalquivir Valley",
+      "The Ebro Valley"
     ]
   },
   {
@@ -1514,7 +1614,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Castile, León, and Navarre",
       "León, Portugal, and Galicia",
-      "Castile, Galicia, and Aragon"
+      "Castile, Galicia, and Aragon",
+      "Asturias, Castile, and León"
     ]
   },
   {
@@ -1529,7 +1630,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The Almohads were weakened by a plague",
       "They bribed senior Almohad commanders before the battle",
-      "They attacked at night, catching the Almohads off guard"
+      "They attacked at night, catching the Almohads off guard",
+      "The Almohad commander fled the battlefield at the outset"
     ]
   },
   {
@@ -1544,7 +1646,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Córdoba, Seville, and Toledo",
       "Zaragoza, Pamplona, and Barcelona",
-      "Coimbra, Porto, and Oviedo"
+      "Coimbra, Porto, and Oviedo",
+      "Toledo, Badajoz, and Mérida"
     ]
   },
   {
@@ -1559,7 +1662,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "They remained loyal to the Franks for centuries",
       "They allied with the Muslims against León",
-      "They converted to Islam and integrated into Al-Andalus"
+      "They converted to Islam and integrated into Al-Andalus",
+      "They became vassals of the Pope and formed the Papal States of Iberia"
     ]
   },
   {
@@ -1574,7 +1678,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "As far as Valencia",
       "As far as Almería",
-      "As far as Córdoba"
+      "As far as Córdoba",
+      "Lleida (Lérida)"
     ]
   },
   {
@@ -1589,7 +1694,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "They were permanently united under a single crown",
       "They were conquered by the Almohads",
-      "They were absorbed into the Kingdom of Portugal"
+      "They were absorbed into the Kingdom of Portugal",
+      "Were divided between Queen Urraca's two rival sons"
     ]
   },
   {
@@ -1604,7 +1710,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Kingdom of Navarre for Ferdinand, Kingdom of Aragon for Garcia Sánchez, County of Castile for Ramiro I",
       "Kingdom of León for Ferdinand, Kingdom of Pamplona for Ramiro I, Kingdom of Aragon for Garcia Sánchez",
-      "Kingdom of Aragon for Ferdinand, Kingdom of Navarre for Garcia Sánchez, Kingdom of Castile for Ramiro I"
+      "Kingdom of Aragon for Ferdinand, Kingdom of Navarre for Garcia Sánchez, Kingdom of Castile for Ramiro I",
+      "Kingdom of León for Ferdinand, Kingdom of Castile for Garcia Sánchez, Kingdom of Aragon for Ramiro I"
     ]
   },
   {
@@ -1619,7 +1726,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "From the 9th century onwards",
       "From the 10th century onwards",
-      "From the 12th century onwards"
+      "From the 12th century onwards",
+      "From the 13th century onwards"
     ]
   },
   {
@@ -1634,7 +1742,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The Abbasid Caliphate of Baghdad",
       "The Fatimid Caliphate of Cairo",
-      "The Ottoman Caliphate of Constantinople"
+      "The Ottoman Caliphate of Constantinople",
+      "The Mamluk Sultanate of Egypt"
     ]
   },
   {
@@ -1649,7 +1758,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "He formed a military alliance with the Franks and the Byzantine Empire",
       "He conquered North Africa to secure reinforcements",
-      "He converted to Christianity to gain support from Iberian nobles"
+      "He converted to Christianity to gain support from Iberian nobles",
+      "He declared himself caliph and broke all ties with the Abbasid caliphate"
     ]
   },
   {
@@ -1664,7 +1774,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "One year",
       "Ten years",
-      "Twenty-five years"
+      "Twenty-five years",
+      "Five years"
     ]
   },
   {
@@ -1679,7 +1790,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Son of an Arab general and a Berber princess",
       "Son of a Berber merchant and an Andalusian noblewoman",
-      "Son of the Abbasid caliph and a Spanish captive"
+      "Son of the Abbasid caliph and a Spanish captive",
+      "Son of Abd al-Rahman II and his favourite Andalusian wife"
     ]
   },
   {
@@ -1694,7 +1806,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "They wanted to convert the Visigoths to Islam",
       "They hoped to establish a joint Visigothic-Muslim kingdom",
-      "They needed Muslim troops to defend against a Frankish invasion"
+      "They needed Muslim troops to defend against a Frankish invasion",
+      "Witiza himself wanted to convert to Islam and sought Muslim allies"
     ]
   },
   {
@@ -1709,7 +1822,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "He surrendered and was taken prisoner",
       "He escaped to the northern mountains and led resistance",
-      "He converted to Islam and became a governor"
+      "He converted to Islam and became a governor",
+      "He drowned while fleeing across the Guadalquivir river"
     ]
   },
   {
@@ -1724,7 +1838,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The Baetic Mountains and the Tagus Valley",
       "The Meseta Plateau and the Guadalquivir Valley",
-      "The Ebro Valley and the Atlantic coast"
+      "The Ebro Valley and the Atlantic coast",
+      "The Sierra Nevada and the Atlantic coast of Galicia"
     ]
   },
   {
@@ -1739,7 +1854,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "A large Frankish invasion from the north",
       "A plague that decimated the Muslim garrison",
-      "The assassination of the ruling emir by Abbasid agents"
+      "The assassination of the ruling emir by Abbasid agents",
+      "A severe famine caused by drought across the entire Iberian Peninsula"
     ]
   },
   {
@@ -1754,7 +1870,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The Mozarabs (Christians living under Muslim rule)",
       "The Sephardim (Iberian Jews)",
-      "The Dhimmis (non-Muslim subjects)"
+      "The Dhimmis (non-Muslim subjects)",
+      "The Kharijite rebels who opposed the Abbasids"
     ]
   },
   {
@@ -1769,7 +1886,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "He conquered the Kingdom of Asturias",
       "He defeated the Franks at the Battle of Poitiers",
-      "He expelled the Almoravids from Al-Andalus"
+      "He expelled the Almoravids from Al-Andalus",
+      "He destroyed the city of León and forced Christians back to the Cantabrian coast"
     ]
   },
   {
@@ -1784,7 +1902,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The Alhambra Palace",
       "The Cathedral of Seville",
-      "The Palace of Medina Azahara"
+      "The Palace of Medina Azahara",
+      "The Great Mosque of Damascus"
     ]
   },
   {
@@ -1799,7 +1918,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Almanzor, then Abd al-Rahman IV",
       "Hisham II directly, then the last Umayyad caliph",
-      "Al-Mansur, then Abd al-Rahman V"
+      "Al-Mansur, then Abd al-Rahman V",
+      "Al-Hakam II, then Almanzor as regent-caliph"
     ]
   },
   {
@@ -1814,7 +1934,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "His vast wealth and diplomatic cunning",
       "His alliance with the Byzantine Empire",
-      "His ability to forge alliances with Christian kingdoms"
+      "His ability to forge alliances with Christian kingdoms",
+      "His betrayal of the Almoravid dynasty and seizure of Córdoba"
     ]
   },
   {
@@ -1829,7 +1950,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "They formed a unified confederation against the Christians",
       "They maintained peaceful relations and shared tribute revenues",
-      "They all submitted peacefully to the Kingdom of León"
+      "They all submitted peacefully to the Kingdom of León",
+      "They formed a league under the leadership of the Taifa of Seville"
     ]
   },
   {
@@ -1844,7 +1966,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Alfonso had promised them their own Christian kingdom within Al-Andalus",
       "The Almoravids refused to pay tribute to Aragon",
-      "The Almoravids had allied with the Kingdom of León against Aragon"
+      "The Almoravids had allied with the Kingdom of León against Aragon",
+      "The Almoravids had seized Mozarab property and enslaved their children"
     ]
   },
   {
@@ -1859,7 +1982,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Immediately after Las Navas de Tolosa, in 1212",
       "A century later, in 1312",
-      "Not until the 14th century, around 1350"
+      "Not until the 14th century, around 1350",
+      "In 1270, following the death of Fernando III the Saint"
     ]
   },
   {
@@ -1874,7 +1998,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The Mediterranean islands off the Iberian coast",
       "The southern coast near Gibraltar",
-      "Frankish territories north of the Pyrenees"
+      "Frankish territories north of the Pyrenees",
+      "The marshlands of the Guadalquivir Delta"
     ]
   },
   {
@@ -1889,7 +2014,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Consistently unified in a single Christian crusade against Al-Andalus",
       "Always at war with each other and never cooperating against the Muslims",
-      "Peaceful and stable, fighting only defensive wars against Muslim raids"
+      "Peaceful and stable, fighting only defensive wars against Muslim raids",
+      "Governed by a council of nobles who met annually to coordinate strategy"
     ]
   },
   {
@@ -1904,7 +2030,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Church law required equal inheritance for all the king's children",
       "Muslim rulers demanded the division of hostile kingdoms as a peace condition",
-      "The nobility forced kings to partition their lands to prevent any single heir from becoming too powerful"
+      "The nobility forced kings to partition their lands to prevent any single heir from becoming too powerful",
+      "Roman law required equal inheritance and could not be overridden by royal will"
     ]
   },
   {
@@ -1919,7 +2046,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "They launched raids during the Muslim holy month of Ramadan",
       "They formed a permanent military alliance with the Frankish Empire",
-      "They paid tribute to Muslim rulers in exchange for territorial concessions"
+      "They paid tribute to Muslim rulers in exchange for territorial concessions",
+      "They launched pre-emptive strikes whenever a new Muslim governor arrived in Al-Andalus"
     ]
   },
   {
@@ -1934,7 +2062,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "He abolished the system of counts and replaced them with bishops",
       "He established a parliament to limit royal authority",
-      "He peacefully unified the kingdoms of Asturias and León under one crown"
+      "He peacefully unified the kingdoms of Asturias and León under one crown",
+      "He established the first code of written laws for the Asturian kingdom"
     ]
   },
   {
@@ -1949,7 +2078,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "A series of famines weakened the Leonese army",
       "The Kingdom of Castile blocked Leonese southward routes",
-      "A Frankish invasion from the north forced León to fight on two fronts"
+      "A Frankish invasion from the north forced León to fight on two fronts",
+      "The establishment of a separate Leonese noble faction that opposed all southern expansion"
     ]
   },
   {
@@ -1964,7 +2094,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "They converted to Islam and no longer owed loyalty to León",
       "The king granted them formal independence as a reward for military service",
-      "They formed a military alliance with the Taifa kingdoms against León"
+      "They formed a military alliance with the Taifa kingdoms against León",
+      "They formed marriage alliances with Navarrese and Aragonese nobles"
     ]
   },
   {
@@ -1979,7 +2110,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "It had the largest population and most fertile agricultural land",
       "It was positioned furthest from Muslim raiding parties",
-      "It controlled the best ports on the Atlantic coast"
+      "It controlled the best ports on the Atlantic coast",
+      "It was the site of the most productive silver mines in northern Iberia"
     ]
   },
   {
@@ -1994,7 +2126,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "A series of internal Christian civil wars",
       "A crusade called by the Pope against Castile",
-      "The military resurgence of the surviving Taifa kingdoms"
+      "The military resurgence of the surviving Taifa kingdoms",
+      "A major famine devastated the Castilian army in 1091"
     ]
   },
   {
@@ -2009,7 +2142,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The Muslims, Navarre, and Aragon",
       "The Muslims, France, and the Holy Roman Empire",
-      "Castile, Portugal, and the Taifa kingdoms only"
+      "Castile, Portugal, and the Taifa kingdoms only",
+      "The Muslims, Navarre, and Portugal"
     ]
   },
   {
@@ -2024,7 +2158,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The Tagus Valley",
       "The Guadalquivir Valley",
-      "The Duero Valley"
+      "The Duero Valley",
+      "The Segre Valley"
     ]
   },
   {
@@ -2039,7 +2174,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "It was conquered by Aragon and ceased to exist as an independent kingdom",
       "It allied with the Almohads against the other Christian kingdoms",
-      "It was devastated by a series of plagues that destroyed its military capacity"
+      "It was devastated by a series of plagues that destroyed its military capacity",
+      "It was declared a protectorate of the Papacy, following French spiritual authority"
     ]
   },
   {
@@ -2054,7 +2190,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Two regions: Aragon and Navarre",
       "Four regions, including Catalonia",
-      "Five counties under separate Frankish governors"
+      "Five counties under separate Frankish governors",
+      "Two regions: the County of Aragon and the County of Sobrarbe only"
     ]
   },
   {
@@ -2069,7 +2206,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "Zaragoza",
       "Pamplona",
-      "Huesca"
+      "Huesca",
+      "Barbastro"
     ]
   },
   {
@@ -2084,7 +2222,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The Taifa of Valencia",
       "The Emirate of Almería",
-      "The Caliphate of Córdoba"
+      "The Caliphate of Córdoba",
+      "The Taifa of Murcia"
     ]
   },
   {
@@ -2099,7 +2238,8 @@ var QUIZ_QUESTIONS =
     "distractors": [
       "The March of Burgundy",
       "The March of Brittany",
-      "The Frankish Southern Frontier"
+      "The Frankish Southern Frontier",
+      "The Limes Hispanicus"
     ]
   }
 ]
