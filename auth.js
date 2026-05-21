@@ -15,12 +15,13 @@ var QuizAuth = (function () {
    */
   function init(onReady) {
     const cfg = (typeof QUIZ_CONFIG !== 'undefined' && QUIZ_CONFIG.FIREBASE_CONFIG) || {};
-    // Firebase Auth requires http/https — skip silently when opened as file://
-    if (!cfg.apiKey || location.protocol === 'file:') {
+    // Firebase Auth requires http/https — skip silently when opened as file:// or localhost
+    if (!cfg.apiKey || location.protocol === 'file:' || location.hostname === 'localhost') {
       onReady(null, false);
       return;
     }
-    firebase.initializeApp(cfg);
+    if (!firebase.apps.length) firebase.initializeApp(cfg);
+    // Skip auth for file:// and localhost — local dev / Playwright tests use local data
     firebase.auth().onAuthStateChanged(function (user) {
       _user = user;
       onReady(user, true);

@@ -70,7 +70,7 @@ async function playQuiz(page, pattern) {
 
 test('start screen is shown on load', async ({ page }) => {
   await openQuiz(page);
-  await expect(page.locator('h1')).toContainText('Iberian History Quiz');
+  await expect(page.locator('[data-screen="start"] h1')).toContainText('Iberian History Quiz');
   await expect(page.locator('[data-testid="start-btn"]')).toBeVisible();
 });
 
@@ -142,8 +142,8 @@ test('options are disabled after answering so double-click has no effect', async
   await openQuiz(page);
   await startQuiz(page);
   const key = await answerCorrectly(page);
-  // clicking again should not change score
-  await page.click(`[data-testid="option-${key}"]`);
+  // clicking again should not change score — force:true bypasses the disabled state check
+  await page.click(`[data-testid="option-${key}"]`, { force: true });
   const score = await page.evaluate(() => globalThis._quizState.score);
   expect(score).toBe(1);
 });
