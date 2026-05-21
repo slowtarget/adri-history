@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taxonomy Browser — Iberian History Quiz</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      min-height: 100vh;
+      padding: 1.5rem;
+    }
+
+    /* ── Header ── */
+    header {
+      max-width: 960px; margin: 0 auto 1.5rem;
+      display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+    }
+    header h1 { font-size: 1.4rem; }
+    .source-badge {
+      font-size: .75rem; padding: .2rem .6rem;
+      border-radius: 999px; font-weight: 600;
+    }
+    .badge-local    { background: #334155; color: #e2e8f0; }
+    .badge-firestore { background: #1e3a5f; color: #7dd3fc; }
+    .tab-row { display: flex; gap: .5rem; margin-left: auto; }
+    .tab {
+      padding: .4rem .9rem; border-radius: .4rem;
+      border: 1px solid #334155; background: transparent;
+      color: #94a3b8; font-size: .875rem; cursor: pointer;
+    }
+    .tab.active { background: #1e40af; border-color: #1e40af; color: #fff; }
+
+    /* ── Loading ── */
+    #loading {
+      text-align: center; padding: 4rem; color: #94a3b8;
+    }
+
+    /* ── Tree view ── */
+    #tree-view { max-width: 960px; margin: 0 auto; }
+
+    .era-block { margin-bottom: 2rem; }
+    .era-heading {
+      font-size: 1.1rem; font-weight: 700;
+      padding: .5rem .75rem; border-radius: .4rem;
+      background: #1e293b; cursor: pointer;
+      display: flex; align-items: center; gap: .5rem;
+      user-select: none;
+    }
+    .era-heading:hover { background: #263548; }
+    .era-arrow { font-size: .75rem; transition: transform .2s; }
+    .era-arrow.open { transform: rotate(90deg); }
+    .era-body { margin-left: 1.25rem; margin-top: .5rem; }
+
+    .period-block { margin-bottom: 1.25rem; }
+    .period-heading {
+      font-size: .95rem; font-weight: 600; color: #7dd3fc;
+      padding: .35rem .6rem; border-radius: .35rem;
+      background: #0f2238; cursor: pointer;
+      display: flex; align-items: center; gap: .4rem;
+      user-select: none;
+    }
+    .period-heading:hover { background: #153050; }
+    .period-arrow { font-size: .65rem; transition: transform .2s; }
+    .period-arrow.open { transform: rotate(90deg); }
+    .period-body { margin-left: 1rem; margin-top: .4rem; }
+
+    .fact-card {
+      background: #1e293b; border-radius: .5rem;
+      padding: .75rem 1rem; margin-bottom: .6rem;
+      border-left: 3px solid #334155;
+    }
+    .fact-card:hover { border-left-color: #3b82f6; }
+    .fact-id { font-size: .7rem; font-weight: 700; color: #475569; margin-bottom: .3rem; }
+    .fact-text { font-size: .875rem; line-height: 1.5; margin-bottom: .5rem; }
+    .fact-tags { display: flex; gap: .35rem; flex-wrap: wrap; margin-bottom: .5rem; }
+    .tag {
+      font-size: .7rem; padding: .15rem .45rem; border-radius: 999px;
+      font-weight: 600;
+    }
+    .tag-topic  { background: #1e3a5f; color: #7dd3fc; }
+    .tag-theme  { background: #1a3326; color: #4ade80; }
+    .tag-entity { background: #3b1f2b; color: #f9a8d4; }
+
+    .fact-questions { margin-top: .4rem; }
+    .questions-toggle {
+      font-size: .75rem; color: #64748b; background: none; border: none;
+      cursor: pointer; padding: 0; text-decoration: underline;
+    }
+    .questions-toggle:hover { color: #94a3b8; }
+    .questions-list { margin-top: .4rem; padding-left: 1rem; }
+    .question-item {
+      font-size: .8rem; color: #94a3b8; margin-bottom: .3rem;
+      list-style: disc; line-height: 1.4;
+    }
+    .question-answer { color: #4ade80; }
+
+    /* ── Graph view placeholder ── */
+    #graph-view {
+      max-width: 960px; margin: 0 auto;
+      display: none;
+    }
+    #graph-canvas {
+      width: 100%; height: 600px;
+      background: #1e293b; border-radius: .75rem;
+    }
+    .graph-legend {
+      display: flex; gap: 1.5rem; margin-top: 1rem;
+      font-size: .8rem; color: #94a3b8; flex-wrap: wrap;
+    }
+    .legend-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      display: inline-block; margin-right: .3rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🗺 Taxonomy Browser</h1>
+  <span id="source-badge" class="source-badge badge-local">local data</span>
+  <div class="tab-row">
+    <button class="tab active" id="tab-tree" onclick="showTab('tree')">Tree</button>
+    <button class="tab" id="tab-graph" onclick="showTab('graph')">Graph</button>
+  </div>
+</header>
+
+<div id="loading">Loading data…</div>
+<div id="tree-view"  style="display:none"></div>
+<div id="graph-view"></div>
+
+<!-- Firebase SDKs (only initialised if ?data=firestore) -->
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"
+        integrity="sha384-Yc8S7M5AqMxCsAWTOKsQjTJn1Mhqc2vEcupY/bqmpnh7R+LzTlvRd8qxOjPOIJd4"
+        crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"
+        integrity="sha384-FTb8gp2JGNvBUJyPPIUh8DurVAJz6Kn2JH+kcadHlV14aKXe7fYDW9PlZXqWykFd"
+        crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"
+        integrity="sha384-2BZtvXvD4QcYzi9Af11iIaNTFwvb2bhEbyml2rD0AE0kaG3Zkb10a4Q2XX8oiVBT"
+        crossorigin="anonymous"></script>
+<!-- Local data globals (used as fallback when not in Firestore mode) -->
+<script src="facts-data.js"></script>
+<script src="questions-data.js"></script>
+<script src="config.js"></script>
+
+<script>
+/* global firebase, QUIZ_CONFIG, QUIZ_FACTS, QUIZ_QUESTIONS */
+(function () {
+  'use strict';
+
+  var params        = new URLSearchParams(globalThis.location.search);
+  var firestoreMode = params.get('data') === 'firestore' && location.protocol !== 'file:';
+
+  /* ── Tab switching ── */
+  globalThis.showTab = function (name) {
+    document.getElementById('tab-tree').classList.toggle('active', name === 'tree');
+    document.getElementById('tab-graph').classList.toggle('active', name === 'graph');
+    document.getElementById('tree-view').style.display  = name === 'tree'  ? '' : 'none';
+    document.getElementById('graph-view').style.display = name === 'graph' ? '' : 'none';
+    if (name === 'graph' && !globalThis._graphBuilt) buildGraph(globalThis._taxoData);
+  };
+
+  /* ── Data loading ── */
+  function loadLocal() {
+    var facts     = (typeof QUIZ_FACTS     === 'undefined') ? [] : QUIZ_FACTS;
+    var questions = (typeof QUIZ_QUESTIONS === 'undefined') ? [] : QUIZ_QUESTIONS;
+    return Promise.resolve({ facts: facts, questions: questions, source: 'local' });
+  }
+
+  function loadFirestore() {
+    var cfg = (typeof QUIZ_CONFIG !== 'undefined' && QUIZ_CONFIG.FIREBASE_CONFIG) || {};
+    if (!cfg.apiKey) return loadLocal();
+    var app = firebase.apps.length ? firebase.app() : firebase.initializeApp(cfg);
+    var db  = firebase.firestore(app);
+    return Promise.all([
+      db.collection('facts').orderBy('source_line').get(),
+      db.collection('questions').orderBy('id').get()
+    ]).then(function (results) {
+      return {
+        facts:     results[0].docs.map(function (d) { return d.data(); }),
+        questions: results[1].docs.map(function (d) { return d.data(); }),
+        source: 'firestore'
+      };
+    }).catch(function () { return loadLocal(); });
+  }
+
+  /* ── Build taxonomy index ── */
+  function buildIndex(facts, questions) {
+    var factToQs = {};
+    questions.forEach(function (q) {
+      (q.fact_ids || []).forEach(function (fid) {
+        if (!factToQs[fid]) factToQs[fid] = [];
+        factToQs[fid].push(q);
+      });
+    });
+
+    var tree = {};
+    facts.forEach(function (f) {
+      var era    = (f.labels && f.labels.era)    || 'Unknown';
+      var period = (f.labels && f.labels.period) || 'Unknown';
+      if (!tree[era]) tree[era] = {};
+      if (!tree[era][period]) tree[era][period] = [];
+      tree[era][period].push(f);
+    });
+
+    return { tree: tree, factToQs: factToQs };
+  }
+
+  /* ── Safe HTML escape ── */
+  function esc(s) {
+    var d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  function humanise(s) { return s.replaceAll('_', ' '); }
+
+  /* ── Fact card helpers (extracted to avoid deep nesting) ── */
+  function buildQuestionsHtml(linkedQs) {
+    if (linkedQs.length === 0) {
+      return '<span style="font-size:.75rem;color:#475569">No linked questions</span>';
+    }
+    var plural  = linkedQs.length > 1 ? 's' : '';
+    var items   = linkedQs.map(function (q) {
+      return '<li class="question-item">Q' + q.id + ': ' + esc(q.question) +
+             ' — <span class="question-answer">' + esc(q.answer) + '</span></li>';
+    }).join('');
+    return '<button class="questions-toggle">▶ ' + linkedQs.length +
+           ' question' + plural + '</button>' +
+           '<ul class="questions-list" style="display:none">' + items + '</ul>';
+  }
+
+  function attachQuestionsToggle(card, linkedQs) {
+    var toggle = card.querySelector('.questions-toggle');
+    if (!toggle) return;
+    var plural = linkedQs.length > 1 ? 's' : '';
+    toggle.addEventListener('click', function () {
+      var list = card.querySelector('.questions-list');
+      var open = list.style.display !== 'none';
+      list.style.display = open ? 'none' : '';
+      toggle.textContent = (open ? '▶ ' : '▼ ') + linkedQs.length + ' question' + plural;
+    });
+  }
+
+  function buildFactCard(fact, linkedQs) {
+    var card = document.createElement('div');
+    card.className = 'fact-card';
+    var lbl = fact.labels || {};
+    card.innerHTML =
+      '<div class="fact-id">' + esc(fact.id) + '</div>' +
+      '<div class="fact-text">' + esc(fact.fact) + '</div>' +
+      '<div class="fact-tags">' +
+        (lbl.topic  ? '<span class="tag tag-topic">'  + esc(lbl.topic)  + '</span>' : '') +
+        (lbl.theme  ? '<span class="tag tag-theme">'  + esc(lbl.theme)  + '</span>' : '') +
+        (lbl.entity ? '<span class="tag tag-entity">' + esc(lbl.entity) + '</span>' : '') +
+      '</div>' +
+      '<div class="fact-questions">' + buildQuestionsHtml(linkedQs) + '</div>';
+    attachQuestionsToggle(card, linkedQs);
+    return card;
+  }
+
+  function buildPeriodBlock(period, periodFacts, factToQs) {
+    var block = document.createElement('div');
+    block.className = 'period-block';
+
+    var pHead = document.createElement('div');
+    pHead.className = 'period-heading';
+    pHead.innerHTML = '<span class="period-arrow open">▶</span> ' +
+      esc(humanise(period)) +
+      ' <span style="font-size:.75rem;color:#475569;font-weight:400">(' + periodFacts.length + ' facts)</span>';
+
+    var pBody = document.createElement('div');
+    pBody.className = 'period-body';
+    periodFacts.forEach(function (fact) {
+      pBody.appendChild(buildFactCard(fact, factToQs[fact.id] || []));
+    });
+
+    pHead.addEventListener('click', function () {
+      var open = pBody.style.display !== 'none';
+      pBody.style.display = open ? 'none' : '';
+      pHead.querySelector('.period-arrow').classList.toggle('open', !open);
+    });
+
+    block.appendChild(pHead);
+    block.appendChild(pBody);
+    return block;
+  }
+
+  /* ── Render tree ── */
+  function renderTree(data) {
+    var container = document.getElementById('tree-view');
+    container.innerHTML = '';
+    var idx = buildIndex(data.facts, data.questions);
+    globalThis._taxoData = data;
+
+    Object.keys(idx.tree).sort().forEach(function (era) {
+      var eraBlock = document.createElement('div');
+      eraBlock.className = 'era-block';
+
+      var heading = document.createElement('div');
+      heading.className = 'era-heading';
+      heading.innerHTML = '<span class="era-arrow open">▶</span> ' + esc(humanise(era));
+
+      var body = document.createElement('div');
+      body.className = 'era-body';
+
+      Object.keys(idx.tree[era]).sort().forEach(function (period) {
+        body.appendChild(buildPeriodBlock(period, idx.tree[era][period], idx.factToQs));
+      });
+
+      heading.addEventListener('click', function () {
+        var open = body.style.display !== 'none';
+        body.style.display = open ? 'none' : '';
+        heading.querySelector('.era-arrow').classList.toggle('open', !open);
+      });
+
+      eraBlock.appendChild(heading);
+      eraBlock.appendChild(body);
+      container.appendChild(eraBlock);
+    });
+  }
+
+  /* ── Graph view (built lazily, implemented in Step 4) ── */
+  globalThis._graphBuilt = false;
+  function buildGraph(data) {
+    globalThis._graphBuilt = true;
+    document.getElementById('graph-view').innerHTML =
+      '<p style="color:#94a3b8;padding:2rem;text-align:center">' +
+      'Graph view coming in Step 4.</p>';
+    return data; // suppress unused-param warning
+  }
+
+  /* ── Main ── */
+  var load = firestoreMode ? loadFirestore() : loadLocal();
+  load.then(function (data) {
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('tree-view').style.display = '';
+
+    var badge = document.getElementById('source-badge');
+    if (data.source === 'firestore') {
+      badge.textContent = 'Firestore';
+      badge.className = 'source-badge badge-firestore';
+    } else {
+      badge.textContent = 'local data';
+    }
+
+    renderTree(data);
+  });
+
+}());
+</script>
+</body>
+</html>
