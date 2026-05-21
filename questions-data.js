@@ -16,7 +16,8 @@ var QUIZ_QUESTIONS =
       "4th century",
       "6th century",
       "7th century"
-    ]
+    ],
+    "era": "Visigothic"
   },
   {
     "id": 2,
@@ -32,7 +33,8 @@ var QUIZ_QUESTIONS =
       "The Byzantines defeated the Visigoths",
       "The Visigoths conquered all of Gaul",
       "The Visigoths and Franks agreed to share Gaul peacefully"
-    ]
+    ],
+    "era": "Visigothic"
   },
   {
     "id": 3,
@@ -48,7 +50,8 @@ var QUIZ_QUESTIONS =
       "Córdoba",
       "Barcelona",
       "Zaragoza"
-    ]
+    ],
+    "era": "Visigothic"
   },
   {
     "id": 4,
@@ -64,7 +67,8 @@ var QUIZ_QUESTIONS =
       "Alaric II",
       "Witiza",
       "Rodrigo"
-    ]
+    ],
+    "era": "Visigothic"
   },
   {
     "id": 5,
@@ -80,7 +84,8 @@ var QUIZ_QUESTIONS =
       "Signing a peace treaty with the Franks",
       "Establishing trade with the Byzantine Empire",
       "Establishing a new legal code for all Iberians"
-    ]
+    ],
+    "era": "Visigothic"
   },
   {
     "id": 6,
@@ -96,7 +101,8 @@ var QUIZ_QUESTIONS =
       "A branch of Judaism",
       "A type of paganism",
       "A Christian sect that worshipped multiple gods"
-    ]
+    ],
+    "era": "Visigothic"
   },
   {
     "id": 7,
@@ -112,7 +118,8 @@ var QUIZ_QUESTIONS =
       "Appointed by the Pope",
       "Won by military conquest",
       "Chosen by the Catholic Church"
-    ]
+    ],
+    "era": "Visigothic"
   },
   {
     "id": 8,
@@ -128,7 +135,8 @@ var QUIZ_QUESTIONS =
       "Reccared",
       "Leovigild",
       "Alaric II"
-    ]
+    ],
+    "era": "Visigothic"
   },
   {
     "id": 9,
@@ -144,7 +152,8 @@ var QUIZ_QUESTIONS =
       "589",
       "722",
       "700"
-    ]
+    ],
+    "era": "Visigothic"
   },
   {
     "id": 10,
@@ -160,7 +169,8 @@ var QUIZ_QUESTIONS =
       "Abd al-Rahman I",
       "Almanzor",
       "Abd al-Rahman III"
-    ]
+    ],
+    "era": "Visigothic"
   },
   {
     "id": 11,
@@ -176,7 +186,8 @@ var QUIZ_QUESTIONS =
       "Abd al-Rahman I",
       "Al-Hakam II",
       "Almanzor"
-    ]
+    ],
+    "era": "Visigothic"
   },
   {
     "id": 12,
@@ -192,7 +203,8 @@ var QUIZ_QUESTIONS =
       "It became part of the Byzantine Empire",
       "It merged with the Frankish Kingdom",
       "It was reorganised as a vassal state under Muslim rule"
-    ]
+    ],
+    "era": "Visigothic"
   },
   {
     "id": 13,
@@ -208,7 +220,8 @@ var QUIZ_QUESTIONS =
       "732",
       "756",
       "718"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 14,
@@ -224,7 +237,8 @@ var QUIZ_QUESTIONS =
       "Tariq",
       "Roderic",
       "Musa"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 15,
@@ -240,7 +254,8 @@ var QUIZ_QUESTIONS =
       "Arab",
       "Basque",
       "Frankish"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 16,
@@ -256,7 +271,8 @@ var QUIZ_QUESTIONS =
       "756",
       "778",
       "742"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 17,
@@ -272,7 +288,8 @@ var QUIZ_QUESTIONS =
       "The Astures",
       "The Byzantines",
       "The Normans"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 18,
@@ -288,7 +305,8 @@ var QUIZ_QUESTIONS =
       "Seville",
       "Granada",
       "Zaragoza"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 19,
@@ -304,7 +322,8 @@ var QUIZ_QUESTIONS =
       "Berbers and Persians",
       "Moors and Saracens",
       "Egyptians and Syrians"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 20,
@@ -320,7 +339,8 @@ var QUIZ_QUESTIONS =
       "756–929",
       "929–1031",
       "711–800"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 21,
@@ -336,7 +356,8 @@ var QUIZ_QUESTIONS =
       "Almanzor",
       "Musa",
       "Al-Hakam II"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 22,
@@ -352,7 +373,8 @@ var QUIZ_QUESTIONS =
       "He was defeated in battle",
       "He sought new lands to conquer",
       "He was invited by the Berbers of Al-Andalus to lead them"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 23,
@@ -368,7 +390,8 @@ var QUIZ_QUESTIONS =
       "Arab traders",
       "Byzantine soldiers",
       "Jewish merchants who converted to Islam"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 24,
@@ -384,7 +407,8 @@ var QUIZ_QUESTIONS =
       "850",
       "1031",
       "902"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 25,
@@ -400,7 +424,8 @@ var QUIZ_QUESTIONS =
       "Al-Hakam II",
       "Almanzor",
       "Hisham II"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 26,
@@ -416,7 +441,8 @@ var QUIZ_QUESTIONS =
       "Alcázar",
       "El Escorial",
       "Giralda"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 27,
@@ -432,7 +458,8 @@ var QUIZ_QUESTIONS =
       "Abbasid Caliphate and Frankish Empire",
       "Egyptian and Moroccan kingdoms",
       "Kingdom of France and Republic of Venice"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 28,
@@ -448,7 +475,8 @@ var QUIZ_QUESTIONS =
       "The founder of the Nasrid Kingdom",
       "The governor of the Dependent Emirate",
       "The commander of the Almoravid armies"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 29,
@@ -464,7 +492,8 @@ var QUIZ_QUESTIONS =
       "42",
       "62",
       "72"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 30,
@@ -480,7 +509,8 @@ var QUIZ_QUESTIONS =
       "The Wise",
       "The Defender",
       "The Conqueror"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 31,
@@ -496,7 +526,8 @@ var QUIZ_QUESTIONS =
       "He converted it into a mosque",
       "He taxed its pilgrims heavily",
       "He stole its treasury and deported its clergy"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 32,
@@ -512,7 +543,8 @@ var QUIZ_QUESTIONS =
       "Sacred manuscripts",
       "The church's stained-glass windows",
       "The carved stone columns of the cathedral"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 33,
@@ -528,7 +560,8 @@ var QUIZ_QUESTIONS =
       "985",
       "1085",
       "1000"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 34,
@@ -544,7 +577,8 @@ var QUIZ_QUESTIONS =
       "Military units of the Taifa kings",
       "Trade agreements between Muslims and Christians",
       "Diplomatic gifts exchanged between Christian and Muslim rulers"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 35,
@@ -560,7 +594,8 @@ var QUIZ_QUESTIONS =
       "Alfonso VIII",
       "Sancho III",
       "Fernán González"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 36,
@@ -576,7 +611,8 @@ var QUIZ_QUESTIONS =
       "Ally with the Christian kingdoms",
       "Create a secular state",
       "Establish an Iberian empire under direct caliphal authority from Marrakesh"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 37,
@@ -592,7 +628,8 @@ var QUIZ_QUESTIONS =
       "1095",
       "1125",
       "1090"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 38,
@@ -608,7 +645,8 @@ var QUIZ_QUESTIONS =
       "Jewish traders living in Al-Andalus",
       "Berber soldiers who converted to Christianity",
       "Muslim scholars who studied in Christian monasteries"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 39,
@@ -624,7 +662,8 @@ var QUIZ_QUESTIONS =
       "Fernando III",
       "Pelayo",
       "Alfonso VIII"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 40,
@@ -640,7 +679,8 @@ var QUIZ_QUESTIONS =
       "1125",
       "1195",
       "1150"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 41,
@@ -656,7 +696,8 @@ var QUIZ_QUESTIONS =
       "1125",
       "1145",
       "1200"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 42,
@@ -672,7 +713,8 @@ var QUIZ_QUESTIONS =
       "Aragon",
       "Navarre",
       "The Almoravids"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 43,
@@ -688,7 +730,8 @@ var QUIZ_QUESTIONS =
       "1195",
       "1238",
       "1225"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 44,
@@ -704,7 +747,8 @@ var QUIZ_QUESTIONS =
       "Fernando III",
       "Alfonso X",
       "Alfonso IX"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 45,
@@ -720,7 +764,8 @@ var QUIZ_QUESTIONS =
       "Franciscan and Augustinian",
       "Benedictine and Cistercian",
       "Hospitallers and Teutonic only"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 46,
@@ -736,7 +781,8 @@ var QUIZ_QUESTIONS =
       "1350",
       "1450",
       "1480"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 47,
@@ -752,7 +798,8 @@ var QUIZ_QUESTIONS =
       "Abd al-Rahman III",
       "Hisham II",
       "Muhammad al-Zagal"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 48,
@@ -768,7 +815,8 @@ var QUIZ_QUESTIONS =
       "March 15, 1492",
       "October 12, 1492",
       "November 30, 1491"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 49,
@@ -784,7 +832,8 @@ var QUIZ_QUESTIONS =
       "The unification of the Christian kingdoms",
       "The expulsion of Jews from Iberia",
       "The papal crusade against the Moors ordered by Pope Urban II"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 50,
@@ -800,7 +849,8 @@ var QUIZ_QUESTIONS =
       "722–1085",
       "756–1238",
       "711–1350"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 51,
@@ -816,7 +866,8 @@ var QUIZ_QUESTIONS =
       "Alfonso II",
       "Ordoño II",
       "Alfonso III"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 52,
@@ -832,7 +883,8 @@ var QUIZ_QUESTIONS =
       "León",
       "Burgos",
       "Santiago de Compostela"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 53,
@@ -848,7 +900,8 @@ var QUIZ_QUESTIONS =
       "Alfonso II",
       "Alfonso III",
       "Fernán González"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 54,
@@ -864,7 +917,8 @@ var QUIZ_QUESTIONS =
       "Alfonso III",
       "Ordoño II",
       "Pelayo"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 55,
@@ -880,7 +934,8 @@ var QUIZ_QUESTIONS =
       "A university",
       "A royal palace",
       "A monastery to house Benedictine monks"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 56,
@@ -896,7 +951,8 @@ var QUIZ_QUESTIONS =
       "Alfonso II",
       "Ordoño II",
       "Ramiro II"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 57,
@@ -912,7 +968,8 @@ var QUIZ_QUESTIONS =
       "Alfonso II",
       "Alfonso III",
       "Alfonso IV"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 58,
@@ -928,7 +985,8 @@ var QUIZ_QUESTIONS =
       "Its founder was named Castillo",
       "It was the centre of trade",
       "The land was first cultivated by Roman legions"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 59,
@@ -944,7 +1002,8 @@ var QUIZ_QUESTIONS =
       "Ferdinand I",
       "Alfonso VI",
       "Ordoño II"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 60,
@@ -960,7 +1019,8 @@ var QUIZ_QUESTIONS =
       "970–1010",
       "1010–1050",
       "940–980"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 61,
@@ -976,7 +1036,8 @@ var QUIZ_QUESTIONS =
       "Ordoño II",
       "Almanzor",
       "Fernando III the Saint"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 62,
@@ -992,7 +1053,8 @@ var QUIZ_QUESTIONS =
       "Fernando III",
       "Sancho III",
       "Ordoño II"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 63,
@@ -1008,7 +1070,8 @@ var QUIZ_QUESTIONS =
       "Jimena",
       "Sancha",
       "Berenguela of Castile"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 64,
@@ -1024,7 +1087,8 @@ var QUIZ_QUESTIONS =
       "1112",
       "1145",
       "1139"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 65,
@@ -1040,7 +1104,8 @@ var QUIZ_QUESTIONS =
       "Sancho VII",
       "Alfonso VIII",
       "Alfonso IX of León"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 66,
@@ -1056,7 +1121,8 @@ var QUIZ_QUESTIONS =
       "722",
       "824",
       "800"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 67,
@@ -1072,7 +1138,8 @@ var QUIZ_QUESTIONS =
       "Visigoths",
       "Berbers",
       "Catalans"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 68,
@@ -1088,7 +1155,8 @@ var QUIZ_QUESTIONS =
       "The Iliad",
       "The Song of the Nibelungs",
       "Beowulf"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 69,
@@ -1104,7 +1172,8 @@ var QUIZ_QUESTIONS =
       "A Visigothic border fortress",
       "The pilgrim road to Santiago de Compostela",
       "A chain of fortified monasteries built by Benedict of Aniane"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 70,
@@ -1120,7 +1189,8 @@ var QUIZ_QUESTIONS =
       "800",
       "850",
       "831"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 71,
@@ -1136,7 +1206,8 @@ var QUIZ_QUESTIONS =
       "1118",
       "1145",
       "1200"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 72,
@@ -1152,7 +1223,8 @@ var QUIZ_QUESTIONS =
       "Garcia Sánchez",
       "Sancho VII",
       "Ramiro I of Navarre"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 73,
@@ -1168,7 +1240,8 @@ var QUIZ_QUESTIONS =
       "Garcia Sánchez",
       "Sancho VII",
       "Ferdinand I of Castile"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 74,
@@ -1184,7 +1257,8 @@ var QUIZ_QUESTIONS =
       "He inherited it from his father",
       "He purchased it from the King of León",
       "He was appointed regent by the Count of Castile on his deathbed"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 75,
@@ -1200,7 +1274,8 @@ var QUIZ_QUESTIONS =
       "Alfonso VI",
       "Sancho III",
       "Pedro I of Aragon"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 76,
@@ -1216,7 +1291,8 @@ var QUIZ_QUESTIONS =
       "Pamplona",
       "Barcelona",
       "Huesca"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 77,
@@ -1232,7 +1308,8 @@ var QUIZ_QUESTIONS =
       "Castile absorbed Aragon",
       "The Almohads conquered Aragon",
       "The Kingdom of Aragon was absorbed into the Crown of Castile"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 78,
@@ -1248,7 +1325,8 @@ var QUIZ_QUESTIONS =
       "Alfonso de León",
       "Sancho de Navarre",
       "García de Burgos"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 79,
@@ -1264,7 +1342,8 @@ var QUIZ_QUESTIONS =
       "The Iliad",
       "The Aeneid",
       "The Divine Comedy"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 80,
@@ -1280,7 +1359,8 @@ var QUIZ_QUESTIONS =
       "Córdoba",
       "Zaragoza",
       "Almería"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 81,
@@ -1296,7 +1376,8 @@ var QUIZ_QUESTIONS =
       "His son Rodrigo",
       "The Almohads",
       "The Almoravids immediately took control"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 82,
@@ -1312,7 +1393,8 @@ var QUIZ_QUESTIONS =
       "1098",
       "1112",
       "1105"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 83,
@@ -1328,7 +1410,8 @@ var QUIZ_QUESTIONS =
       "Almanzor",
       "Fernando III",
       "Count Fernán González of Castile"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 84,
@@ -1344,7 +1427,8 @@ var QUIZ_QUESTIONS =
       "Alfonso VIII",
       "Ferdinand I",
       "Alfonso IX of León"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 85,
@@ -1360,7 +1444,8 @@ var QUIZ_QUESTIONS =
       "Granada and Córdoba",
       "Salamanca and Ávila",
       "Zaragoza and Pamplona"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 86,
@@ -1376,7 +1461,8 @@ var QUIZ_QUESTIONS =
       "Ramiro I",
       "Sancho III",
       "James I of Aragon"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 87,
@@ -1392,7 +1478,8 @@ var QUIZ_QUESTIONS =
       "Sancho VI",
       "Garcia Sánchez",
       "Sancho IV"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 88,
@@ -1408,7 +1495,8 @@ var QUIZ_QUESTIONS =
       "Byzantine forces aided the Muslims",
       "The Visigoths voluntarily surrendered",
       "Famine had weakened the Visigothic population for years"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 89,
@@ -1424,7 +1512,8 @@ var QUIZ_QUESTIONS =
       "It had the largest army in Europe",
       "It was protected by the strongest walls in the world",
       "It was the birthplace of Islam in the West"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 90,
@@ -1440,7 +1529,8 @@ var QUIZ_QUESTIONS =
       "The Almoravids overthrew it",
       "Economic collapse caused by trade disruption",
       "The Abbasid caliph of Baghdad reasserted his authority and deposed the Cordoban caliph"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 91,
@@ -1456,7 +1546,8 @@ var QUIZ_QUESTIONS =
       "The money was used to build churches",
       "They helped fund the Crusades in the Holy Land",
       "It allowed Christian kings to hire mercenary armies from France"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 92,
@@ -1472,7 +1563,8 @@ var QUIZ_QUESTIONS =
       "It allied with the Ottoman Empire",
       "Christians were not interested in it",
       "Its population converted to Christianity en masse, making it unthreatening"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 93,
@@ -1488,7 +1580,8 @@ var QUIZ_QUESTIONS =
       "Alfonso X",
       "Ferdinand I",
       "Alfonso IX of León"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 94,
@@ -1504,7 +1597,8 @@ var QUIZ_QUESTIONS =
       "It was a trade route to Africa",
       "It was a military road built by the Romans",
       "It was used exclusively for transporting tribute gold from the Taifa kingdoms"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 95,
@@ -1520,7 +1614,8 @@ var QUIZ_QUESTIONS =
       "Alaric II and Reccared",
       "Leovigild and Witiza",
       "Alaric II and Leovigild"
-    ]
+    ],
+    "era": "Visigothic"
   },
   {
     "id": 96,
@@ -1536,7 +1631,8 @@ var QUIZ_QUESTIONS =
       "They were Berber soldiers who helped the Franks",
       "They were Jewish scholars at the Pamplona court",
       "A dynasty of converted Franks who governed the upper Pyrenees"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 97,
@@ -1552,7 +1648,8 @@ var QUIZ_QUESTIONS =
       "The Dark Age of Al-Andalus",
       "The Age of the Crusades",
       "The Age of Taifas"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 98,
@@ -1568,7 +1665,8 @@ var QUIZ_QUESTIONS =
       "Aragon and Castile",
       "León and Navarre",
       "Both Castile and León from his mother Queen Berenguela"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 99,
@@ -1584,7 +1682,8 @@ var QUIZ_QUESTIONS =
       "The Berbers wanted to return to North Africa",
       "They argued over control of trade routes",
       "The Berbers refused to follow Arab military commanders"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 100,
@@ -1600,7 +1699,8 @@ var QUIZ_QUESTIONS =
       "The Meseta Central",
       "The Guadalquivir Valley",
       "The Ebro Valley"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 101,
@@ -1616,7 +1716,8 @@ var QUIZ_QUESTIONS =
       "León, Portugal, and Galicia",
       "Castile, Galicia, and Aragon",
       "Asturias, Castile, and León"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 102,
@@ -1632,7 +1733,8 @@ var QUIZ_QUESTIONS =
       "They bribed senior Almohad commanders before the battle",
       "They attacked at night, catching the Almohads off guard",
       "The Almohad commander fled the battlefield at the outset"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 103,
@@ -1648,7 +1750,8 @@ var QUIZ_QUESTIONS =
       "Zaragoza, Pamplona, and Barcelona",
       "Coimbra, Porto, and Oviedo",
       "Toledo, Badajoz, and Mérida"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 104,
@@ -1664,7 +1767,8 @@ var QUIZ_QUESTIONS =
       "They allied with the Muslims against León",
       "They converted to Islam and integrated into Al-Andalus",
       "They became vassals of the Pope and formed the Papal States of Iberia"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 105,
@@ -1680,7 +1784,8 @@ var QUIZ_QUESTIONS =
       "As far as Almería",
       "As far as Córdoba",
       "Lleida (Lérida)"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 106,
@@ -1696,7 +1801,8 @@ var QUIZ_QUESTIONS =
       "They were conquered by the Almohads",
       "They were absorbed into the Kingdom of Portugal",
       "Were divided between Queen Urraca's two rival sons"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 107,
@@ -1712,7 +1818,8 @@ var QUIZ_QUESTIONS =
       "Kingdom of León for Ferdinand, Kingdom of Pamplona for Ramiro I, Kingdom of Aragon for Garcia Sánchez",
       "Kingdom of Aragon for Ferdinand, Kingdom of Navarre for Garcia Sánchez, Kingdom of Castile for Ramiro I",
       "Kingdom of León for Ferdinand, Kingdom of Castile for Garcia Sánchez, Kingdom of Aragon for Ramiro I"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 108,
@@ -1728,7 +1835,8 @@ var QUIZ_QUESTIONS =
       "From the 10th century onwards",
       "From the 12th century onwards",
       "From the 13th century onwards"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 109,
@@ -1744,7 +1852,8 @@ var QUIZ_QUESTIONS =
       "The Fatimid Caliphate of Cairo",
       "The Ottoman Caliphate of Constantinople",
       "The Mamluk Sultanate of Egypt"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 110,
@@ -1760,7 +1869,8 @@ var QUIZ_QUESTIONS =
       "He conquered North Africa to secure reinforcements",
       "He converted to Christianity to gain support from Iberian nobles",
       "He declared himself caliph and broke all ties with the Abbasid caliphate"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 111,
@@ -1776,7 +1886,8 @@ var QUIZ_QUESTIONS =
       "Ten years",
       "Twenty-five years",
       "Five years"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 112,
@@ -1792,7 +1903,8 @@ var QUIZ_QUESTIONS =
       "Son of a Berber merchant and an Andalusian noblewoman",
       "Son of the Abbasid caliph and a Spanish captive",
       "Son of Abd al-Rahman II and his favourite Andalusian wife"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 113,
@@ -1808,7 +1920,8 @@ var QUIZ_QUESTIONS =
       "They hoped to establish a joint Visigothic-Muslim kingdom",
       "They needed Muslim troops to defend against a Frankish invasion",
       "Witiza himself wanted to convert to Islam and sought Muslim allies"
-    ]
+    ],
+    "era": "Visigothic"
   },
   {
     "id": 114,
@@ -1824,7 +1937,8 @@ var QUIZ_QUESTIONS =
       "He escaped to the northern mountains and led resistance",
       "He converted to Islam and became a governor",
       "He drowned while fleeing across the Guadalquivir river"
-    ]
+    ],
+    "era": "Visigothic"
   },
   {
     "id": 115,
@@ -1840,7 +1954,8 @@ var QUIZ_QUESTIONS =
       "The Meseta Plateau and the Guadalquivir Valley",
       "The Ebro Valley and the Atlantic coast",
       "The Sierra Nevada and the Atlantic coast of Galicia"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 116,
@@ -1856,7 +1971,8 @@ var QUIZ_QUESTIONS =
       "A plague that decimated the Muslim garrison",
       "The assassination of the ruling emir by Abbasid agents",
       "A severe famine caused by drought across the entire Iberian Peninsula"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 117,
@@ -1872,7 +1988,8 @@ var QUIZ_QUESTIONS =
       "The Sephardim (Iberian Jews)",
       "The Dhimmis (non-Muslim subjects)",
       "The Kharijite rebels who opposed the Abbasids"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 118,
@@ -1888,7 +2005,8 @@ var QUIZ_QUESTIONS =
       "He defeated the Franks at the Battle of Poitiers",
       "He expelled the Almoravids from Al-Andalus",
       "He destroyed the city of León and forced Christians back to the Cantabrian coast"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 119,
@@ -1904,7 +2022,8 @@ var QUIZ_QUESTIONS =
       "The Cathedral of Seville",
       "The Palace of Medina Azahara",
       "The Great Mosque of Damascus"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 120,
@@ -1920,7 +2039,8 @@ var QUIZ_QUESTIONS =
       "Hisham II directly, then the last Umayyad caliph",
       "Al-Mansur, then Abd al-Rahman V",
       "Al-Hakam II, then Almanzor as regent-caliph"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 121,
@@ -1936,7 +2056,8 @@ var QUIZ_QUESTIONS =
       "His alliance with the Byzantine Empire",
       "His ability to forge alliances with Christian kingdoms",
       "His betrayal of the Almoravid dynasty and seizure of Córdoba"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 122,
@@ -1952,7 +2073,8 @@ var QUIZ_QUESTIONS =
       "They maintained peaceful relations and shared tribute revenues",
       "They all submitted peacefully to the Kingdom of León",
       "They formed a league under the leadership of the Taifa of Seville"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 123,
@@ -1968,7 +2090,8 @@ var QUIZ_QUESTIONS =
       "The Almoravids refused to pay tribute to Aragon",
       "The Almoravids had allied with the Kingdom of León against Aragon",
       "The Almoravids had seized Mozarab property and enslaved their children"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 124,
@@ -1984,7 +2107,8 @@ var QUIZ_QUESTIONS =
       "A century later, in 1312",
       "Not until the 14th century, around 1350",
       "In 1270, following the death of Fernando III the Saint"
-    ]
+    ],
+    "era": "Al-Andalus"
   },
   {
     "id": 125,
@@ -2000,7 +2124,8 @@ var QUIZ_QUESTIONS =
       "The southern coast near Gibraltar",
       "Frankish territories north of the Pyrenees",
       "The marshlands of the Guadalquivir Delta"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 126,
@@ -2016,7 +2141,8 @@ var QUIZ_QUESTIONS =
       "Always at war with each other and never cooperating against the Muslims",
       "Peaceful and stable, fighting only defensive wars against Muslim raids",
       "Governed by a council of nobles who met annually to coordinate strategy"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 127,
@@ -2032,7 +2158,8 @@ var QUIZ_QUESTIONS =
       "Muslim rulers demanded the division of hostile kingdoms as a peace condition",
       "The nobility forced kings to partition their lands to prevent any single heir from becoming too powerful",
       "Roman law required equal inheritance and could not be overridden by royal will"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 128,
@@ -2048,7 +2175,8 @@ var QUIZ_QUESTIONS =
       "They formed a permanent military alliance with the Frankish Empire",
       "They paid tribute to Muslim rulers in exchange for territorial concessions",
       "They launched pre-emptive strikes whenever a new Muslim governor arrived in Al-Andalus"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 129,
@@ -2064,7 +2192,8 @@ var QUIZ_QUESTIONS =
       "He established a parliament to limit royal authority",
       "He peacefully unified the kingdoms of Asturias and León under one crown",
       "He established the first code of written laws for the Asturian kingdom"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 130,
@@ -2080,7 +2209,8 @@ var QUIZ_QUESTIONS =
       "The Kingdom of Castile blocked Leonese southward routes",
       "A Frankish invasion from the north forced León to fight on two fronts",
       "The establishment of a separate Leonese noble faction that opposed all southern expansion"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 131,
@@ -2096,7 +2226,8 @@ var QUIZ_QUESTIONS =
       "The king granted them formal independence as a reward for military service",
       "They formed a military alliance with the Taifa kingdoms against León",
       "They formed marriage alliances with Navarrese and Aragonese nobles"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 132,
@@ -2112,7 +2243,8 @@ var QUIZ_QUESTIONS =
       "It was positioned furthest from Muslim raiding parties",
       "It controlled the best ports on the Atlantic coast",
       "It was the site of the most productive silver mines in northern Iberia"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 133,
@@ -2128,7 +2260,8 @@ var QUIZ_QUESTIONS =
       "A crusade called by the Pope against Castile",
       "The military resurgence of the surviving Taifa kingdoms",
       "A major famine devastated the Castilian army in 1091"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 134,
@@ -2144,7 +2277,8 @@ var QUIZ_QUESTIONS =
       "The Muslims, France, and the Holy Roman Empire",
       "Castile, Portugal, and the Taifa kingdoms only",
       "The Muslims, Navarre, and Portugal"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 135,
@@ -2160,7 +2294,8 @@ var QUIZ_QUESTIONS =
       "The Guadalquivir Valley",
       "The Duero Valley",
       "The Segre Valley"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 136,
@@ -2176,7 +2311,8 @@ var QUIZ_QUESTIONS =
       "It allied with the Almohads against the other Christian kingdoms",
       "It was devastated by a series of plagues that destroyed its military capacity",
       "It was declared a protectorate of the Papacy, following French spiritual authority"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 137,
@@ -2192,7 +2328,8 @@ var QUIZ_QUESTIONS =
       "Four regions, including Catalonia",
       "Five counties under separate Frankish governors",
       "Two regions: the County of Aragon and the County of Sobrarbe only"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 138,
@@ -2208,7 +2345,8 @@ var QUIZ_QUESTIONS =
       "Pamplona",
       "Huesca",
       "Barbastro"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 139,
@@ -2224,7 +2362,8 @@ var QUIZ_QUESTIONS =
       "The Emirate of Almería",
       "The Caliphate of Córdoba",
       "The Taifa of Murcia"
-    ]
+    ],
+    "era": "Reconquista"
   },
   {
     "id": 140,
@@ -2240,6 +2379,7 @@ var QUIZ_QUESTIONS =
       "The March of Brittany",
       "The Frankish Southern Frontier",
       "The Limes Hispanicus"
-    ]
+    ],
+    "era": "Reconquista"
   }
 ]

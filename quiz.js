@@ -252,32 +252,58 @@
     } catch (_) { /* fail silently — local results are already saved */ }
   }
 
-  /* ── Question selection (no two questions share a fact) ────── */
+  /* ── Question selection ─────────────────────────────────────
+   * Guarantees era coverage: Visigothic ≥ 2, Al-Andalus ≥ 4,
+   * Reconquista ≥ 4 (10 reserved), then fills the remaining slots
+   * freely.  No two questions sharing a fact_id appear together.
+   * The final list is re-shuffled so era-grouped order is hidden.
+   * ──────────────────────────────────────────────────────────── */
+  const ERA_MINIMUMS = { 'Visigothic': 2, 'Al-Andalus': 4, 'Reconquista': 4 };
+
   function selectQuestions(pool, count) {
     const shuffled = shuffle(pool);
     const selected = [];
+    const selectedSet = new Set();
     const usedFacts = new Set();
 
-    for (const q of shuffled) {
+    function tryAdd(q) {
       const factIds = q.fact_ids || [];
-      if (factIds.every(fid => !usedFacts.has(fid))) {
+      if (factIds.every(function (fid) { return !usedFacts.has(fid); })) {
         selected.push(q);
-        factIds.forEach(fid => usedFacts.add(fid));
-        if (selected.length === count) break;
+        selectedSet.add(q);
+        factIds.forEach(function (fid) { usedFacts.add(fid); });
+        return true;
       }
+      return false;
     }
 
-    // Fallback: if not enough non-overlapping questions, fill from remainder
+    // Pass 1: satisfy era minimums
+    Object.keys(ERA_MINIMUMS).forEach(function (era) {
+      var min = ERA_MINIMUMS[era];
+      var filled = 0;
+      for (var i = 0; i < shuffled.length && filled < min; i++) {
+        var q = shuffled[i];
+        if (!selectedSet.has(q) && q.era === era && tryAdd(q)) filled++;
+      }
+    });
+
+    // Pass 2: fill remaining slots from the full pool
+    for (var i = 0; i < shuffled.length && selected.length < count; i++) {
+      var q = shuffled[i];
+      if (!selectedSet.has(q)) tryAdd(q);
+    }
+
+    // Fallback: if fact-overlap exhausted the pool, fill without constraint
     if (selected.length < count) {
-      for (const q of shuffled) {
-        if (!selected.includes(q)) {
-          selected.push(q);
-          if (selected.length === count) break;
+      for (var i = 0; i < shuffled.length && selected.length < count; i++) {
+        if (!selectedSet.has(shuffled[i])) {
+          selected.push(shuffled[i]);
+          selectedSet.add(shuffled[i]);
         }
       }
     }
 
-    return selected;
+    return shuffle(selected); // re-shuffle so era order isn't apparent
   }
 
   /* ── Quiz flow ──────────────────────────────────────────────── */
