@@ -99,14 +99,15 @@
     }
     .question-answer { color: #4ade80; }
 
-    /* ── Graph view placeholder ── */
+    /* ── Graph view ── */
     #graph-view {
       max-width: 960px; margin: 0 auto;
       display: none;
     }
-    #graph-canvas {
+    #graph-svg {
       width: 100%; height: 600px;
       background: #1e293b; border-radius: .75rem;
+      display: block;
     }
     .graph-legend {
       display: flex; gap: 1.5rem; margin-top: 1rem;
@@ -115,6 +116,19 @@
     .legend-dot {
       width: 10px; height: 10px; border-radius: 50%;
       display: inline-block; margin-right: .3rem;
+    }
+    .legend-sq {
+      width: 10px; height: 10px;
+      display: inline-block; margin-right: .3rem;
+    }
+    /* floating tooltip */
+    #graph-tooltip {
+      position: fixed; pointer-events: none;
+      background: #1e293b; border: 1px solid #334155;
+      border-radius: .4rem; padding: .5rem .75rem;
+      font-size: .78rem; color: #e2e8f0;
+      max-width: 280px; line-height: 1.5;
+      z-index: 100; display: none;
     }
   </style>
 </head>
@@ -132,6 +146,7 @@
 <div id="loading">Loading data…</div>
 <div id="tree-view"  style="display:none"></div>
 <div id="graph-view"></div>
+<div id="graph-tooltip"></div>
 
 <!-- Firebase SDKs (only initialised if ?data=firestore) -->
 <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"
@@ -325,14 +340,180 @@
     });
   }
 
-  /* ── Graph view (built lazily, implemented in Step 4) ── */
+  /* ── Era colour palette ── */
+  var ERA_COLORS = {
+    'Visigothic':          '#f59e0b',
+    'Al-Andalus':          '#10b981',
+    'Christian_Kingdoms':  '#6366f1',
+    'Unknown':             '#6b7280'
+  };
+
+  function eraColor(era) {
+    return ERA_COLORS[era] || '#6b7280';
+  }
+
+  /* ── Graph: drag handlers (extracted to keep nesting shallow) ── */
+  function dragStarted(event, d, simulation) {
+    if (!event.active) simulation.alphaTarget(0.3).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+  }
+  function dragged(event, d) { d.fx = event.x; d.fy = event.y; }
+  function dragEnded(event, d, simulation) {
+    if (!event.active) simulation.alphaTarget(0);
+    d.fx = null;
+    d.fy = null;
+  }
+
+  /* ── Graph: tooltip handlers ── */
+  var tooltip = document.getElementById('graph-tooltip');
+
+  function showTooltip(event, d) {
+    var label = d.type === 'fact'
+      ? '<strong>' + esc(d.factId) + '</strong><br>' + esc(d.text)
+      : '<strong>Q' + d.qId + '</strong><br>' + esc(d.text);
+    tooltip.innerHTML = label;
+    tooltip.style.display = 'block';
+    tooltip.style.left = (event.clientX + 12) + 'px';
+    tooltip.style.top  = (event.clientY + 12) + 'px';
+  }
+
+  function moveTooltip(event) {
+    tooltip.style.left = (event.clientX + 12) + 'px';
+    tooltip.style.top  = (event.clientY + 12) + 'px';
+  }
+
+  function hideTooltip() { tooltip.style.display = 'none'; }
+
+  /* ── Graph: render with D3 ── */
+  function renderGraph(d3lib, data, view) {
+    view.innerHTML = '';
+
+    var facts     = data.facts;
+    var questions = data.questions;
+
+    /* Build node + link arrays */
+    var nodes = [];
+    var links = [];
+    var factIndexById = {};
+
+    facts.forEach(function (f) {
+      factIndexById[f.id] = nodes.length;
+      nodes.push({
+        id: 'f:' + f.id, type: 'fact',
+        factId: f.id, text: f.fact,
+        era: (f.labels && f.labels.era) || 'Unknown'
+      });
+    });
+
+    questions.forEach(function (q) {
+      var qi = nodes.length;
+      nodes.push({ id: 'q:' + q.id, type: 'question', qId: q.id, text: q.question });
+      (q.fact_ids || []).forEach(function (fid) {
+        if (factIndexById[fid] !== undefined) {
+          links.push({ source: qi, target: factIndexById[fid] });
+        }
+      });
+    });
+
+    /* SVG */
+    var w = view.offsetWidth || 900;
+    var h = 600;
+
+    var svg = d3lib.select(view)
+      .append('svg')
+      .attr('id', 'graph-svg')
+      .attr('viewBox', '0 0 ' + w + ' ' + h);
+
+    var g = svg.append('g');
+    svg.call(d3lib.zoom().scaleExtent([0.2, 4]).on('zoom', function (event) {
+      g.attr('transform', event.transform);
+    }));
+
+    /* Simulation */
+    var simulation = d3lib.forceSimulation(nodes)
+      .force('link',   d3lib.forceLink(links).id(function (d) { return d.id; }).distance(55))
+      .force('charge', d3lib.forceManyBody().strength(-80))
+      .force('center', d3lib.forceCenter(w / 2, h / 2))
+      .force('collide', d3lib.forceCollide(10));
+
+    /* Links */
+    var link = g.append('g')
+      .selectAll('line')
+      .data(links)
+      .join('line')
+      .attr('stroke', '#334155')
+      .attr('stroke-width', 1)
+      .attr('stroke-opacity', 0.6);
+
+    /* Nodes */
+    var node = g.append('g')
+      .selectAll('circle')
+      .data(nodes)
+      .join('circle')
+      .attr('r', function (d) { return d.type === 'fact' ? 7 : 4; })
+      .attr('fill', function (d) {
+        return d.type === 'fact' ? eraColor(d.era) : '#475569';
+      })
+      .attr('stroke', '#0f172a')
+      .attr('stroke-width', 1)
+      .style('cursor', 'grab')
+      .on('mouseover', showTooltip)
+      .on('mousemove', moveTooltip)
+      .on('mouseout',  hideTooltip)
+      .call(
+        d3lib.drag()
+          .on('start', function (ev, d) { dragStarted(ev, d, simulation); })
+          .on('drag',  dragged)
+          .on('end',   function (ev, d) { dragEnded(ev, d, simulation); })
+      );
+
+    /* Tick */
+    simulation.on('tick', function () {
+      link
+        .attr('x1', function (d) { return d.source.x; })
+        .attr('y1', function (d) { return d.source.y; })
+        .attr('x2', function (d) { return d.target.x; })
+        .attr('y2', function (d) { return d.target.y; });
+      node
+        .attr('cx', function (d) { return d.x; })
+        .attr('cy', function (d) { return d.y; });
+    });
+
+    /* Legend */
+    var legendEl = document.createElement('div');
+    legendEl.className = 'graph-legend';
+    var eras = Object.keys(ERA_COLORS);
+    eras.forEach(function (era) {
+      var span = document.createElement('span');
+      span.innerHTML =
+        '<span class="legend-dot" style="background:' + ERA_COLORS[era] + '"></span>' +
+        esc(humanise(era)) + ' (fact)';
+      legendEl.appendChild(span);
+    });
+    var qLegend = document.createElement('span');
+    qLegend.innerHTML = '<span class="legend-sq" style="background:#475569"></span>Question';
+    legendEl.appendChild(qLegend);
+    view.appendChild(legendEl);
+  }
+
+  /* ── Graph view: dynamically loads D3, then renders ── */
   globalThis._graphBuilt = false;
   function buildGraph(data) {
     globalThis._graphBuilt = true;
-    document.getElementById('graph-view').innerHTML =
-      '<p style="color:#94a3b8;padding:2rem;text-align:center">' +
-      'Graph view coming in Step 4.</p>';
-    return data; // suppress unused-param warning
+    var view = document.getElementById('graph-view');
+    view.innerHTML = '<p style="color:#94a3b8;padding:2rem;text-align:center">Loading graph…</p>';
+
+    var s    = document.createElement('script');
+    s.src    = 'https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js';
+    s.onload = function () { renderGraph(globalThis.d3, data, view); };
+    s.onerror = function () {
+      view.innerHTML =
+        '<p style="color:#f87171;padding:2rem;text-align:center">' +
+        'Could not load D3 — graph requires an internet connection.</p>';
+    };
+    document.head.appendChild(s);
+    return data;
   }
 
   /* ── Main ── */
