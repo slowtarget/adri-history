@@ -1,0 +1,1489 @@
+// Auto-generated from facts.json — do not edit by hand
+// This file is used by quiz.js to enrich questions at load time
+var QUIZ_FACTS = 
+[
+  {
+    "id": "F009",
+    "fact": "After the Battle of Guadalete (711), the Visigothic Kingdom disappeared and Al-Andalus was established.",
+    "source_quote": "From then on, the Visigothic Kingdom would disappear, and Al-Andalus would be established.",
+    "explanation": "The total collapse of the Visigothic state after Guadalete transformed the Iberian Peninsula into the Muslim-controlled territory known as Al-Andalus.",
+    "labels": {
+      "era": "Visigothic",
+      "period": "End_of_Visigothic_Kingdom",
+      "entity": "Al-Andalus",
+      "topic": "political",
+      "theme": "state_formation"
+    },
+    "source_line": 32
+  },
+  {
+    "id": "F008",
+    "fact": "General Tariq, sent by Musa (Umayyad governor of North Africa), defeated King Roderic at the Battle of Guadalete (711), ending the Visigothic Kingdom.",
+    "source_quote": "Musa, the governor of the Umayyad Caliphate in North Africa, sent a Berber army to the Iberian Peninsula under the command of Tariq, who confronted Roderic at the Battle of Guadalete (711).",
+    "explanation": "The Battle of Guadalete was the decisive moment that ended the Visigothic Kingdom and opened the Iberian Peninsula to Muslim conquest.",
+    "labels": {
+      "era": "Visigothic",
+      "period": "End_of_Visigothic_Kingdom",
+      "entity": "Battle_of_Guadalete",
+      "topic": "military",
+      "theme": "battle"
+    },
+    "source_line": 30
+  },
+  {
+    "id": "F080",
+    "source_line": 41,
+    "fact": "King Roderic (the Visigothic king) lost his life at the Battle of Guadalete (711).",
+    "source_quote": "Guadalete (711), defeating the Visigothic king, who lost his life in the battle.",
+    "explanation": "Roderic's death in the battle meant there was no surviving Visigothic king to rally resistance, which is why the kingdom collapsed so completely.",
+    "labels": {
+      "era": "Visigothic",
+      "period": "End_of_Visigothic_Kingdom",
+      "entity": "Roderic",
+      "topic": "military",
+      "theme": "battle"
+    }
+  },
+  {
+    "id": "F079",
+    "source_line": 29,
+    "fact": "In the civil war following Witiza's reign, Witiza's faction sought the help of a foreign power (the Muslims); the discontented nobles requested military aid, leading to Tariq's invasion.",
+    "source_quote": "In the civil war, Witiza sought the help of a foreign power, and therefore, General Tariq defeated Roderic at the Battle of Guadalete (711).",
+    "explanation": "The Muslim invasion was not unprovoked — it was invited by one side of an internal Visigothic power struggle, which is why it succeeded so quickly.",
+    "labels": {
+      "era": "Visigothic",
+      "period": "End_of_Visigothic_Kingdom",
+      "entity": "Witiza",
+      "topic": "political",
+      "theme": "civil_war"
+    }
+  },
+  {
+    "id": "F005",
+    "fact": "King Reccared and the Third Council of Toledo (589) converted the Visigothic Kingdom from Arianism to Catholicism.",
+    "source_quote": "with King Reccared and the Third Council of Toledo (589), the kingdom converted to Catholicism.",
+    "explanation": "This conversion unified the Visigothic ruling class and the Hispanic-Roman Catholic population under the same faith, strengthening royal authority.",
+    "labels": {
+      "era": "Visigothic",
+      "period": "Visigothic_Kingdom_of_Toledo",
+      "entity": "Reccared",
+      "topic": "religious",
+      "theme": "conversion"
+    },
+    "source_line": 20
+  },
+  {
+    "id": "F003",
+    "fact": "After leaving Gaul, the Visigoths settled in the Iberian Peninsula with their capital in Toledo.",
+    "source_quote": "From then on, the Visigoths settled in the Iberian Peninsula, with their capital in Toledo.",
+    "explanation": "Toledo became the political and administrative heart of the Visigothic Kingdom.",
+    "labels": {
+      "era": "Visigothic",
+      "period": "Visigothic_Kingdom_of_Toledo",
+      "entity": "Visigoths",
+      "topic": "political",
+      "theme": "capital_city"
+    },
+    "source_line": 9
+  },
+  {
+    "id": "F004",
+    "fact": "The Visigoths initially practised Arianism, defined as a heresy that rejects the Holy Trinity.",
+    "source_quote": "They initially believed in Arianism, a heresy that rejects the Holy Trinity.",
+    "explanation": "Arianism distinguished the Visigoths from the Catholic Iberian and Gallo-Roman populations they ruled, creating religious and political tension.",
+    "labels": {
+      "era": "Visigothic",
+      "period": "Visigothic_Kingdom_of_Toledo",
+      "entity": "Visigoths",
+      "topic": "religious",
+      "theme": "heresy"
+    },
+    "source_line": 19
+  },
+  {
+    "id": "F006",
+    "fact": "The Visigothic kingship was elective, not hereditary — it did not pass from father to son, which caused frequent civil wars.",
+    "source_quote": "Unlike other kingdoms, the Visigothic kingship was elective, not hereditary; that is, it did not pass from father to son.",
+    "explanation": "Elective kingship was the root cause of the Visigoths' endemic civil wars, as competing noble factions fought to place their candidates on the throne.",
+    "labels": {
+      "era": "Visigothic",
+      "period": "Visigothic_Kingdom_of_Toledo",
+      "entity": "Visigoths",
+      "topic": "political",
+      "theme": "succession"
+    },
+    "source_line": 24
+  },
+  {
+    "id": "F071",
+    "fact": "The Byzantine Empire most influenced the Visigothic court under kings Leovigild and Reccared, who sought to consolidate power by following the example of the emperors.",
+    "source_quote": "Byzantine influence was readily apparent at court, as the kings sought to consolidate their power by following the example of the emperors. This is especially true of kings like Leovigild and Reccared.",
+    "explanation": "Visigothic kings looked to the Byzantine imperial model to legitimise and centralise their authority, showing how Roman traditions persisted in post-Roman kingdoms.",
+    "labels": {
+      "era": "Visigothic",
+      "period": "Visigothic_Kingdom_of_Toledo",
+      "entity": "Visigoths",
+      "topic": "political",
+      "theme": "Byzantine_influence"
+    },
+    "source_line": 13
+  },
+  {
+    "id": "F007",
+    "fact": "During the reign of Witiza (702–710), an economic and agricultural crisis led to the election of Rodrigo as king.",
+    "source_quote": "During the reign of Witiza (702-710), a crisis arose that affected the economy and agriculture, and as a result, another king was elected: Rodrigo.",
+    "explanation": "Witiza's disastrous reign destabilised the Visigothic Kingdom and triggered the political crisis that directly preceded the Muslim invasion.",
+    "labels": {
+      "era": "Visigothic",
+      "period": "Visigothic_Kingdom_of_Toledo",
+      "entity": "Witiza",
+      "topic": "political",
+      "theme": "succession"
+    },
+    "source_line": 28
+  },
+  {
+    "id": "F002",
+    "fact": "At the Battle of Vouillé (507), Visigothic king Alaric II was defeated by Frankish king Clovis I, forcing the Visigoths to abandon Gaul.",
+    "source_quote": "They first settled in southeastern Gaul, until the Battle of Vouillé (507), when King Alaric II was defeated by King Clovis I.",
+    "explanation": "Vouillé ended Visigothic presence in Gaul and drove them to establish their kingdom entirely in the Iberian Peninsula.",
+    "labels": {
+      "era": "Visigothic",
+      "period": "Visigothic_Origins",
+      "entity": "Battle_of_Vouille",
+      "topic": "military",
+      "theme": "battle"
+    },
+    "source_line": 8
+  },
+  {
+    "id": "F001",
+    "fact": "The Visigoths arrived in Europe in the 5th century, at the same time as other Germanic peoples.",
+    "source_quote": "The Visigoths arrived in Europe in the 5th century, at the same time as the other Germanic peoples.",
+    "explanation": "Establishes the Visigoths as part of the mass migrations of Germanic tribes that transformed the late Roman world.",
+    "labels": {
+      "era": "Visigothic",
+      "period": "Visigothic_Origins",
+      "entity": "Visigoths",
+      "topic": "historical_context",
+      "theme": "migration"
+    },
+    "source_line": 7
+  },
+  {
+    "id": "F019",
+    "fact": "In 929, Emir Abd al-Rahman III proclaimed himself caliph — the highest political and religious authority — definitively breaking from the Abbasid power of Baghdad and founding the Caliphate of Córdoba.",
+    "source_quote": "In 929, Emir Abd al-Rahman III proclaimed himself caliph, the highest political and religious authority of Al-Andalus, thus definitively breaking away from the Abbasid power of Baghdad.",
+    "explanation": "Proclaiming himself caliph placed Al-Andalus on an equal footing with Baghdad, the greatest assertion of authority in the Islamic world.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Caliphate_of_Cordoba",
+      "entity": "Abd_al-Rahman_III",
+      "topic": "political",
+      "theme": "independence_declaration"
+    },
+    "source_line": 98
+  },
+  {
+    "id": "F020",
+    "fact": "Abd al-Rahman III was the son of a Cordoban nobleman and a Christian slave of Basque origin.",
+    "source_quote": "The new caliph was the son of a Cordoban nobleman and a Christian slave of Basque origin.",
+    "explanation": "His mixed heritage reflected the multicultural nature of Al-Andalus, where people of diverse ethnic and religious origins intermingled.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Caliphate_of_Cordoba",
+      "entity": "Abd_al-Rahman_III",
+      "topic": "biographical",
+      "theme": "parentage"
+    },
+    "source_line": 100
+  },
+  {
+    "id": "F021",
+    "fact": "Abd al-Rahman III established diplomatic relations with the Byzantine Empire and the Holy Roman Empire.",
+    "source_quote": "he was able to halt the Reconquista and established diplomatic relations with the Byzantine Empire and the Holy Roman Empire.",
+    "explanation": "This diplomatic reach reflected Al-Andalus's standing as a major Western power equal to the great Christian empires.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Caliphate_of_Cordoba",
+      "entity": "Abd_al-Rahman_III",
+      "topic": "political",
+      "theme": "diplomacy"
+    },
+    "source_line": 101
+  },
+  {
+    "id": "F023",
+    "fact": "Abd al-Rahman III built the palace-city of Medina Azahara near Córdoba.",
+    "source_quote": "and built the palace of Medina Azahara.",
+    "explanation": "Medina Azahara was an opulent palace-city that served as the administrative and ceremonial seat of the Caliphate, symbolising its wealth and power.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Caliphate_of_Cordoba",
+      "entity": "Abd_al-Rahman_III",
+      "topic": "cultural",
+      "theme": "architecture"
+    },
+    "source_line": 103
+  },
+  {
+    "id": "F084",
+    "source_line": 101,
+    "fact": "Abd al-Rahman III halted the Reconquista during the Caliphate of Córdoba period.",
+    "source_quote": "Although he had to face many revolts, he was able to halt the Reconquista.",
+    "explanation": "The Caliphate was militarily powerful enough to stop Christian southward expansion — a reversal of the momentum that had been building since Covadonga.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Caliphate_of_Cordoba",
+      "entity": "Abd_al-Rahman_III",
+      "topic": "military",
+      "theme": "halt_of_reconquista"
+    }
+  },
+  {
+    "id": "F085",
+    "source_line": 102,
+    "fact": "Abd al-Rahman III patronized the arts and sciences and expanded the Great Mosque of Córdoba.",
+    "source_quote": "He also patronized the arts and sciences, expanded the Great Mosque of Córdoba.",
+    "explanation": "Under Abd al-Rahman III, Córdoba became not only a political but also a cultural and intellectual capital, with the expanded Great Mosque as its most visible symbol.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Caliphate_of_Cordoba",
+      "entity": "Abd_al-Rahman_III",
+      "topic": "cultural",
+      "theme": "patronage"
+    }
+  },
+  {
+    "id": "F086",
+    "source_line": 112,
+    "fact": "Abd al-Rahman III was succeeded by the caliphs Al-Hakam II and then Hisham II.",
+    "source_quote": "Abd al-Rahman III was succeeded by the caliphs Al-Hakam II and Hisham II.",
+    "explanation": "The succession Al-Hakam II → Hisham II is critical because Hisham II's minority allowed Almanzor to seize power and eventually undermine the Caliphate.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Caliphate_of_Cordoba",
+      "entity": "Al-Hakam_II",
+      "topic": "political",
+      "theme": "succession"
+    }
+  },
+  {
+    "id": "F024",
+    "fact": "When Caliph Hisham II was a child, power fell into the hands of Almanzor, the most important general of the time, making the caliph a puppet.",
+    "source_quote": "When the latter [Hisham II] was a child, the power of the caliphate fell into the hands of Almanzor, the most important general of the time.",
+    "explanation": "Almanzor's seizure of effective power while keeping Hisham II as a figurehead was the beginning of the Caliphate's structural collapse.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Caliphate_of_Cordoba",
+      "entity": "Almanzor",
+      "topic": "political",
+      "theme": "power_struggle"
+    },
+    "source_line": 112
+  },
+  {
+    "id": "F025",
+    "fact": "Almanzor reformed the army of Al-Andalus and carried out 52 raids on Christian lands and cities such as Salamanca, Barcelona, Coimbra, and Zaragoza.",
+    "source_quote": "He reformed the army of Al-Andalus and carried out 52 raids on Christian lands and cities such as Salamanca, Barcelona, Coimbra, and Zaragoza.",
+    "explanation": "Almanzor's 52 raids were a systematic campaign to terrorise and weaken the Christian kingdoms of northern Iberia.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Caliphate_of_Cordoba",
+      "entity": "Almanzor",
+      "topic": "military",
+      "theme": "raids"
+    },
+    "source_line": 114
+  },
+  {
+    "id": "F026",
+    "fact": "The Arabic nickname \"al-Mansur\" means \"the victorious.\"",
+    "source_quote": "In fact, the nickname 'al-Mansur' means 'the victorious.'",
+    "explanation": "This epithet reflected Almanzor's unbroken record of military success against the Christian kingdoms.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Caliphate_of_Cordoba",
+      "entity": "Almanzor",
+      "topic": "biographical",
+      "theme": "title_or_name"
+    },
+    "source_line": 115
+  },
+  {
+    "id": "F027",
+    "fact": "Almanzor destroyed the cathedral of Santiago de Compostela and forced Christian slaves to carry its bells to Córdoba as trophies.",
+    "source_quote": "which led him to destroy the cathedral of Santiago de Compostela and force Christian slaves to carry the church bells as trophies to Córdoba.",
+    "explanation": "The sack of Santiago de Compostela was Almanzor's most dramatic act of religious and political humiliation of the Christian kingdoms.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Caliphate_of_Cordoba",
+      "entity": "Almanzor",
+      "topic": "military",
+      "theme": "raid"
+    },
+    "source_line": 116
+  },
+  {
+    "id": "F028",
+    "fact": "Almanzor is partly responsible for the fall of the Caliphate: by making the caliph a puppet he undermined his prestige, and by trying to ensure his son's succession he provoked civil wars.",
+    "source_quote": "Almanzor is also one of those responsible for the fall of the Caliphate, since by turning the caliph into a puppet, he undermined the ruler's prestige, and by trying to ensure his son's succession, he provoked civil wars.",
+    "explanation": "Almanzor fatally weakened the institution of the caliphate from within, setting the stage for its collapse in 1031.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Caliphate_of_Cordoba",
+      "entity": "Almanzor",
+      "topic": "political",
+      "theme": "decline"
+    },
+    "source_line": 121
+  },
+  {
+    "id": "F087",
+    "source_line": 116,
+    "fact": "Almanzor was known for his extreme cruelty and Islamic fanaticism.",
+    "source_quote": "He is known for his extreme cruelty and Islamic fanaticism.",
+    "explanation": "Almanzor's ruthlessness and religious zeal made him feared across Christian Iberia and partly explain the systematic destruction he wrought, including the sack of Santiago de Compostela.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Caliphate_of_Cordoba",
+      "entity": "Almanzor",
+      "topic": "biographical",
+      "theme": "character"
+    }
+  },
+  {
+    "id": "F022",
+    "fact": "During the Caliphate, increased trade with Africa and Europe made Córdoba the most important city in Western Europe.",
+    "source_quote": "increased trade with Africa and Europe, which generated immense wealth. Cordoba, the capital, became the most important city in Western Europe.",
+    "explanation": "Córdoba's commercial and cultural supremacy during the Caliphate made it the centre of learning and sophistication in the Western world.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Caliphate_of_Cordoba",
+      "entity": "Cordoba",
+      "topic": "economic",
+      "theme": "trade"
+    },
+    "source_line": 107
+  },
+  {
+    "id": "F012",
+    "fact": "The Muslims attempted to advance into France but were defeated by the Franks at the Battle of Poitiers (732).",
+    "source_quote": "they attempted to move south into France but were defeated by the Franks at the Battle of Poitiers (732).",
+    "explanation": "Poitiers set the northern boundary of Muslim expansion in Europe, stopping the conquest of France.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Dependent_Emirate",
+      "entity": "Battle_of_Poitiers",
+      "topic": "military",
+      "theme": "battle"
+    },
+    "source_line": 51
+  },
+  {
+    "id": "F010",
+    "fact": "The Muslims conquered almost the entire Iberian Peninsula in three years, encountering resistance only in the northwest.",
+    "source_quote": "in three years, conquered almost the entire Peninsula. They only encountered resistance in the northwest of the Peninsula.",
+    "explanation": "The speed of the conquest showed both the weakness of post-Guadalete Visigothic resistance and the military effectiveness of the Arab-Berber forces.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Dependent_Emirate",
+      "entity": "Muslim_Conquest",
+      "topic": "military",
+      "theme": "conquest"
+    },
+    "source_line": 43
+  },
+  {
+    "id": "F013",
+    "fact": "The Muslim conquest was swift due to four factors: disintegration of the Visigothic army, Muslim faith-motivated soldiers, tolerant policies toward Christians and Jews, and alliance with some Visigothic nobles.",
+    "source_quote": "The disintegration of the Visigothic army after the Battle of Guadalete; the effectiveness of the Muslim soldiers, who were motivated by their faith; the Muslims' tolerant policies toward the Christian and Jewish populations; the alliance between the Muslims and some Visigothic nobles.",
+    "explanation": "These four factors explain why a relatively small army could conquer a vast peninsula in just three years.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Dependent_Emirate",
+      "entity": "Muslim_Conquest",
+      "topic": "political",
+      "theme": "causes_of_conquest"
+    },
+    "source_line": 52
+  },
+  {
+    "id": "F081",
+    "source_line": 62,
+    "fact": "After the defeat at Poitiers, the Muslims focused on controlling the Iberian Peninsula and occupied the entire territory except the Cantabrian Mountains and the Pyrenees.",
+    "source_quote": "After the defeat at Poitiers, the Muslims focused on controlling the Iberian Peninsula. They occupied the entire territory except for the Cantabrian Mountains and the Pyrenees.",
+    "explanation": "The two mountain ranges that escaped Muslim control — the Cantabrian Mountains and the Pyrenees — became the refuge zones from which the Christian Reconquista would eventually emerge.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Dependent_Emirate",
+      "entity": "Muslim_Conquest",
+      "topic": "military",
+      "theme": "territorial_control"
+    }
+  },
+  {
+    "id": "F015",
+    "fact": "The two main groups of Muslim invaders were Berbers and Arabs; the Arabs despised the Berbers, and this tension caused numerous civil wars.",
+    "source_quote": "The invaders belonged to two different groups: the Berbers and the Arabs. Relations between the two were strained; the Arabs despised the Berbers, and this led to numerous civil wars between them.",
+    "explanation": "Ethnic tension between Arabs and Berbers was a chronic source of instability in Al-Andalus from the very beginning.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Dependent_Emirate",
+      "entity": "Muslim_Society",
+      "topic": "social",
+      "theme": "ethnic_conflict"
+    },
+    "source_line": 67
+  },
+  {
+    "id": "F082",
+    "source_line": 69,
+    "fact": "Encouraged by Christian successes in the north, some native Iberians started revolts in Muslim-held areas, putting the Dependent Emirate on the verge of collapse before Abd al-Rahman I arrived.",
+    "source_quote": "Furthermore, encouraged by the successes in the north of the Peninsula, some natives started revolts in Muslim-held areas. The Emirate was on the verge of collapse, but the arrival of Abd al-Rahman I consolidated Islamic power in the Iberian Peninsula.",
+    "explanation": "Internal revolts by native Iberians combined with Arab-Berber tensions nearly destroyed the Dependent Emirate; it was Abd al-Rahman I's arrival that saved it.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Dependent_Emirate",
+      "entity": "Muslim_Society",
+      "topic": "political",
+      "theme": "revolt"
+    }
+  },
+  {
+    "id": "F014",
+    "fact": "During the Dependent Emirate (711–756), Al-Andalus was a province of the Umayyad Caliphate of Damascus, governed by an emir with its capital in Córdoba.",
+    "source_quote": "Al-Andalus became a province of the Umayyad Caliphate of Damascus, governed by an emir and with its capital in Cordoba.",
+    "explanation": "This dependency on Damascus defined the first phase of Al-Andalus's political life, before Abd al-Rahman I broke away.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Dependent_Emirate",
+      "entity": "Umayyad_Caliphate",
+      "topic": "political",
+      "theme": "governance"
+    },
+    "source_line": 63
+  },
+  {
+    "id": "F016",
+    "fact": "The Abbasid rebellion of 750 killed almost all members of the Umayyad family; Abd al-Rahman I was the sole survivor and fled to Al-Andalus.",
+    "source_quote": "In 750, a rebellion by the Abbasids resulted in the deaths of all members of the Umayyad family except one: Abd al-Rahman. He fled to al-Andalus, where he had support.",
+    "explanation": "Abd al-Rahman I's escape from the Abbasid massacre was the crucial event that brought Umayyad rule to Al-Andalus.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Independent_Emirate",
+      "entity": "Abd_al-Rahman_I",
+      "topic": "political",
+      "theme": "succession"
+    },
+    "source_line": 76
+  },
+  {
+    "id": "F017",
+    "fact": "In 756, Abd al-Rahman I proclaimed himself independent emir of Al-Andalus, separating politically from the Abbasid caliphate of Baghdad while maintaining religious recognition of it.",
+    "source_quote": "in 756 proclaimed himself independent emir. This meant that, politically, he separated from the Abbasid emir of Baghdad but continued to recognize his religious authority.",
+    "explanation": "This declaration created the Independent Emirate and began Al-Andalus's development as an autonomous power.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Independent_Emirate",
+      "entity": "Abd_al-Rahman_I",
+      "topic": "political",
+      "theme": "independence_declaration"
+    },
+    "source_line": 77
+  },
+  {
+    "id": "F018",
+    "fact": "Abd al-Rahman I allied with the Muladi — native Iberian converts to Islam — to consolidate his power in Al-Andalus.",
+    "source_quote": "allying himself with Muladi, that is, native converts from the Iberian Peninsula.",
+    "explanation": "The Muladi were Iberian people (mostly of Christian or mixed origin) who converted to Islam; their support was essential to Abd al-Rahman I's stability.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Independent_Emirate",
+      "entity": "Abd_al-Rahman_I",
+      "topic": "political",
+      "theme": "governance"
+    },
+    "source_line": 82
+  },
+  {
+    "id": "F083",
+    "source_line": 82,
+    "fact": "Abd al-Rahman I consolidated his power by placing relatives in key positions, allying with the Muladi, maintaining a mercenary army, establishing strong administration, and using Islam as a unifying element amid the ethnic diversity of Al-Andalus.",
+    "source_quote": "His power in al-Andalus resulted from placing his living relatives in positions of power and allying himself with Muladi... managed to pacify the interior and secure the borders thanks to his mercenary army, strong administration, and the use of Islam as a unifying element amidst the ethnic diversity of Al-Andalus.",
+    "explanation": "Abd al-Rahman I's multi-pronged approach to power — family loyalty, local alliances, military force, bureaucratic efficiency, and religious identity — created a stable, independent emirate from a near-collapsed province.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Independent_Emirate",
+      "entity": "Abd_al-Rahman_I",
+      "topic": "political",
+      "theme": "governance"
+    }
+  },
+  {
+    "id": "F043",
+    "fact": "On January 2, 1492, the last king of the Nasrid Kingdom, Boabdil, surrendered and handed over the keys to Granada, ending Muslim rule in Iberia.",
+    "source_quote": "on January 2, 1492, the last king, Boabdil, surrendered and handed over the keys to the city.",
+    "explanation": "Boabdil's surrender ended over 780 years of Muslim rule in the Iberian Peninsula and completed the Reconquista.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Nasrid_Kingdom",
+      "entity": "Boabdil",
+      "topic": "political",
+      "theme": "surrender"
+    },
+    "source_line": 161
+  },
+  {
+    "id": "F042",
+    "fact": "The Nasrid Kingdom of Granada, the last Muslim territory in Iberia, survived until 1492 by paying tribute to Christians and relying on its natural border in the Baetic mountain system.",
+    "source_quote": "The payment of tribute to the Christians and its natural border in the Baetic System allowed it to survive until 1492.",
+    "explanation": "Granada's longevity — nearly 250 years as the sole Muslim state in Iberia — was due to both its mountain defences and willingness to pay tribute.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Nasrid_Kingdom",
+      "entity": "Nasrid_Kingdom_of_Granada",
+      "topic": "political",
+      "theme": "survival"
+    },
+    "source_line": 159
+  },
+  {
+    "id": "F090",
+    "source_line": 158,
+    "fact": "A few years after the Battle of Las Navas de Tolosa (1212), only one Muslim territory remained on the Iberian Peninsula: the Nasrid Kingdom of Granada (established circa 1238).",
+    "source_quote": "A few years after Las Navas de Tolosa, only one Muslim territory remained on the Iberian Peninsula: the Nasrid Kingdom of Granada.",
+    "explanation": "The rapid collapse of Al-Andalus after 1212 reduced eight centuries of Muslim presence to a single kingdom, isolated in the southeast.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Nasrid_Kingdom",
+      "entity": "Nasrid_Kingdom_of_Granada",
+      "topic": "political",
+      "theme": "state_formation"
+    }
+  },
+  {
+    "id": "F037",
+    "fact": "The Almohads, a new North African Muslim movement, invaded Al-Andalus in 1145 and seized control of most of it.",
+    "source_quote": "This led to a new North African invasion in 1145: the Almohads, who seized control of most of al-Andalus.",
+    "explanation": "The Almohads replaced the Almoravids as the dominant Islamic power in Al-Andalus, bringing an even stricter form of Islam.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "North_African_Empires",
+      "entity": "Almohads",
+      "topic": "military",
+      "theme": "invasion"
+    },
+    "source_line": 150
+  },
+  {
+    "id": "F038",
+    "fact": "The Almohads defeated the Christians at the Battle of Alarcos (1195).",
+    "source_quote": "they were not well received by either the Andalusians or the Christians, whom they defeated at the Battle of Alarcos (1195).",
+    "explanation": "The Almohad victory at Alarcos temporarily reversed Christian gains and demonstrated their military superiority over the Castilians.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "North_African_Empires",
+      "entity": "Almohads",
+      "topic": "military",
+      "theme": "battle"
+    },
+    "source_line": 151
+  },
+  {
+    "id": "F033",
+    "fact": "The Almoravids were a North African religious movement that sought to restore the purity of Islam by radicalising the precepts of the Quran; they had established an empire in northwest Africa.",
+    "source_quote": "The Almoravids, a religious movement that sought to restore the purity of Islam by radicalizing the precepts of the Quran, had established an empire in northwest Africa.",
+    "explanation": "The Almoravids' strict religious ideology made them effective military forces but harsh rulers who alienated the more tolerant Andalusian Muslims.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "North_African_Empires",
+      "entity": "Almoravids",
+      "topic": "religious",
+      "theme": "ideology"
+    },
+    "source_line": 141
+  },
+  {
+    "id": "F034",
+    "fact": "The Almoravids defeated Alfonso VI at the Battle of Sagrajas (1086).",
+    "source_quote": "In 1086, they defeated Alfonso VI at the Battle of Sagrajas.",
+    "explanation": "Sagrajas reversed the Christian advance just one year after the fall of Toledo, demonstrating the Almoravids' military power.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "North_African_Empires",
+      "entity": "Almoravids",
+      "topic": "military",
+      "theme": "battle"
+    },
+    "source_line": 142
+  },
+  {
+    "id": "F089",
+    "source_line": 143,
+    "fact": "The Andalusians were unhappy with the Almoravid rulers, who brought an open and cruel persecution of Christians to Al-Andalus.",
+    "source_quote": "the Andalusians were unhappy with their new rulers, who brought with them an open and cruel persecution of Christians.",
+    "explanation": "The Almoravids' religious intolerance alienated the multicultural Andalusian population that had grown accustomed to relative coexistence under previous rulers.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "North_African_Empires",
+      "entity": "Almoravids",
+      "topic": "social",
+      "theme": "persecution"
+    }
+  },
+  {
+    "id": "F035",
+    "fact": "Mozarabs were Christians living under Muslim rule in Al-Andalus; they were persecuted by the Almoravids and appealed to Alfonso I the Battler, King of Aragon, for help.",
+    "source_quote": "the Andalusians were unhappy with their new rulers, who brought with them an open and cruel persecution of Christians. The Mozarabs appealed to Alfonso I the Battler, King of Aragon, for help.",
+    "explanation": "The Mozarabs' appeal shows how the Almoravids broke the tradition of religious tolerance in Al-Andalus, radicalising Christian-Muslim relations.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "North_African_Empires",
+      "entity": "Mozarabs",
+      "topic": "religious",
+      "theme": "persecution"
+    },
+    "source_line": 143
+  },
+  {
+    "id": "F029",
+    "fact": "In 1031, the last caliph of Córdoba was deposed and Al-Andalus fragmented into small independent kingdoms called taifas.",
+    "source_quote": "With the death of Almanzor, power struggles began among governors and military leaders, and in 1031 the last caliph was deposed. al-Andalus fragmented into small, independent kingdoms called taifas.",
+    "explanation": "The fragmentation into dozens of taifas fatally weakened Muslim military and political power in the Peninsula.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Taifa_Kingdoms",
+      "entity": "Taifas",
+      "topic": "political",
+      "theme": "fragmentation"
+    },
+    "source_line": 127
+  },
+  {
+    "id": "F030",
+    "fact": "The weak taifa kingdoms paid tribute payments called parias to Christian kingdoms in exchange for not being attacked.",
+    "source_quote": "formed alliances with Christian kingdoms, which imposed tribute payments called parias in exchange for not being attacked.",
+    "explanation": "Parias were effectively protection money — the taifas paid to avoid Christian attacks, transferring vast wealth to the Christian kingdoms.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Taifa_Kingdoms",
+      "entity": "Taifas",
+      "topic": "political",
+      "theme": "tribute"
+    },
+    "source_line": 131
+  },
+  {
+    "id": "F088",
+    "source_line": 129,
+    "fact": "The taifa kingdoms were weak and often at war with each other.",
+    "source_quote": "These weak and small kingdoms were often at war with each other.",
+    "explanation": "The mutual warfare of the taifas prevented any unified Muslim resistance and made it easier for Christian kingdoms — enriched by parias — to advance.",
+    "labels": {
+      "era": "Al-Andalus",
+      "period": "Taifa_Kingdoms",
+      "entity": "Taifas",
+      "topic": "military",
+      "theme": "internal_conflict"
+    }
+  },
+  {
+    "id": "F097",
+    "source_line": 226,
+    "fact": "The castle-owning counts of the eastern frontier were responsible for protecting the Kingdom of León from Muslim invasions; their distance from royal authority led them to gradually gain more independence.",
+    "source_quote": "The owners of these castles were counts, and they were responsible for protecting the Kingdom of León from Muslim invasions. Since they were far from the king's authority, they gradually gained more independence.",
+    "explanation": "The geographic distance between the frontier counts and the Leonese court created the political space for Castile's gradual autonomy — a classic frontier dynamic.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "County_of_Castile",
+      "entity": "Castile",
+      "topic": "political",
+      "theme": "frontier_autonomy"
+    }
+  },
+  {
+    "id": "F098",
+    "source_line": 233,
+    "fact": "The County of Castile was strengthened because it was a borderland territory between the Christian and Muslim kingdoms.",
+    "source_quote": "This territory was strengthened because it was a borderland between the Christian and Muslim kingdoms.",
+    "explanation": "Frontier regions developed distinctive cultures of military hardiness and gradual independence; Castile's borderland position made it both vulnerable and ultimately powerful.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "County_of_Castile",
+      "entity": "Castile",
+      "topic": "geographic",
+      "theme": "frontier"
+    }
+  },
+  {
+    "id": "F052",
+    "fact": "Count Fernán González (931–970) unified the Castilian counties and created the County of Castile as a single political entity.",
+    "source_quote": "Count Fernán González (931-970) unified all the counties and created the County of Castile, with himself as its ruler.",
+    "explanation": "Fernán González's unification gave Castile a coherent political identity for the first time, beginning its rise to dominance in the Reconquista.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "County_of_Castile",
+      "entity": "Fernan_Gonzalez",
+      "topic": "political",
+      "theme": "state_formation"
+    },
+    "source_line": 228
+  },
+  {
+    "id": "F053",
+    "fact": "In 1035, Sancho III of Navarre appointed his son Ferdinand as Count of Castile.",
+    "source_quote": "In the 11th century, Sancho III of Navarre added the County of Castile to his kingdom and appointed his son Ferdinand as count in 1035.",
+    "explanation": "Sancho III's control of Castile — through marriage and appointment — briefly united the northern Christian kingdoms under one ruler.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "County_of_Castile",
+      "entity": "Sancho_III_of_Navarre",
+      "topic": "political",
+      "theme": "succession"
+    },
+    "source_line": 237
+  },
+  {
+    "id": "F059",
+    "fact": "Charlemagne created a defensive border zone called the Marca Hispanica in the Pyrenees to protect his empire from Muslim incursions.",
+    "source_quote": "to strengthen the border, he created a defensive zone called the Marca Hispanica.",
+    "explanation": "The Marca Hispanica became the origin of the eastern Christian kingdoms and counties — Navarre, Aragon, and the Catalan counties.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Eastern_Kingdoms_Origins",
+      "entity": "Charlemagne",
+      "topic": "military",
+      "theme": "defensive_zone"
+    },
+    "source_line": 321
+  },
+  {
+    "id": "F106",
+    "source_line": 318,
+    "fact": "Christians found refuge in the Pyrenees, where they had to fight both the Franks in the north and the Muslims in the south; Charlemagne fought Muslims to defend his southern border and conquered territories in the Pyrenees.",
+    "source_quote": "Christians also found refuge in the Pyrenees. In this territory, they had to fight against the Franks in the north and the Muslims in the south. Charlemagne had to fight the Muslims to defend his southern border, and while doing so, he also conquered many territories in the Pyrenees.",
+    "explanation": "The Pyrenean Christians were caught between two great powers; Charlemagne's campaigns there, though partly defensive, created the political landscape from which the eastern Christian kingdoms emerged.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Eastern_Kingdoms_Origins",
+      "entity": "Charlemagne",
+      "topic": "military",
+      "theme": "pyrenean_refuge"
+    }
+  },
+  {
+    "id": "F073",
+    "fact": "After Charlemagne's death, the counts of the Marca Hispanica distanced themselves from Frankish authority and became increasingly independent, leading to the creation of the Kingdom of Pamplona, the Counties of Aragon, and the Catalan Counties.",
+    "source_quote": "After Charlemagne's death, the counts of the Marca Hispanica began to distance themselves from Frankish authority and become increasingly independent. This led to the creation of the Kingdom of Pamplona, the Counties of Aragon, and the Catalan Counties.",
+    "explanation": "The breakup of Carolingian authority in the Pyrenees directly produced the eastern Christian kingdoms that would play a major role in the Reconquista.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Eastern_Kingdoms_Origins",
+      "entity": "Marca_Hispanica",
+      "topic": "political",
+      "theme": "independence_declaration"
+    },
+    "source_line": 324
+  },
+  {
+    "id": "F068",
+    "fact": "El Cid's real name was Rodrigo Díaz de Vivar; he was immortalised in the medieval epic poem El Cantar de Mio Cid.",
+    "source_quote": "He was praised for his honor and bravery, qualities reflected in the epic poem El Cantar de Mio Cid, which immortalized his name and created his legend.",
+    "explanation": "El Cantar de Mio Cid is the oldest major work of Spanish literature and the primary source for El Cid's legendary status.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "El_Cid",
+      "entity": "El_Cid",
+      "topic": "cultural",
+      "theme": "epic_poem"
+    },
+    "source_line": 337
+  },
+  {
+    "id": "F069",
+    "fact": "In 1094, El Cid conquered the Taifa of Valencia and established an independent dominion there.",
+    "source_quote": "In 1094, he conquered the Taifa of Valencia, establishing an independent dominion there that remained after his death.",
+    "explanation": "El Cid's conquest of Valencia was his greatest military achievement, creating a personal domain loyal to neither Christian nor Muslim lords.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "El_Cid",
+      "entity": "El_Cid",
+      "topic": "military",
+      "theme": "conquest"
+    },
+    "source_line": 341
+  },
+  {
+    "id": "F070",
+    "fact": "After El Cid's death, his wife Jimena ruled the Taifa of Valencia until 1101.",
+    "source_quote": "remained after his death, ruled by his wife, Jimena, until 1101.",
+    "explanation": "Jimena continued El Cid's independent Valencia rule briefly; the Almoravids captured the city in 1101.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "El_Cid",
+      "entity": "Jimena",
+      "topic": "political",
+      "theme": "succession"
+    },
+    "source_line": 343
+  },
+  {
+    "id": "F036",
+    "fact": "Alfonso I the Battler united thousands of Christians into a single army and defeated the Almoravids at the Battle of Lucena (1125).",
+    "source_quote": "He united thousands of Christians into a single army and they succeeded in defeating the Almoravids at the Battle of Lucena (1125).",
+    "explanation": "The Battle of Lucena began the unravelling of Almoravid power in Al-Andalus, paving the way for the Almohad invasion.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Aragon",
+      "entity": "Alfonso_I_the_Battler",
+      "topic": "military",
+      "theme": "battle"
+    },
+    "source_line": 145
+  },
+  {
+    "id": "F065",
+    "fact": "Alfonso I the Battler of Aragon conquered the city of Zaragoza in 1118 and made it his capital.",
+    "source_quote": "Later, in 1118, Alfonso I the Battler conquered the city of Zaragoza and made it his capital.",
+    "explanation": "Zaragoza's conquest was the greatest achievement of the Aragonese Reconquista, transforming Aragon into a major Iberian power.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Aragon",
+      "entity": "Alfonso_I_the_Battler",
+      "topic": "military",
+      "theme": "conquest"
+    },
+    "source_line": 290
+  },
+  {
+    "id": "F067",
+    "fact": "After Alfonso I the Battler died without an heir, Navarre and Aragon separated.",
+    "source_quote": "Upon his death without an heir, Navarre and Aragon separated.",
+    "explanation": "The lack of a clear successor dissolved the union between Navarre and Aragon that Alfonso I had maintained, permanently splitting the two kingdoms.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Aragon",
+      "entity": "Alfonso_I_the_Battler",
+      "topic": "political",
+      "theme": "succession"
+    },
+    "source_line": 272
+  },
+  {
+    "id": "F066",
+    "fact": "The original capital of the Kingdom of Aragon was Jaca, before the conquest of Zaragoza moved it there.",
+    "source_quote": "Aragon would eventually become an independent kingdom and establish its capital in Jaca.",
+    "explanation": "Jaca's role as the original Aragonese capital reflects the kingdom's Pyrenean mountain origins before its southward expansion.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Aragon",
+      "entity": "Kingdom_of_Aragon",
+      "topic": "political",
+      "theme": "capital_city"
+    },
+    "source_line": 288
+  },
+  {
+    "id": "F101",
+    "source_line": 270,
+    "fact": "After Sancho III's death, the territories of Aragon, Navarre, Sobrarbe, and Ribagorza were later reunited under a single monarch; during their union the Ebro Valley was dominated.",
+    "source_quote": "Years later, the territories of Aragon, Navarra, and the counties of Sobrarbe and Ribagorza were reunited under a single monarch, and during the period of their union, the Ebro Valley was dominated.",
+    "explanation": "This reunification — leading to Alfonso I the Battler's reign — created the military power needed to conquer Zaragoza and dominate the Ebro Valley.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Aragon",
+      "entity": "Kingdom_of_Aragon",
+      "topic": "political",
+      "theme": "reunification"
+    }
+  },
+  {
+    "id": "F103",
+    "source_line": 283,
+    "fact": "The area below the Pyrenees that became Aragon was divided into three regions (Sobrarbe, Ribagorza, and Aragon) and was under the political influence of the Carolingians.",
+    "source_quote": "The central area below the Pyrenees was divided into three regions (Sobrarbe, Ribagorza, and Aragon) and was under the political influence of the Carolingians.",
+    "explanation": "Aragon's origins lie in three Carolingian-influenced Pyrenean counties that gradually consolidated into a single kingdom.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Aragon",
+      "entity": "Kingdom_of_Aragon",
+      "topic": "political",
+      "theme": "carolingian_origins"
+    }
+  },
+  {
+    "id": "F104",
+    "source_line": 284,
+    "fact": "The future Kingdom of Aragon gradually sought independence from the Franks, looked towards Pamplona, and through strategic marriages with Sancho III of Pamplona in the 11th century became an independent kingdom with its capital in Jaca.",
+    "source_quote": "Gradually, they attempted to gain independence from the Franks and began to look towards Pamplona. Through strategic marriages in the 11th century (with Sancho III of Pamplona), Aragon would eventually become an independent kingdom and establish its capital in Jaca.",
+    "explanation": "Aragon's path to independence was diplomatic and marital as much as military — the Pamplona connection gave it legitimacy and resources.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Aragon",
+      "entity": "Kingdom_of_Aragon",
+      "topic": "political",
+      "theme": "independence_declaration"
+    }
+  },
+  {
+    "id": "F047",
+    "fact": "During the reign of Alfonso II of Asturias (791–842), the remains of the Apostle James were discovered in Compostela; he ordered a church built over the tomb.",
+    "source_quote": "Alfonso II (791-842) strengthened the king's power against the nobles. During his reign, the remains of the Apostle James were discovered in Compostela. Following this discovery, the king ordered the construction of a church to venerate the apostle's tomb.",
+    "explanation": "The discovery of St. James's tomb and Alfonso II's church created Santiago de Compostela, one of Christendom's greatest pilgrimage sites.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Asturias",
+      "entity": "Alfonso_II",
+      "topic": "religious",
+      "theme": "pilgrimage_site"
+    },
+    "source_line": 200
+  },
+  {
+    "id": "F095",
+    "source_line": 200,
+    "fact": "Alfonso II of Asturias (791–842) strengthened the king's power against the nobles.",
+    "source_quote": "Alfonso II (791-842) strengthened the king's power against the nobles.",
+    "explanation": "Strengthening royal authority against the nobility was a key political achievement of Alfonso II alongside the cultural significance of his discovery of St. James's tomb.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Asturias",
+      "entity": "Alfonso_II",
+      "topic": "political",
+      "theme": "royal_authority"
+    }
+  },
+  {
+    "id": "F048",
+    "fact": "Alfonso III of Asturias (866–910) conquered Coimbra and Porto; upon his death he divided his possessions into three kingdoms for his three sons.",
+    "source_quote": "Alfonso III (866-910) conquered Coimbra and Porto, and upon his death, divided his possessions into three kingdoms for his three sons: Asturias, Galicia, and Leon.",
+    "explanation": "Alfonso III's conquests pushed the kingdom south into what is now Portugal; his division of the realm temporarily fragmented Christian power.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Asturias",
+      "entity": "Alfonso_III",
+      "topic": "military",
+      "theme": "expansion"
+    },
+    "source_line": 207
+  },
+  {
+    "id": "F046",
+    "fact": "Alfonso I of Asturias (739–757) extended his domains into Galicia and began to occupy the northern part of the Duero Basin.",
+    "source_quote": "Alfonso I (739-757), who extended his domains into Galicia and began to occupy the northern part of the Duero Basin.",
+    "explanation": "Alfonso I was the first major expansionist king of Asturias, laying the groundwork for the kingdom's growth into a major Iberian power.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Asturias",
+      "entity": "Alfonso_I_of_Asturias",
+      "topic": "military",
+      "theme": "expansion"
+    },
+    "source_line": 198
+  },
+  {
+    "id": "F011",
+    "fact": "The Battle of Covadonga (722) was fought between the Astures, led by the Visigoth Pelayo, and Muslim soldiers; the Christian victory gave rise to the Kingdom of Asturias with Pelayo as its first monarch.",
+    "source_quote": "the Battle of Covadonga (722) took place between the Astures, led by the Visigoth Pelayo, and a group of Muslim soldiers. The Christian victory gave rise to the Kingdom of Asturias, with Pelayo, the victor, as its first monarch.",
+    "explanation": "Covadonga is the traditional starting point of the Reconquista and the founding event of the Kingdom of Asturias.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Asturias",
+      "entity": "Battle_of_Covadonga",
+      "topic": "military",
+      "theme": "battle"
+    },
+    "source_line": 46
+  },
+  {
+    "id": "F045",
+    "fact": "The Kingdom of Asturias originally had its capital in Cangas de Onís, which was later moved to Oviedo.",
+    "source_quote": "The capital was in Cangas de Onis, although it was soon moved to Oviedo.",
+    "explanation": "The shift from Cangas de Onís to Oviedo reflected the kingdom's growing stability and southward expansion.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Asturias",
+      "entity": "Kingdom_of_Asturias",
+      "topic": "political",
+      "theme": "capital_city"
+    },
+    "source_line": 193
+  },
+  {
+    "id": "F094",
+    "source_line": 197,
+    "fact": "The Asturian kings took advantage of periods when the Muslim territory suffered internal problems to expand their territories.",
+    "source_quote": "The Asturian kings took advantage of periods when the Muslim territory suffered internal problems to expand their territories.",
+    "explanation": "Asturian expansion was opportunistic — the kings timed their campaigns to coincide with Muslim civil wars or crises, a pattern repeated throughout the Reconquista.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Asturias",
+      "entity": "Kingdom_of_Asturias",
+      "topic": "military",
+      "theme": "expansion"
+    }
+  },
+  {
+    "id": "F032",
+    "fact": "Alfonso VI of León and Castile conquered Toledo in 1085, forcing the Taifa kings to seek help from the Almoravid Empire.",
+    "source_quote": "In 1085, Alfonso VI of León and Castile conquered Toledo, forcing the Taifa kings to seek help from the Almoravid Empire.",
+    "explanation": "The fall of the old Visigothic capital to Christians was a major symbolic and strategic blow that triggered North African intervention.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Castile_and_Leon",
+      "entity": "Alfonso_VI",
+      "topic": "military",
+      "theme": "conquest"
+    },
+    "source_line": 134
+  },
+  {
+    "id": "F077",
+    "fact": "After the death of Alfonso VI, León and Castile separated.",
+    "source_quote": "Upon the death of Alfonso VI, León and Castile separated.",
+    "explanation": "The personal union of León and Castile under Alfonso VI dissolved at his death, temporarily reversing the political unification Ferdinand I had achieved.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Castile_and_Leon",
+      "entity": "Alfonso_VI",
+      "topic": "political",
+      "theme": "succession"
+    },
+    "source_line": 245
+  },
+  {
+    "id": "F058",
+    "fact": "Alfonso X the Wise (son of Fernando III the Saint) reduced military activity.",
+    "source_quote": "His son, Alfonso X, the Wise, reduced military activity.",
+    "explanation": "Alfonso X shifted the kingdom's energy from military conquest to legal reform, scholarship, and cultural patronage.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Castile_and_Leon",
+      "entity": "Alfonso_X",
+      "topic": "cultural",
+      "theme": "patronage"
+    },
+    "source_line": 311
+  },
+  {
+    "id": "F099",
+    "source_line": 245,
+    "fact": "The arrival of the Almoravids halted Castilian expansion after Alfonso VI's conquest of Toledo.",
+    "source_quote": "However, the arrival of the Almoravids halted Castilian expansion.",
+    "explanation": "Just as Castile was poised to dominate Iberia after Toledo's fall in 1085, the Almoravid intervention restored the military balance and stopped further Christian advances for decades.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Castile_and_Leon",
+      "entity": "Almoravids",
+      "topic": "military",
+      "theme": "halted_expansion"
+    }
+  },
+  {
+    "id": "F054",
+    "fact": "Ferdinand I became the first king of Castile and León by marrying a princess from León.",
+    "source_quote": "When Ferdinand I married a princess from León, he became the first king of Castile and León.",
+    "explanation": "Ferdinand I's marriage united two of the most powerful Christian kingdoms in Iberia, creating the combined state that would drive the Reconquista.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Castile_and_Leon",
+      "entity": "Ferdinand_I",
+      "topic": "political",
+      "theme": "marriage_union"
+    },
+    "source_line": 238
+  },
+  {
+    "id": "F076",
+    "fact": "During his reign as King of Castile and León, Ferdinand I conquered Salamanca, Ávila, and Galicia.",
+    "source_quote": "During his reign, he conquered Salamanca, Avila, and Galicia.",
+    "explanation": "Ferdinand I's conquests expanded the new joint kingdom of Castile and León southward and westward, laying the groundwork for further Reconquista advance.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Castile_and_Leon",
+      "entity": "Ferdinand_I",
+      "topic": "military",
+      "theme": "conquest"
+    },
+    "source_line": 239
+  },
+  {
+    "id": "F057",
+    "fact": "Fernando III the Saint inherited Castile from his mother and León from his father, definitively uniting both kingdoms; he conquered Córdoba and Seville by advancing through the Guadalquivir Valley.",
+    "source_quote": "Fernando III, the Saint, inherited the Kingdom of Castile from his mother and the Kingdom of Leon from his father, thus definitively uniting both kingdoms...took advantage of Almohad weakness to advance through the Guadalquivir Valley and conquer Córdoba and Seville.",
+    "explanation": "Fernando III's campaigns delivered the most important cities of Al-Andalus to Christian rule, effectively ending Muslim power in central Iberia.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Castile_and_Leon",
+      "entity": "Fernando_III",
+      "topic": "military",
+      "theme": "conquest"
+    },
+    "source_line": 308
+  },
+  {
+    "id": "F055",
+    "fact": "Queen Urraca, successor to Alfonso VI, was the first woman in all of Europe to reign in her own right.",
+    "source_quote": "His successor was Queen Urraca, the first woman in all of Europe to reign in her own right.",
+    "explanation": "Queen Urraca's reign was a remarkable exception in medieval Europe, where royal succession almost always passed to male heirs.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Castile_and_Leon",
+      "entity": "Queen_Urraca",
+      "topic": "political",
+      "theme": "succession"
+    },
+    "source_line": 246
+  },
+  {
+    "id": "F050",
+    "fact": "The eastern frontier of the Kingdom of León was called Castile because of the large number of castles built there for defence.",
+    "source_quote": "Because of the large number of castles, this land would come to be known as Castile.",
+    "explanation": "The name Castile (from castillo, castle) directly reflects the military function of the region as a fortified frontier zone.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Leon",
+      "entity": "Castile",
+      "topic": "geographic",
+      "theme": "place_name_origin"
+    },
+    "source_line": 221
+  },
+  {
+    "id": "F096",
+    "source_line": 215,
+    "fact": "In the 10th century, the proclamation of the Caliphate of Córdoba made southward expansion more difficult for the Kingdom of León, especially due to the strength of war generals like Almanzor.",
+    "source_quote": "In the 10th century, with the proclamation of the Caliphate, conquering lands in the south became more difficult for the Kingdom of León, especially due to the strength and violence of war generals like Almanzor.",
+    "explanation": "The Caliphate's military power temporarily reversed the momentum of Christian expansion and forced the Kingdom of León onto the defensive.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Leon",
+      "entity": "Kingdom_of_Leon",
+      "topic": "military",
+      "theme": "caliphate_pressure"
+    }
+  },
+  {
+    "id": "F100",
+    "source_line": 250,
+    "fact": "The Kingdom of León faced conflicts with the Muslims, with Castile, and with Portugal throughout this period.",
+    "source_quote": "The Kingdom of León faced conflicts with the Muslims, with Castile, and with Portugal.",
+    "explanation": "León's wars on three fronts — against Muslims, its own former territory Castile, and the newly independent Portugal — illustrate the complexity of Christian Iberian politics.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Leon",
+      "entity": "Kingdom_of_Leon",
+      "topic": "military",
+      "theme": "multi-front_conflict"
+    }
+  },
+  {
+    "id": "F049",
+    "fact": "Ordoño II (910–924) reunited the divided kingdoms and moved the capital to León, giving rise to the Kingdom of León.",
+    "source_quote": "His second son, Ordoño II (910-924), who inherited Galicia, reunited the kingdoms and moved the capital to León. From this point on, it would be known as the Kingdom of León.",
+    "explanation": "Ordoño II's reunification and capital move transformed the Kingdom of Asturias into the Kingdom of León.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Leon",
+      "entity": "Ordono_II",
+      "topic": "political",
+      "theme": "capital_city"
+    },
+    "source_line": 211
+  },
+  {
+    "id": "F051",
+    "fact": "King Ramiro II of León defeated Abd al-Rahman III's army at the Battle of Simancas in 939.",
+    "source_quote": "the Battle of Simancas in 939, where King Ramiro II defeated the army of Abd al-Rahman III.",
+    "explanation": "Simancas was one of the few Christian victories during the powerful Caliphate period, halting the Caliphate's northern expansion.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Leon",
+      "entity": "Ramiro_II",
+      "topic": "military",
+      "theme": "battle"
+    },
+    "source_line": 219
+  },
+  {
+    "id": "F072",
+    "fact": "The Arista dynasty (Counts of Pamplona) expelled the Carolingians with the help of the Banu Qasi, a Muladi family that ruled the Ebro region.",
+    "source_quote": "The Arista dynasty, then Counts of Pamplona, expelled the Carolingians with the help of the Banu Qasi, a Muladi family that ruled the Ebro region.",
+    "explanation": "The Banu Qasi alliance shows how Christian and Muladi (native Muslim convert) factions could cooperate against the Franks to achieve shared political goals.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Navarre",
+      "entity": "Banu_Qasi",
+      "topic": "political",
+      "theme": "alliance"
+    },
+    "source_line": 254
+  },
+  {
+    "id": "F060",
+    "fact": "Basque-origin tribes defeated Charlemagne at the Battle of Roncesvalles (778), enabling them to remain independent from the Franks.",
+    "source_quote": "Originally formed by tribes of Basque origin, they defeated Charlemagne at the Battle of Roncesvalles (778) and managed to remain independent from the Franks.",
+    "explanation": "Roncesvalles was a significant setback for Frankish expansion and allowed the future Kingdom of Pamplona to develop independently.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Navarre",
+      "entity": "Battle_of_Roncesvalles",
+      "topic": "military",
+      "theme": "battle"
+    },
+    "source_line": 331
+  },
+  {
+    "id": "F061",
+    "fact": "The Battle of Roncesvalles was immortalised in the epic poem The Song of Roland (La Chanson de Roland).",
+    "source_quote": "The battle was so important that it was immortalized in the epic poem The Song of Roland (La Chanson de Roland).",
+    "explanation": "La Chanson de Roland is one of the earliest and most important works of medieval French literature, mythologising the Frankish defeat at Roncesvalles.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Navarre",
+      "entity": "Battle_of_Roncesvalles",
+      "topic": "cultural",
+      "theme": "epic_poem"
+    },
+    "source_line": 253
+  },
+  {
+    "id": "F102",
+    "source_line": 276,
+    "fact": "In later years, the Kingdom of Navarre's expansion slowed; for decades its kings belonged to French dynasties, distancing Navarre from the political evolution of the Iberian Peninsula.",
+    "source_quote": "In later years, the Kingdom of Navarre, situated between Castile and Aragon, saw its expansion slowed. For decades, the kings of Navarre belonged to French dynasties, distancing themselves from the political evolution of the Iberian Peninsula to follow French authority.",
+    "explanation": "Navarre's shift to French dynastic rule effectively sidelined it from the Reconquista, leaving Castile and Aragon as the dominant forces of Iberian Christian expansion.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Navarre",
+      "entity": "Kingdom_of_Navarre",
+      "topic": "political",
+      "theme": "french_dynasties"
+    }
+  },
+  {
+    "id": "F062",
+    "fact": "The Kingdom of Pamplona was formed in 824 by the Arista dynasty.",
+    "source_quote": "In 824, the Kingdom of Pamplona was formed.",
+    "explanation": "The Kingdom of Pamplona emerged from the post-Carolingian fragmentation of the Pyrenean border and would evolve into the Kingdom of Navarre.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Navarre",
+      "entity": "Kingdom_of_Pamplona",
+      "topic": "political",
+      "theme": "state_formation"
+    },
+    "source_line": 255
+  },
+  {
+    "id": "F064",
+    "fact": "Sancho III of Navarre controlled all the Hispanic kingdoms through military and matrimonial policies, including the County of Castile by marrying its heiress Sancha.",
+    "source_quote": "Sancho III inherited the kingdom. Thanks to his military and matrimonial policies, he was the most important king of his time, managing to control the counties of Sobrarbe, Ribagorza, and Aragon, the County of Castile (through his marriage to the heiress of the territory, Sancha), and the Kingdom of León.",
+    "explanation": "Sancho III of Navarre was briefly the most powerful Christian ruler in Iberia, uniting nearly all Christian territories under his control.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Navarre",
+      "entity": "Sancho_III_of_Navarre",
+      "topic": "political",
+      "theme": "marriage_union"
+    },
+    "source_line": 259
+  },
+  {
+    "id": "F074",
+    "fact": "Sancho III of Navarre utilised the growing importance of the Camino de Santiago to establish contact with other European powers.",
+    "source_quote": "he ruled all the Hispanic Kingdoms and established contact with other European powers, utilizing the growing importance of the Camino de Santiago.",
+    "explanation": "The Camino de Santiago served as a diplomatic and cultural channel connecting Iberia with the rest of Christian Europe, and Sancho III exploited this strategically.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Navarre",
+      "entity": "Sancho_III_of_Navarre",
+      "topic": "political",
+      "theme": "diplomacy"
+    },
+    "source_line": 263
+  },
+  {
+    "id": "F078",
+    "fact": "When Sancho III of Navarre died, he divided his territories into three: Castile and León for Ferdinand, Pamplona for García Sánchez, and Aragon for Ramiro I.",
+    "source_quote": "When he died, his sons divided the territories into three: the Kingdom of Castile and León for Ferdinand, the Kingdom of Pamplona for Garcia Sanchez, and the Kingdom of Aragon for Ramiro I.",
+    "explanation": "This division after Sancho III's death split his briefly unified Iberian hegemony into separate kingdoms, each with its own dynasty and trajectory.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Navarre",
+      "entity": "Sancho_III_of_Navarre",
+      "topic": "political",
+      "theme": "succession"
+    },
+    "source_line": 266
+  },
+  {
+    "id": "F063",
+    "fact": "In 1162, under Sancho VI the Wise, the Kingdom of Pamplona officially changed its name to the Kingdom of Navarre.",
+    "source_quote": "which later, in 1162 under the reign of Sancho VI the Wise, changed its name to the Kingdom of Navarre.",
+    "explanation": "The renaming reflected the kingdom's evolution and expanded identity beyond its original Pamplona-centred origins.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Navarre",
+      "entity": "Sancho_VI_the_Wise",
+      "topic": "political",
+      "theme": "renaming"
+    },
+    "source_line": 255
+  },
+  {
+    "id": "F056",
+    "fact": "Portugal gained its independence in 1128 under Alfonso Enríquez.",
+    "source_quote": "Portugal, which had gained its independence in 1128 under Alfonso Enriquez.",
+    "explanation": "Alfonso Enríquez broke away from the Crown of León and Castile in 1128, founding the Kingdom of Portugal as a separate entity.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Kingdom_of_Portugal",
+      "entity": "Alfonso_Enriquez",
+      "topic": "political",
+      "theme": "independence_declaration"
+    },
+    "source_line": 250
+  },
+  {
+    "id": "F039",
+    "fact": "The Almohads were defeated at the Battle of Las Navas de Tolosa (1212), which marked the final decline of Al-Andalus.",
+    "source_quote": "they were defeated at the Battle of Las Navas de Tolosa (1212). This battle marked the final decline of al-Andalus.",
+    "explanation": "Las Navas de Tolosa broke Almohad military power permanently, opening all of Andalusia to rapid Christian conquest.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Las_Navas_de_Tolosa",
+      "entity": "Battle_of_Las_Navas_de_Tolosa",
+      "topic": "military",
+      "theme": "battle"
+    },
+    "source_line": 152
+  },
+  {
+    "id": "F040",
+    "fact": "At the Battle of Las Navas de Tolosa (1212), Alfonso VIII of Castile was joined by Kings Peter II of Aragon and Sancho VII of Navarre.",
+    "source_quote": "At the Battle of Las Navas de Tolosa, Alfonso VIII of Castile was joined by Kings Peter II of Aragon and Sancho VII of Navarre.",
+    "explanation": "The battle united the three major Christian kingdoms of Iberia in a rare coordinated campaign, reflecting its decisive importance.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Las_Navas_de_Tolosa",
+      "entity": "Battle_of_Las_Navas_de_Tolosa",
+      "topic": "military",
+      "theme": "coalition"
+    },
+    "source_line": 301
+  },
+  {
+    "id": "F041",
+    "fact": "Pope Innocent III called for a crusade against the Almohads; military orders Templars, Hospitallers, Santiago, and Calatrava participated in the Battle of Las Navas de Tolosa.",
+    "source_quote": "Pope Innocent III had called for a crusade to expel the Almohads, and members of various military orders joined them: Templars, Hospitallers, Santiago, and Calatrava.",
+    "explanation": "The papal crusade status of Las Navas de Tolosa gave the battle international significance and brought military orders from across Christendom.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Las_Navas_de_Tolosa",
+      "entity": "Battle_of_Las_Navas_de_Tolosa",
+      "topic": "religious",
+      "theme": "crusade"
+    },
+    "source_line": 303
+  },
+  {
+    "id": "F075",
+    "fact": "At Las Navas de Tolosa, the Christians defeated the Almohads despite being vastly outnumbered because they possessed heavy cavalry and religious motivation.",
+    "source_quote": "Though vastly outnumbered, the Christians were able to defeat the Muslims because they possessed heavy cavalry and religious motivation.",
+    "explanation": "The specific military and spiritual advantages of the Christian force explain why numerical inferiority did not prevent the decisive victory at Las Navas de Tolosa.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Las_Navas_de_Tolosa",
+      "entity": "Battle_of_Las_Navas_de_Tolosa",
+      "topic": "military",
+      "theme": "battle_tactics"
+    },
+    "source_line": 302
+  },
+  {
+    "id": "F105",
+    "source_line": 314,
+    "fact": "By the end of the 13th century, Muslim territory in Iberia was limited to the Nasrid Kingdom of Granada.",
+    "source_quote": "By the end of the 13th century, Muslim territory was limited to the Nasrid Kingdom of Granada.",
+    "explanation": "This marks the practical completion of the Reconquista as a territorial process — over 80% of the Peninsula had been recovered by Christian kingdoms by 1300.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Late_Reconquista",
+      "entity": "Reconquista",
+      "topic": "historical_context",
+      "theme": "territorial_summary"
+    }
+  },
+  {
+    "id": "F091",
+    "source_line": 166,
+    "fact": "After the Muslim victory at Guadalete, part of the Visigothic population took refuge in the mountainous regions of northern Iberia; pockets of resistance there gave rise to the Christian kingdoms.",
+    "source_quote": "After the Muslim victory at the Battle of Guadalete (711), the Visigothic kingdom disappeared, and part of its population took refuge in the mountainous regions of northern Iberia. It was there that pockets of resistance arose, which would later give rise to the Christian kingdoms.",
+    "explanation": "The northern mountain refuges were the seed of the Reconquista — geographical barriers that the Muslims did not fully control became the cradles of the Christian kingdoms.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Overview",
+      "entity": "Christian_Kingdoms",
+      "topic": "political",
+      "theme": "origins"
+    }
+  },
+  {
+    "id": "F092",
+    "source_line": 171,
+    "fact": "Relations between the Christian kingdoms varied over the years; alliances constantly shifted — they fought among themselves, against Al-Andalus, and sometimes allied with Muslims to fight other Christians.",
+    "source_quote": "relations between these kingdoms varied over the years; there were periods of peace and others of war, each acting according to its own interests, with alliances that constantly shifted. They fought among themselves and against Al-Andalus, and sometimes some of them joined forces with the Muslims to wage war against them.",
+    "explanation": "The Christian Reconquista was not a simple unified crusade — it was a complex web of shifting alliances driven by political self-interest as much as religion.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Overview",
+      "entity": "Christian_Kingdoms",
+      "topic": "political",
+      "theme": "inter-kingdom_relations"
+    }
+  },
+  {
+    "id": "F093",
+    "source_line": 177,
+    "fact": "The monarchs of the Christian kingdoms were considered owners of their territories; upon a monarch's death it was common to divide the kingdom among their children.",
+    "source_quote": "The monarchs who ruled these kingdoms were considered the owners of the territories, so when a monarch died and left several children, it was not uncommon for the kingdom to be divided among them so they could inherit it.",
+    "explanation": "This inheritance practice — treating kingdoms as personal property — explains the repeated divisions and reunifications that characterised the history of Castile, León, Navarre, and Aragon.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Overview",
+      "entity": "Christian_Kingdoms",
+      "topic": "political",
+      "theme": "succession"
+    }
+  },
+  {
+    "id": "F044",
+    "fact": "The Reconquista is the Christian reconquest of lands occupied by Muslims in Iberia, lasting from 711 to 1492 (practically completed in the 13th century with Las Navas de Tolosa).",
+    "source_quote": "The term 'Reconquista' refers to the process of Christian reconquest of the lands occupied by the Muslims after the destruction of the Visigothic Kingdom of Toledo. This process lasts from 711 to 1492, although it was practically completed in the 13th century with the Battle of Las Navas de Tolosa.",
+    "explanation": "The Reconquista frames nearly 800 years of Iberian history as a prolonged struggle between Christian and Muslim kingdoms.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Overview",
+      "entity": "Reconquista",
+      "topic": "historical_context",
+      "theme": "definition"
+    },
+    "source_line": 183
+  },
+  {
+    "id": "F031",
+    "fact": "Parias payments allowed Christian kingdoms to become more powerful than their Muslim enemies and begin advancing southward.",
+    "source_quote": "The Christian kingdoms used this influx of money to become more powerful than their Muslim enemies and began to advance southward.",
+    "explanation": "Parias directly funded the military expansion that would eventually destroy the taifa kingdoms themselves.",
+    "labels": {
+      "era": "Reconquista",
+      "period": "Taifa_Period",
+      "entity": "Christian_Kingdoms",
+      "topic": "political",
+      "theme": "tribute_consequences"
+    },
+    "source_line": 133
+  }
+]

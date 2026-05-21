@@ -252,58 +252,81 @@
     } catch (_) { /* fail silently — local results are already saved */ }
   }
 
-  /* ── Question selection ─────────────────────────────────────
-   * Guarantees era coverage: Visigothic ≥ 2, Al-Andalus ≥ 4,
-   * Reconquista ≥ 4 (10 reserved), then fills the remaining slots
-   * freely.  No two questions sharing a fact_id appear together.
-   * The final list is re-shuffled so era-grouped order is hidden.
+  /* ── One-time question enrichment ──────────────────────────
+   * Run once at startup: attach the full fact objects to every
+   * question so quote/explanation/era are available without
+   * storing them redundantly on the question itself.
    * ──────────────────────────────────────────────────────────── */
-  const ERA_MINIMUMS = { 'Visigothic': 2, 'Al-Andalus': 4, 'Reconquista': 4 };
+  var factById = {};
+  if (typeof QUIZ_FACTS !== 'undefined') {
+    QUIZ_FACTS.forEach(function (f) { factById[f.id] = f; });
+  }
+  QUIZ_QUESTIONS.forEach(function (q) {
+    q.facts = (q.fact_ids || []).map(function (fid) { return factById[fid]; }).filter(Boolean);
+    q.era   = q.facts.length > 0 ? q.facts[0].labels.era : 'Unknown';
+  });
 
+  /* ── Question selection ─────────────────────────────────────
+   * Steps through the sorted QUIZ_FACTS array at intervals of
+   * n/count with ±2 random jitter, picking one question per
+   * sampled fact.  Wraps around if the pointer exceeds the array
+   * length.  No two questions sharing a fact_id appear together.
+   * Falls back to random fill if the stepping loop can't find
+   * enough questions (e.g. heavily overlapping fact sets).
+   * ──────────────────────────────────────────────────────────── */
   function selectQuestions(pool, count) {
-    const shuffled = shuffle(pool);
-    const selected = [];
-    const selectedSet = new Set();
-    const usedFacts = new Set();
+    var facts = (typeof QUIZ_FACTS !== 'undefined') ? QUIZ_FACTS : [];
+    var n = facts.length;
 
-    function tryAdd(q) {
-      const factIds = q.fact_ids || [];
-      if (factIds.every(function (fid) { return !usedFacts.has(fid); })) {
-        selected.push(q);
-        selectedSet.add(q);
-        factIds.forEach(function (fid) { usedFacts.add(fid); });
-        return true;
-      }
-      return false;
-    }
-
-    // Pass 1: satisfy era minimums
-    Object.keys(ERA_MINIMUMS).forEach(function (era) {
-      var min = ERA_MINIMUMS[era];
-      var filled = 0;
-      for (var i = 0; i < shuffled.length && filled < min; i++) {
-        var q = shuffled[i];
-        if (!selectedSet.has(q) && q.era === era && tryAdd(q)) filled++;
-      }
+    /* Build reverse index: fact_id → [questions] */
+    var factQs = {};
+    pool.forEach(function (q) {
+      (q.fact_ids || []).forEach(function (fid) {
+        if (!factQs[fid]) factQs[fid] = [];
+        factQs[fid].push(q);
+      });
     });
 
-    // Pass 2: fill remaining slots from the full pool
-    for (var i = 0; i < shuffled.length && selected.length < count; i++) {
-      var q = shuffled[i];
-      if (!selectedSet.has(q)) tryAdd(q);
+    var step  = n / count;                   /* ~5.3 for 106 facts / 20 */
+    var pos   = Math.random() * step;        /* random start in [0, step) */
+    var selected  = [];
+    var usedQIds  = new Set();
+    var usedFacts = new Set();
+    var attempts  = 0;
+    var maxAttempts = n * 3;                 /* safety exit */
+
+    while (selected.length < count && attempts < maxAttempts) {
+      var idx  = Math.floor(pos) % n;
+      var fact = facts[idx];
+
+      if (fact && !usedFacts.has(fact.id)) {
+        /* Candidates: questions for this fact, not yet used, no fact overlap */
+        var candidates = (factQs[fact.id] || []).filter(function (q) {
+          if (usedQIds.has(q.id)) return false;
+          return (q.fact_ids || []).every(function (fid) { return !usedFacts.has(fid); });
+        });
+
+        if (candidates.length > 0) {
+          var q = candidates[Math.floor(Math.random() * candidates.length)];
+          selected.push(q);
+          usedQIds.add(q.id);
+          (q.fact_ids || []).forEach(function (fid) { usedFacts.add(fid); });
+        }
+      }
+
+      pos += step + (Math.random() * 4 - 2); /* advance with ±2 jitter */
+      attempts++;
     }
 
-    // Fallback: if fact-overlap exhausted the pool, fill without constraint
+    /* Fallback: fill remaining slots without fact constraint */
     if (selected.length < count) {
-      for (var i = 0; i < shuffled.length && selected.length < count; i++) {
-        if (!selectedSet.has(shuffled[i])) {
-          selected.push(shuffled[i]);
-          selectedSet.add(shuffled[i]);
-        }
+      var remaining = shuffle(pool);
+      for (var i = 0; i < remaining.length && selected.length < count; i++) {
+        if (!usedQIds.has(remaining[i].id)) selected.push(remaining[i]);
       }
     }
 
-    return shuffle(selected); // re-shuffle so era order isn't apparent
+    return shuffle(selected);
   }
 
   /* ── Quiz flow ──────────────────────────────────────────────── */
@@ -387,9 +410,12 @@
     window._quizState.lastAnswerCorrect = isCorrect;
 
     if (!isCorrect) {
-      if (q.quote || q.explanation) {
-        inlineQuote.textContent = q.quote ? '\u201c' + q.quote + '\u201d' : '';
-        inlineExplanation.textContent = q.explanation || '';
+      var primaryFact = (q.facts && q.facts[0]) || {};
+      var qQuote = primaryFact.source_quote || '';
+      var qExplain = primaryFact.explanation || '';
+      if (qQuote || qExplain) {
+        inlineQuote.textContent = qQuote ? '\u201c' + qQuote + '\u201d' : '';
+        inlineExplanation.textContent = qExplain;
         inlineExplain.classList.remove('hidden');
       }
       wrongAnswers.push({
@@ -398,8 +424,8 @@
         yourText:    currentChoices[selectedKey],
         correctKey:  currentCorrectKey,
         correctText: q.answer,
-        quote:       q.quote       || '',
-        explanation: q.explanation || '',
+        quote:       qQuote,
+        explanation: qExplain,
       });
     }
 
