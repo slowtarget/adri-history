@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Migrate to Firestore — Iberian History Quiz</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .card {
+      background: #1e293b;
+      border-radius: 1rem;
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 560px;
+      box-shadow: 0 8px 32px rgba(0,0,0,.4);
+    }
+    h1 { font-size: 1.5rem; margin-bottom: .25rem; }
+    .subtitle { color: #94a3b8; font-size: .9rem; margin-bottom: 2rem; }
+    .btn {
+      display: inline-block; padding: .65rem 1.4rem;
+      border: none; border-radius: .5rem; font-size: 1rem;
+      cursor: pointer; font-weight: 600; transition: opacity .15s;
+    }
+    .btn:disabled { opacity: .4; cursor: default; }
+    .btn-google  { background: #fff; color: #1f1f1f; }
+    .btn-primary { background: #1d4ed8; color: #fff; margin-top: 1rem; width: 100%; }
+    .btn-primary:hover:not(:disabled) { background: #1e40af; }
+
+    .status-box {
+      background: #0f172a; border-radius: .5rem;
+      padding: 1rem 1.25rem; margin-top: 1.5rem;
+      font-size: .875rem; line-height: 1.6;
+      min-height: 3rem;
+    }
+    .log-line { margin: .1rem 0; }
+    .log-line.ok   { color: #4ade80; }
+    .log-line.warn { color: #facc15; }
+    .log-line.err  { color: #f87171; }
+    .log-line.info { color: #94a3b8; }
+
+    .progress-row { margin-top: 1.25rem; }
+    .progress-label { font-size: .8rem; color: #94a3b8; margin-bottom: .3rem; }
+    progress { width: 100%; height: 8px; border-radius: 4px; overflow: hidden; }
+    progress::-webkit-progress-bar   { background: #334155; border-radius: 4px; }
+    progress::-webkit-progress-value { background: #3b82f6; border-radius: 4px; }
+
+    .signin-row { display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; }
+    .user-label { font-size: .875rem; color: #94a3b8; }
+
+    .rules-box {
+      margin-top: 1.75rem; padding: 1rem 1.25rem;
+      background: #0f172a; border-radius: .5rem;
+      font-size: .8rem; color: #94a3b8;
+    }
+    .rules-box h3 { color: #e2e8f0; margin-bottom: .5rem; font-size: .875rem; }
+    pre { white-space: pre-wrap; font-family: monospace; font-size: .75rem; color: #7dd3fc; }
+  </style>
+</head>
+<body>
+<div class="card">
+  <h1>🔥 Migrate to Firestore</h1>
+  <p class="subtitle">Uploads local facts &amp; questions into your Firebase project in one click.</p>
+
+  <div class="signin-row">
+    <button id="signin-btn" class="btn btn-google">Sign in with Google</button>
+    <span id="user-label" class="user-label"></span>
+  </div>
+
+  <button id="upload-btn" class="btn btn-primary" disabled>
+    Upload to Firestore →
+  </button>
+
+  <div class="status-box" id="status-box">
+    <span class="log-line info">Sign in to begin.</span>
+  </div>
+
+  <div class="progress-row" id="progress-row" style="display:none">
+    <div class="progress-label" id="progress-label">0%</div>
+    <progress id="progress-bar" value="0" max="100"></progress>
+  </div>
+
+  <div class="rules-box">
+    <h3>Required Firestore security rules</h3>
+    <p>Apply these in the <a href="https://console.firebase.google.com" target="_blank"
+       style="color:#7dd3fc">Firebase console</a> → Firestore → Rules:</p>
+    <pre>
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /facts/{doc} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    match /questions/{doc} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}</pre>
+  </div>
+</div>
+
+<!-- Firebase SDKs (same versions as main app) -->
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"
+        integrity="sha384-Yc8S7M5AqMxCsAWTOKsQjTJn1Mhqc2vEcupY/bqmpnh7R+LzTlvRd8qxOjPOIJd4"
+        crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"
+        integrity="sha384-FTb8gp2JGNvBUJyPPIUh8DurVAJz6Kn2JH+kcadHlV14aKXe7fYDW9PlZXqWykFd"
+        crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"
+        integrity="sha384-2BZtvXvD4QcYzi9Af11iIaNTFwvb2bhEbyml2rD0AE0kaG3Zkb10a4Q2XX8oiVBT"
+        crossorigin="anonymous"></script>
+<!-- Local data globals (QUIZ_FACTS, QUIZ_QUESTIONS) -->
+<script src="facts-data.js"></script>
+<script src="questions-data.js"></script>
+<script src="config.js"></script>
+
+<script>
+/* global firebase, QUIZ_CONFIG, QUIZ_FACTS, QUIZ_QUESTIONS */
+(function () {
+  'use strict';
+
+  var cfg = (typeof QUIZ_CONFIG !== 'undefined' && QUIZ_CONFIG.FIREBASE_CONFIG) || {};
+  if (!cfg.apiKey) {
+    log('err', 'No Firebase apiKey found in config.js — cannot proceed.');
+    return;
+  }
+
+  // Allow auth on this page regardless of hostname (unlike the main quiz)
+  firebase.initializeApp(cfg);
+  var auth = firebase.auth();
+  var db   = firebase.firestore();
+
+  var signinBtn  = document.getElementById('signin-btn');
+  var uploadBtn  = document.getElementById('upload-btn');
+  var userLabel  = document.getElementById('user-label');
+  var statusBox  = document.getElementById('status-box');
+  var progressRow   = document.getElementById('progress-row');
+  var progressBar   = document.getElementById('progress-bar');
+  var progressLabel = document.getElementById('progress-label');
+
+  /* ── Logging ── */
+  function log(type, msg) {
+    var line = document.createElement('div');
+    line.className = 'log-line ' + type;
+    line.textContent = msg;
+    statusBox.appendChild(line);
+    statusBox.scrollTop = statusBox.scrollHeight;
+  }
+
+  function clearLog() { statusBox.innerHTML = ''; }
+
+  function setProgress(done, total) {
+    var pct = total ? Math.round(done / total * 100) : 0;
+    progressBar.value = pct;
+    progressLabel.textContent = done + ' / ' + total + ' (' + pct + '%)';
+  }
+
+  /* ── Auth ── */
+  auth.onAuthStateChanged(function (user) {
+    if (user) {
+      userLabel.textContent = 'Signed in as ' + (user.displayName || user.email);
+      signinBtn.textContent = 'Sign out';
+      uploadBtn.disabled = false;
+    } else {
+      userLabel.textContent = '';
+      signinBtn.textContent = 'Sign in with Google';
+      uploadBtn.disabled = true;
+    }
+  });
+
+  signinBtn.addEventListener('click', function () {
+    if (auth.currentUser) {
+      auth.signOut();
+    } else {
+      auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).catch(function (err) {
+        log('err', 'Sign-in failed: ' + err.message);
+      });
+    }
+  });
+
+  /* ── Migration ── */
+  uploadBtn.addEventListener('click', function () {
+    uploadBtn.disabled = true;
+    clearLog();
+    progressRow.style.display = '';
+    runMigration().then(function () {
+      uploadBtn.disabled = false;
+    });
+  });
+
+  async function runMigration() {
+    var facts     = (typeof QUIZ_FACTS     === 'undefined') ? [] : QUIZ_FACTS;
+    var questions = (typeof QUIZ_QUESTIONS === 'undefined') ? [] : QUIZ_QUESTIONS;
+
+    if (!facts.length || !questions.length) {
+      log('err', 'QUIZ_FACTS or QUIZ_QUESTIONS is empty — check facts-data.js and questions-data.js loaded correctly.');
+      return;
+    }
+
+    log('info', 'Starting migration…');
+    log('info', facts.length + ' facts  •  ' + questions.length + ' questions');
+
+    var total  = facts.length + questions.length;
+    var done   = 0;
+    var errors = 0;
+
+    setProgress(0, total);
+
+    /* Write in Firestore batches (max 500 ops each) */
+    var BATCH_SIZE = 450;
+
+    /* ── Facts ── */
+    log('info', 'Uploading facts…');
+    for (var fi = 0; fi < facts.length; fi += BATCH_SIZE) {
+      var batch = db.batch();
+      var slice = facts.slice(fi, fi + BATCH_SIZE);
+      slice.forEach(function (fact) {
+        batch.set(db.collection('facts').doc(fact.id), fact);
+      });
+      try {
+        await batch.commit();
+        done += slice.length;
+        setProgress(done, total);
+      } catch (err) {
+        log('err', 'Batch failed (facts ' + fi + '–' + (fi + slice.length - 1) + '): ' + err.message);
+        errors++;
+      }
+    }
+    log('ok', 'Facts: ' + facts.length + ' uploaded.');
+
+    /* ── Questions ── */
+    log('info', 'Uploading questions…');
+    for (var qi = 0; qi < questions.length; qi += BATCH_SIZE) {
+      var qbatch = db.batch();
+      var qslice = questions.slice(qi, qi + BATCH_SIZE);
+      qslice.forEach(function (q) {
+        qbatch.set(db.collection('questions').doc(String(q.id)), q);
+      });
+      try {
+        await qbatch.commit();
+        done += qslice.length;
+        setProgress(done, total);
+      } catch (err) {
+        log('err', 'Batch failed (questions ' + qi + '–' + (qi + qslice.length - 1) + '): ' + err.message);
+        errors++;
+      }
+    }
+    log('ok', 'Questions: ' + questions.length + ' uploaded.');
+
+    /* ── Summary ── */
+    if (errors === 0) {
+      log('ok', '✓ Migration complete — ' + total + ' documents written to Firestore.');
+      log('info', 'Open index.html?data=firestore to verify.');
+    } else {
+      log('warn', errors + ' batch error(s) — check the log above and retry.');
+    }
+  }
+
+}());
+</script>
+</body>
+</html>
