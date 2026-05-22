@@ -173,6 +173,7 @@
                      location.hostname === 'localhost' ||
                      location.hostname === '127.0.0.1' ||
                      params.get('data') === 'local';
+  var testId        = params.get('test') || 'iberian_history';
   var firestoreMode = !isLocal;
 
   /* ── Tab switching ── */
@@ -194,11 +195,12 @@
   function loadFirestore() {
     var cfg = (typeof QUIZ_CONFIG !== 'undefined' && QUIZ_CONFIG.FIREBASE_CONFIG) || {};
     if (!cfg.apiKey) return loadLocal();
-    var app = firebase.apps.length ? firebase.app() : firebase.initializeApp(cfg);
-    var db  = firebase.firestore(app);
+    var app  = firebase.apps.length ? firebase.app() : firebase.initializeApp(cfg);
+    var db   = firebase.firestore(app);
+    var test = db.collection('tests').doc(testId);
     return Promise.all([
-      db.collection('facts').orderBy('source_line').get(),
-      db.collection('questions').orderBy('id').get()
+      test.collection('facts').orderBy('source_line').get(),
+      test.collection('questions').orderBy('id').get()
     ]).then(function (results) {
       return {
         facts:     results[0].docs.map(function (d) { return d.data(); }),

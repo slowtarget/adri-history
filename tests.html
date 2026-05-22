@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📚 Quiz Library</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .library-header {
+      text-align: center;
+      padding: 2.5rem 1rem 1rem;
+    }
+    .library-header h1 { font-size: 1.75rem; margin-bottom: .4rem; }
+    .library-header p  { color: #94a3b8; font-size: .95rem; margin: 0; }
+
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.25rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .test-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: .75rem;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+    }
+
+    .test-card-icon   { font-size: 2.5rem; line-height: 1; }
+    .test-card-title  { font-size: 1.2rem; font-weight: 700; color: #e2e8f0; margin: 0; }
+    .test-card-sub    { font-size: .85rem; color: #94a3b8; margin: 0; }
+    .test-card-desc   { font-size: .875rem; color: #cbd5e1; margin: 0; flex: 1; }
+    .test-card-links  { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: .25rem; }
+
+    .loading-msg, .error-msg {
+      text-align: center;
+      color: #94a3b8;
+      padding: 3rem 1rem;
+    }
+    .error-msg { color: #f87171; }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="library-header">
+    <h1>📚 Quiz Library</h1>
+    <p>Choose a quiz to begin</p>
+  </div>
+
+  <div id="test-grid" class="test-grid">
+    <p id="loading-msg" class="loading-msg">Loading quizzes…</p>
+  </div>
+</div>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"
+        integrity="sha384-Yc8S7M5AqMxCsAWTOKsQjTJn1Mhqc2vEcupY/bqmpnh7R+LzTlvRd8qxOjPOIJd4"
+        crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"
+        integrity="sha384-2BZtvXvD4QcYzi9Af11iIaNTFwvb2bhEbyml2rD0AE0kaG3Zkb10a4Q2XX8oiVBT"
+        crossorigin="anonymous"></script>
+<!-- Local test list for dev / Playwright -->
+<script src="tests-data.js"></script>
+<script src="config.js"></script>
+<script>
+/* global firebase, QUIZ_CONFIG, QUIZ_TESTS */
+(function () {
+  'use strict';
+
+  var grid = document.getElementById('test-grid');
+
+  function card(t) {
+    var div = document.createElement('div');
+    div.className = 'test-card';
+    div.innerHTML =
+      '<div class="test-card-icon">' + (t.icon || '📋') + '</div>' +
+      '<h2 class="test-card-title">' + escHtml(t.title || t.id) + '</h2>' +
+      '<p class="test-card-sub">'  + escHtml(t.subtitle || '')  + '</p>' +
+      '<p class="test-card-desc">' + escHtml(t.description || '') + '</p>' +
+      '<div class="test-card-links">' +
+        '<a href="index.html?test=' + encodeURIComponent(t.id) + '" class="btn btn-primary">Start Quiz →</a>' +
+        '<a href="taxonomy.html?test=' + encodeURIComponent(t.id) + '" class="btn btn-secondary">Browse Taxonomy</a>' +
+      '</div>';
+    return div;
+  }
+
+  function escHtml(str) {
+    return String(str)
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;');
+  }
+
+  function localTests() {
+    return typeof QUIZ_TESTS === 'undefined' ? [] : QUIZ_TESTS;
+  }
+
+  function renderTests(tests) {
+    grid.innerHTML = '';
+    if (!tests || !tests.length) {
+      grid.innerHTML = '<p class="error-msg">No active quizzes found.</p>';
+      return;
+    }
+    tests.forEach(function (t) { grid.appendChild(card(t)); });
+  }
+
+  var params   = new URLSearchParams(globalThis.location.search);
+  var isLocal  = location.protocol === 'file:' ||
+                 location.hostname === 'localhost' ||
+                 location.hostname === '127.0.0.1' ||
+                 params.get('data') === 'local';
+
+  if (isLocal) {
+    renderTests(localTests());
+    return;
+  }
+
+  var cfg = (typeof QUIZ_CONFIG !== 'undefined' && QUIZ_CONFIG.FIREBASE_CONFIG) || {};
+  if (!cfg.apiKey) {
+    renderTests(localTests());
+    return;
+  }
+
+  var app = firebase.apps.length ? firebase.app() : firebase.initializeApp(cfg);
+  firebase.firestore(app)
+    .collection('tests')
+    .where('active', '==', true)
+    .get()
+    .then(function (snap) {
+      var firestoreTests = snap.docs.map(function (d) { return d.data(); });
+      renderTests(firestoreTests.length ? firestoreTests : localTests());
+    })
+    .catch(function () {
+      renderTests(localTests());
+    });
+}());
+</script>
+</body>
+</html>

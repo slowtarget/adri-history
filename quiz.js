@@ -198,6 +198,10 @@
     var app = firebase.apps.length ? firebase.app() : null;
     if (!app) return;
 
+    var tid = (window.QUIZ_TEST && window.QUIZ_TEST.id) ||
+               new URLSearchParams(window.location.search).get('test') ||
+               'iberian_history';
+
     firebase.firestore(app).collection('results').add({
       name:      entry.name || 'Anonymous',
       started:   entry.started,
@@ -205,6 +209,7 @@
       score:     entry.score,
       total:     entry.total,
       wrong:     entry.wrong,
+      testId:    tid,
       userId:    user.uid,
       userEmail: user.email || '',
       savedAt:   new Date().toISOString(),
@@ -406,16 +411,17 @@
 
     showScreen('results');
 
+    var ui = (window.QUIZ_TEST && window.QUIZ_TEST.ui) || {};
     if (passed) {
-      resultIcon.textContent    = '🏆';
-      resultHeading.textContent = 'Congratulations!';
-      resultMessage.textContent =
+      resultIcon.textContent    = ui.passIcon    || '🏆';
+      resultHeading.textContent = ui.passHeading || 'Congratulations!';
+      resultMessage.textContent = ui.passMessage ||
         'Excellent work! You scored ' + score + ' out of ' + QUESTIONS_PER_QUIZ +
         '. You\'ve clearly mastered this material — keep it up!';
     } else {
-      resultIcon.textContent    = '📖';
-      resultHeading.textContent = 'More Work Needed';
-      resultMessage.textContent =
+      resultIcon.textContent    = ui.failIcon    || '📚';
+      resultHeading.textContent = ui.failHeading || 'More Work Needed';
+      resultMessage.textContent = ui.failMessage ||
         'You scored ' + score + ' out of ' + QUESTIONS_PER_QUIZ +
         '. You need at least ' + PASS_SCORE + '/20 to pass (90%). ' +
         'Review the source material and try again — you\'ll get there!';

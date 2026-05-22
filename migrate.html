@@ -54,8 +54,18 @@
     progress::-webkit-progress-bar   { background: #334155; border-radius: 4px; }
     progress::-webkit-progress-value { background: #3b82f6; border-radius: 4px; }
 
-    .signin-row { display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; }
+    .signin-row { display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; margin-top: 1.25rem; }
     .user-label { font-size: .875rem; color: #94a3b8; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label, .form-label { display: block; font-size: .8rem; color: #94a3b8; margin-bottom: .3rem; }
+    fieldset.form-group { border: none; padding: 0; margin-left: 0; margin-right: 0; }
+    .form-group input[type=text] {
+      width: 100%; padding: .5rem .75rem; border-radius: .4rem;
+      background: #0f172a; border: 1px solid #334155; color: #e2e8f0;
+      font-size: .9rem; font-family: monospace;
+    }
+    .radio-group { display: flex; flex-direction: column; gap: .4rem; font-size: .85rem; color: #cbd5e1; }
+    .radio-group label { display: flex; gap: .5rem; align-items: center; cursor: pointer; }
 
     .rules-box {
       margin-top: 1.75rem; padding: 1rem 1.25rem;
@@ -69,7 +79,20 @@
 <body>
 <div class="card">
   <h1>🔥 Migrate to Firestore</h1>
-  <p class="subtitle">Uploads local facts &amp; questions into your Firebase project in one click.</p>
+  <p class="subtitle">Uploads test metadata, facts &amp; questions into the <code>tests/{testId}</code> subcollection structure.</p>
+
+  <div class="form-group">
+    <label for="test-id-input">Test ID</label>
+    <input type="text" id="test-id-input" value="iberian_history" spellcheck="false" />
+  </div>
+
+  <fieldset class="form-group">
+    <legend class="form-label">Data source</legend>
+    <div class="radio-group">
+      <label><input type="radio" name="source" value="firestore" checked /> Existing Firestore flat collections (migrate in-place)</label>
+      <label><input type="radio" name="source" value="local" /> Local data files (facts-data.js / questions-data.js)</label>
+    </div>
+  </fieldset>
 
   <div class="signin-row">
     <button id="signin-btn" class="btn btn-google">Sign in with Google</button>
@@ -98,15 +121,23 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // Facts and questions: authenticated read only — no client writes.
-    match /facts/{doc} {
-      allow read: if request.auth != null;
-      allow write: if false;
+    // Test metadata + subcollections: authenticated read/write (for this tool).
+    match /tests/{testId} {
+      allow read:  if request.auth != null;
+      allow write: if request.auth != null;
+      match /facts/{factId} {
+        allow read:  if request.auth != null;
+        allow write: if request.auth != null;
+      }
+      match /questions/{questionId} {
+        allow read:  if request.auth != null;
+        allow write: if request.auth != null;
+      }
     }
-    match /questions/{doc} {
-      allow read: if request.auth != null;
-      allow write: if false;
-    }
+
+    // Old flat collections: read-only (migrate.html reads these when migrating in-place).
+    match /facts/{doc}     { allow read: if request.auth != null; allow write: if false; }
+    match /questions/{doc} { allow read: if request.auth != null; allow write: if false; }
 
     // Results: users can create their own and read their own — nothing else.
     match /results/{doc} {
@@ -136,13 +167,14 @@ service cloud.firestore {
 <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"
         integrity="sha384-2BZtvXvD4QcYzi9Af11iIaNTFwvb2bhEbyml2rD0AE0kaG3Zkb10a4Q2XX8oiVBT"
         crossorigin="anonymous"></script>
-<!-- Local data globals (QUIZ_FACTS, QUIZ_QUESTIONS) -->
+<!-- Local data globals -->
 <script src="facts-data.js"></script>
 <script src="questions-data.js"></script>
+<script src="tests-data.js"></script>
 <script src="config.js"></script>
 
 <script>
-/* global firebase, QUIZ_CONFIG, QUIZ_FACTS, QUIZ_QUESTIONS */
+/* global firebase, QUIZ_CONFIG, QUIZ_FACTS, QUIZ_QUESTIONS, QUIZ_TESTS */
 (function () {
   'use strict';
 
@@ -152,15 +184,16 @@ service cloud.firestore {
     return;
   }
 
-  // Allow auth on this page regardless of hostname (unlike the main quiz)
+  // Allow auth on this page regardless of hostname
   firebase.initializeApp(cfg);
   var auth = firebase.auth();
   var db   = firebase.firestore();
 
-  var signinBtn  = document.getElementById('signin-btn');
-  var uploadBtn  = document.getElementById('upload-btn');
-  var userLabel  = document.getElementById('user-label');
-  var statusBox  = document.getElementById('status-box');
+  var signinBtn   = document.getElementById('signin-btn');
+  var uploadBtn   = document.getElementById('upload-btn');
+  var userLabel   = document.getElementById('user-label');
+  var testIdInput = document.getElementById('test-id-input');
+  var statusBox   = document.getElementById('status-box');
   var progressRow   = document.getElementById('progress-row');
   var progressBar   = document.getElementById('progress-bar');
   var progressLabel = document.getElementById('progress-label');
@@ -215,71 +248,103 @@ service cloud.firestore {
     });
   });
 
-  async function runMigration() {
-    var facts     = (typeof QUIZ_FACTS     === 'undefined') ? [] : QUIZ_FACTS;
-    var questions = (typeof QUIZ_QUESTIONS === 'undefined') ? [] : QUIZ_QUESTIONS;
+  function resolveTestMeta(testId) {
+    var found = typeof QUIZ_TESTS !== 'undefined' &&
+                (QUIZ_TESTS.find(function (t) { return t.id === testId; }) || QUIZ_TESTS[0]);
+    var base = found || {
+      id: testId, title: testId, subtitle: '', description: '',
+      icon: '📚', questionsPerQuiz: 20, passThreshold: 0.9, active: true,
+      ui: { passIcon: '🏆', passHeading: 'Congratulations!', passMessage: 'Well done!',
+            failIcon: '📚', failHeading: 'More Work Needed', failMessage: 'Keep practising!' }
+    };
+    return { ...base, id: testId };
+  }
 
-    if (!facts.length || !questions.length) {
-      log('err', 'QUIZ_FACTS or QUIZ_QUESTIONS is empty — check facts-data.js and questions-data.js loaded correctly.');
+  async function loadSourceData(source) {
+    if (source !== 'firestore') {
+      return {
+        facts:     typeof QUIZ_FACTS     === 'undefined' ? [] : QUIZ_FACTS,
+        questions: typeof QUIZ_QUESTIONS === 'undefined' ? [] : QUIZ_QUESTIONS
+      };
+    }
+    log('info', 'Reading from existing Firestore flat collections…');
+    var [fSnap, qSnap] = await Promise.all([
+      db.collection('facts').orderBy('source_line').get(),
+      db.collection('questions').orderBy('id').get()
+    ]);
+    var facts     = fSnap.docs.map(function (d) { return d.data(); });
+    var questions = qSnap.docs.map(function (d) { return d.data(); });
+    log('info', 'Read ' + facts.length + ' facts and ' + questions.length + ' questions from Firestore.');
+    return { facts, questions };
+  }
+
+  async function uploadBatches(colRef, items, idFn, label, state) {
+    var BATCH_SIZE = 450;
+    log('info', 'Uploading ' + label + '…');
+    for (var i = 0; i < items.length; i += BATCH_SIZE) {
+      var slice = items.slice(i, i + BATCH_SIZE);
+      var batch = db.batch();
+      slice.forEach(function (item) { batch.set(colRef.doc(idFn(item)), item); });
+      try {
+        await batch.commit();
+        state.done += slice.length;
+        setProgress(state.done, state.total);
+      } catch (err) {
+        log('err', 'Batch failed (' + label + ' ' + i + '–' + (i + slice.length - 1) + '): ' + err.message);
+        state.errors++;
+      }
+    }
+    log('ok', label + ': ' + items.length + ' uploaded.');
+  }
+
+  async function runMigration() {
+    var testId   = (testIdInput.value || 'iberian_history').trim();
+    var sourceEl = document.querySelector('input[name="source"]:checked');
+    var source   = sourceEl ? sourceEl.value : 'local';
+
+    var testMeta = resolveTestMeta(testId);
+
+    var data;
+    try {
+      data = await loadSourceData(source);
+    } catch (err) {
+      log('err', 'Failed to read from Firestore: ' + err.message);
       return;
     }
 
-    log('info', 'Starting migration…');
+    var { facts, questions } = data;
+    if (!facts.length || !questions.length) {
+      log('err', 'No facts or questions found — check data source.');
+      return;
+    }
+
+    log('info', 'Starting migration for test "' + testId + '"…');
     log('info', facts.length + ' facts  •  ' + questions.length + ' questions');
 
-    var total  = facts.length + questions.length;
-    var done   = 0;
-    var errors = 0;
+    var state  = { done: 0, errors: 0, total: 1 + facts.length + questions.length };
+    setProgress(0, state.total);
 
-    setProgress(0, total);
-
-    /* Write in Firestore batches (max 500 ops each) */
-    var BATCH_SIZE = 450;
-
-    /* ── Facts ── */
-    log('info', 'Uploading facts…');
-    for (var fi = 0; fi < facts.length; fi += BATCH_SIZE) {
-      var batch = db.batch();
-      var slice = facts.slice(fi, fi + BATCH_SIZE);
-      slice.forEach(function (fact) {
-        batch.set(db.collection('facts').doc(fact.id), fact);
-      });
-      try {
-        await batch.commit();
-        done += slice.length;
-        setProgress(done, total);
-      } catch (err) {
-        log('err', 'Batch failed (facts ' + fi + '–' + (fi + slice.length - 1) + '): ' + err.message);
-        errors++;
-      }
+    /* Write test metadata document */
+    try {
+      await db.collection('tests').doc(testId).set(testMeta);
+      state.done++;
+      setProgress(state.done, state.total);
+      log('ok', 'Test metadata written to tests/' + testId + '.');
+    } catch (err) {
+      log('err', 'Failed to write test metadata: ' + err.message);
+      state.errors++;
     }
-    log('ok', 'Facts: ' + facts.length + ' uploaded.');
 
-    /* ── Questions ── */
-    log('info', 'Uploading questions…');
-    for (var qi = 0; qi < questions.length; qi += BATCH_SIZE) {
-      var qbatch = db.batch();
-      var qslice = questions.slice(qi, qi + BATCH_SIZE);
-      qslice.forEach(function (q) {
-        qbatch.set(db.collection('questions').doc(String(q.id)), q);
-      });
-      try {
-        await qbatch.commit();
-        done += qslice.length;
-        setProgress(done, total);
-      } catch (err) {
-        log('err', 'Batch failed (questions ' + qi + '–' + (qi + qslice.length - 1) + '): ' + err.message);
-        errors++;
-      }
-    }
-    log('ok', 'Questions: ' + questions.length + ' uploaded.');
+    var testRef = db.collection('tests').doc(testId);
+    await uploadBatches(testRef.collection('facts'),     facts,     function (f) { return f.id; },       'facts (tests/' + testId + '/facts)',         state);
+    await uploadBatches(testRef.collection('questions'), questions, function (q) { return String(q.id); },'questions (tests/' + testId + '/questions)', state);
 
-    /* ── Summary ── */
-    if (errors === 0) {
-      log('ok', '✓ Migration complete — ' + total + ' documents written to Firestore.');
+    /* Summary */
+    if (state.errors === 0) {
+      log('ok', '✓ Migration complete — ' + state.total + ' documents written to Firestore.');
       log('info', 'Open index.html?data=firestore to verify.');
     } else {
-      log('warn', errors + ' batch error(s) — check the log above and retry.');
+      log('warn', state.errors + ' batch error(s) — check the log above and retry.');
     }
   }
 
