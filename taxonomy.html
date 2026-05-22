@@ -391,40 +391,84 @@
 
   function hideTooltip() { tooltip.style.display = 'none'; }
 
+  /* ── Graph: tag colours ── */
+  var TAG_KEYS   = ['era', 'period', 'entity', 'topic', 'theme'];
+  var TAG_COLORS = {
+    era:    '#f59e0b',
+    period: '#06b6d4',
+    entity: '#ec4899',
+    topic:  '#84cc16',
+    theme:  '#a855f7',
+  };
+
+  function nodeCharge(d) {
+    if (d.type === 'tag')  return -200;
+    if (d.type === 'fact') return -60;
+    return -15;
+  }
+  function nodeCollide(d) {
+    if (d.type === 'tag')  return 28;
+    if (d.type === 'fact') return 9;
+    return 5;
+  }
+  function nodeRadius(d) {
+    if (d.type === 'tag')  return 10;
+    if (d.type === 'fact') return 6;
+    return 2.5;
+  }
+  function nodeFill(d) {
+    if (d.type === 'tag')  return d.color;
+    if (d.type === 'fact') return eraColor(d.era);
+    return '#334155';
+  }
+
+  function addFactTagLinks(f, tagNodeSet, nodes, links) {
+    TAG_KEYS.forEach(function (key) {
+      var val = f.labels && f.labels[key];
+      if (!val || val === 'None') return;
+      var tid = 'tag:' + key + ':' + val;
+      if (!tagNodeSet.has(tid)) {
+        tagNodeSet.add(tid);
+        nodes.push({ id: tid, type: 'tag', tagKey: key, tagVal: val,
+                     color: TAG_COLORS[key] || '#94a3b8',
+                     text: key + ': ' + humanise(val) });
+      }
+      links.push({ source: 'f:' + f.id, target: tid, lt: 'ft' });
+    });
+  }
+
+  function addQuestionLinks(q, factIdSet, nodes, links) {
+    var qid = 'q:' + q.id;
+    nodes.push({ id: qid, type: 'question', qId: q.id, text: q.question });
+    (q.fact_ids || []).forEach(function (fid) {
+      if (factIdSet.has(fid)) links.push({ source: qid, target: 'f:' + fid, lt: 'qf' });
+    });
+  }
+
+  function buildGraphData(facts, questions) {
+    var nodes      = [];
+    var links      = [];
+    var factIdSet  = new Set();
+    var tagNodeSet = new Set();
+    facts.forEach(function (f) {
+      factIdSet.add(f.id);
+      nodes.push({ id: 'f:' + f.id, type: 'fact', factId: f.id,
+                   text: f.fact, era: (f.labels && f.labels.era) || 'Unknown' });
+      addFactTagLinks(f, tagNodeSet, nodes, links);
+    });
+    questions.forEach(function (q) { addQuestionLinks(q, factIdSet, nodes, links); });
+    return { nodes: nodes, links: links };
+  }
+
   /* ── Graph: render with D3 ── */
   function renderGraph(d3lib, data, view) {
     view.innerHTML = '';
+    var gd    = buildGraphData(data.facts, data.questions);
+    var nodes = gd.nodes;
+    var links = gd.links;
 
-    var facts     = data.facts;
-    var questions = data.questions;
-
-    /* Build node + link arrays */
-    var nodes = [];
-    var links = [];
-    var factIdSet = new Set();
-
-    facts.forEach(function (f) {
-      factIdSet.add(f.id);
-      nodes.push({
-        id: 'f:' + f.id, type: 'fact',
-        factId: f.id, text: f.fact,
-        era: (f.labels && f.labels.era) || 'Unknown'
-      });
-    });
-
-    questions.forEach(function (q) {
-      var qNodeId = 'q:' + q.id;
-      nodes.push({ id: qNodeId, type: 'question', qId: q.id, text: q.question });
-      (q.fact_ids || []).forEach(function (fid) {
-        if (factIdSet.has(fid)) {
-          links.push({ source: qNodeId, target: 'f:' + fid });
-        }
-      });
-    });
-
-    /* SVG */
     var w = view.offsetWidth || 900;
-    var h = 600;
+    var h = 640;
 
     var svg = d3lib.select(view)
       .append('svg')
@@ -432,49 +476,51 @@
       .attr('viewBox', '0 0 ' + w + ' ' + h);
 
     var g = svg.append('g');
-    svg.call(d3lib.zoom().scaleExtent([0.2, 4]).on('zoom', function (event) {
-      g.attr('transform', event.transform);
+    svg.call(d3lib.zoom().scaleExtent([0.2, 4]).on('zoom', function (ev) {
+      g.attr('transform', ev.transform);
     }));
 
-    /* Simulation */
     var simulation = d3lib.forceSimulation(nodes)
-      .force('link',   d3lib.forceLink(links).id(function (d) { return d.id; }).distance(55))
-      .force('charge', d3lib.forceManyBody().strength(-80))
-      .force('center', d3lib.forceCenter(w / 2, h / 2))
-      .force('collide', d3lib.forceCollide(10));
+      .force('link',    d3lib.forceLink(links).id(function (d) { return d.id; })
+        .distance(function (d) { return d.lt === 'ft' ? 65 : 35; })
+        .strength(function (d)  { return d.lt === 'ft' ? 0.6 : 0.25; }))
+      .force('charge',  d3lib.forceManyBody().strength(nodeCharge))
+      .force('center',  d3lib.forceCenter(w / 2, h / 2))
+      .force('collide', d3lib.forceCollide(nodeCollide));
 
-    /* Links */
     var link = g.append('g')
-      .selectAll('line')
-      .data(links)
-      .join('line')
-      .attr('stroke', '#334155')
-      .attr('stroke-width', 1)
-      .attr('stroke-opacity', 0.6);
+      .selectAll('line').data(links).join('line')
+      .attr('stroke',         function (d) { return d.lt === 'ft' ? '#475569' : '#1e293b'; })
+      .attr('stroke-width',   function (d) { return d.lt === 'ft' ? 1.2 : 0.7; })
+      .attr('stroke-opacity', function (d) { return d.lt === 'ft' ? 0.7 : 0.4; });
 
-    /* Nodes */
     var node = g.append('g')
-      .selectAll('circle')
-      .data(nodes)
-      .join('circle')
-      .attr('r', function (d) { return d.type === 'fact' ? 7 : 4; })
-      .attr('fill', function (d) {
-        return d.type === 'fact' ? eraColor(d.era) : '#475569';
-      })
-      .attr('stroke', '#0f172a')
-      .attr('stroke-width', 1)
+      .selectAll('circle').data(nodes).join('circle')
+      .attr('r',            nodeRadius)
+      .attr('fill',         nodeFill)
+      .attr('stroke',       function (d) { return d.type === 'question' ? '#475569' : '#0f172a'; })
+      .attr('stroke-width', function (d) { return d.type === 'question' ? 0.5 : 1.5; })
       .style('cursor', 'grab')
       .on('mouseover', showTooltip)
       .on('mousemove', moveTooltip)
       .on('mouseout',  hideTooltip)
-      .call(
-        d3lib.drag()
-          .on('start', function (ev, d) { dragStarted(ev, d, simulation); })
-          .on('drag',  dragged)
-          .on('end',   function (ev, d) { dragEnded(ev, d, simulation); })
-      );
+      .call(d3lib.drag()
+        .on('start', function (ev, d) { dragStarted(ev, d, simulation); })
+        .on('drag',  dragged)
+        .on('end',   function (ev, d) { dragEnded(ev, d, simulation); }));
 
-    /* Tick */
+    var tagLabel = g.append('g')
+      .selectAll('text')
+      .data(nodes.filter(function (d) { return d.type === 'tag'; }))
+      .join('text')
+      .text(function (d) { return humanise(d.tagVal); })
+      .attr('font-size', 8)
+      .attr('font-family', 'system-ui, sans-serif')
+      .attr('fill', '#e2e8f0')
+      .attr('text-anchor', 'middle')
+      .style('pointer-events', 'none')
+      .style('user-select', 'none');
+
     simulation.on('tick', function () {
       link
         .attr('x1', function (d) { return d.source.x; })
@@ -484,22 +530,27 @@
       node
         .attr('cx', function (d) { return d.x; })
         .attr('cy', function (d) { return d.y; });
+      tagLabel
+        .attr('x', function (d) { return d.x; })
+        .attr('y', function (d) { return d.y + 20; });
     });
 
     /* Legend */
     var legendEl = document.createElement('div');
     legendEl.className = 'graph-legend';
-    var eras = Object.keys(ERA_COLORS);
-    eras.forEach(function (era) {
-      var span = document.createElement('span');
-      span.innerHTML =
-        '<span class="legend-dot" style="background:' + ERA_COLORS[era] + '"></span>' +
-        esc(humanise(era)) + ' (fact)';
-      legendEl.appendChild(span);
+    Object.keys(ERA_COLORS).forEach(function (era) {
+      var s = document.createElement('span');
+      s.innerHTML = '<span class="legend-dot" style="background:' + ERA_COLORS[era] + '"></span>' + esc(humanise(era)) + ' (fact)';
+      legendEl.appendChild(s);
     });
-    var qLegend = document.createElement('span');
-    qLegend.innerHTML = '<span class="legend-sq" style="background:#475569"></span>Question';
-    legendEl.appendChild(qLegend);
+    TAG_KEYS.forEach(function (key) {
+      var s = document.createElement('span');
+      s.innerHTML = '<span class="legend-dot" style="background:' + (TAG_COLORS[key] || '#94a3b8') + '"></span>' + esc(key) + ' (tag)';
+      legendEl.appendChild(s);
+    });
+    var ql = document.createElement('span');
+    ql.innerHTML = '<span class="legend-sq" style="background:#334155"></span>Question';
+    legendEl.appendChild(ql);
     view.appendChild(legendEl);
   }
 
