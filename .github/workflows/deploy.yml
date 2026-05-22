@@ -24,14 +24,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Inject results token into config.js
-        env:
-          QUIZ_RESULTS_TOKEN: ${{ secrets.QUIZ_RESULTS_TOKEN }}
-        run: |
-          echo "Token length: ${#QUIZ_RESULTS_TOKEN}"
-          sed -i "s/GITHUB_TOKEN: ''/GITHUB_TOKEN: '${QUIZ_RESULTS_TOKEN}'/" config.js
-          grep -q "GITHUB_TOKEN: ''" config.js && echo "WARNING: token was NOT injected" || echo "OK: token injected"
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
 

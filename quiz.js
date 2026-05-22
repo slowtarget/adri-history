@@ -189,67 +189,28 @@
     URL.revokeObjectURL(url);
   }
 
-  /* ── GitHub API: append one row to results.csv in the repo ─── */
-  async function pushResultToGitHub(entry) {
-    const cfg = (typeof QUIZ_CONFIG !== 'undefined') ? QUIZ_CONFIG : {};
-    if (!cfg.GITHUB_TOKEN) return; // silently skip if not configured
+  /* ── Firestore: persist result to 'results' collection ──────── */
+  function pushResultToFirestore(entry) {
+    /* Skip if Firestore SDK not loaded (local/test mode) or user not authenticated */
+    if (typeof firebase === 'undefined' || typeof firebase.firestore !== 'function') return;
+    var user = (typeof QuizAuth !== 'undefined') ? QuizAuth.getUser() : null;
+    if (!user) return;
+    var app = firebase.apps.length ? firebase.app() : null;
+    if (!app) return;
 
-    const apiURL = 'https://api.github.com/repos/' +
-      cfg.GITHUB_OWNER + '/' + cfg.GITHUB_REPO +
-      '/contents/' + cfg.RESULTS_FILE;
-
-    const headers = {
-      'Authorization': 'Bearer ' + cfg.GITHUB_TOKEN,
-      'Accept': 'application/vnd.github+json',
-      'Content-Type': 'application/json',
-    };
-
-    /* 1. Fetch existing file (get SHA + current content) */
-    let sha     = null;
-    let current = '';
-    try {
-      const res = await fetch(apiURL, { headers: headers });
-      if (res.ok) {
-        const data = await res.json();
-        sha     = data.sha;
-        current = fromB64(data.content);
-      }
-    } catch (_) { /* file doesn't exist yet — that's fine */ }
-
-    /* 2. Build new row */
-    const started   = new Date(entry.started);
-    const completed = new Date(entry.completed);
-    const wrongSummary = entry.wrong.map(function (w) {
-      return w.question + ' [Correct: ' + w.correctKey + ') ' + w.correctText + ']';
-    }).join(' | ');
-    const newRow = [
-      csvCell(entry.name || 'Anonymous'),
-      csvCell(started.toLocaleDateString()),
-      csvCell(started.toLocaleTimeString()),
-      csvCell(completed.toLocaleTimeString()),
-      csvCell(entry.score),
-      csvCell(entry.total),
-      csvCell(Math.round(entry.score / entry.total * 100) + '%'),
-      csvCell(wrongSummary || 'None'),
-    ].join(',');
-
-    const CSV_HEADER = 'Name,Date,Time Started,Time Completed,Score,Out Of,Percentage,Wrong Questions';
-    const newContent = (current ? current.trimEnd() + '\n' : CSV_HEADER + '\n') + newRow + '\n';
-
-    /* 3. Commit the updated file */
-    const body = {
-      message: 'Add quiz result for ' + (entry.name || 'Anonymous'),
-      content: toB64(newContent),
-    };
-    if (sha) body.sha = sha;
-
-    try {
-      await fetch(apiURL, {
-        method:  'PUT',
-        headers: headers,
-        body:    JSON.stringify(body),
-      });
-    } catch (_) { /* fail silently — local results are already saved */ }
+    firebase.firestore(app).collection('results').add({
+      name:      entry.name || 'Anonymous',
+      started:   entry.started,
+      completed: entry.completed,
+      score:     entry.score,
+      total:     entry.total,
+      wrong:     entry.wrong,
+      userId:    user.uid,
+      userEmail: user.email || '',
+      savedAt:   new Date().toISOString(),
+    }).catch(function (err) {
+      console.warn('[quiz] Firestore result save error:', err.message);
+    });
   }
 
   /* ── One-time question enrichment ──────────────────────────
@@ -560,7 +521,7 @@
     });
     if (parsed.success) {
       saveResult(parsed.data);
-      pushResultToGitHub(parsed.data);
+      pushResultToFirestore(parsed.data);
     }
 
     /* expose final state for tests */
