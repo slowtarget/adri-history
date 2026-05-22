@@ -401,10 +401,10 @@
     /* Build node + link arrays */
     var nodes = [];
     var links = [];
-    var factIndexById = {};
+    var factIdSet = new Set();
 
     facts.forEach(function (f) {
-      factIndexById[f.id] = nodes.length;
+      factIdSet.add(f.id);
       nodes.push({
         id: 'f:' + f.id, type: 'fact',
         factId: f.id, text: f.fact,
@@ -413,11 +413,11 @@
     });
 
     questions.forEach(function (q) {
-      var qi = nodes.length;
-      nodes.push({ id: 'q:' + q.id, type: 'question', qId: q.id, text: q.question });
+      var qNodeId = 'q:' + q.id;
+      nodes.push({ id: qNodeId, type: 'question', qId: q.id, text: q.question });
       (q.fact_ids || []).forEach(function (fid) {
-        if (factIndexById[fid] !== undefined) {
-          links.push({ source: qi, target: factIndexById[fid] });
+        if (factIdSet.has(fid)) {
+          links.push({ source: qNodeId, target: 'f:' + fid });
         }
       });
     });
