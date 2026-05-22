@@ -525,6 +525,7 @@
   /* ── Main ── */
   var load = firestoreMode ? loadFirestore() : loadLocal();
   load.then(function (data) {
+    globalThis._taxoData = data;
     document.getElementById('loading').style.display = 'none';
     document.getElementById('tree-view').style.display = '';
 
