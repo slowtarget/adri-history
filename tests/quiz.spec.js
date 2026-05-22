@@ -276,3 +276,33 @@ test('quiz produces a different question order on each run', async ({ page }) =>
   // questions are identical is (1/100)^5 — effectively impossible.
   expect(unique.size).toBeGreaterThan(1);
 });
+
+/* ──────────────────────────────────────────────────────────────── */
+/* Taxonomy browser                                                  */
+/* ──────────────────────────────────────────────────────────────── */
+
+test('taxonomy tree loads and shows at least one era heading', async ({ page }) => {
+  await page.goto('/taxonomy.html');
+  // wait for the loading indicator to disappear
+  await expect(page.locator('#loading')).toBeHidden({ timeout: 10000 });
+  // at least one era block should be visible in the tree
+  const eraHeadings = page.locator('.era-heading');
+  await expect(eraHeadings.first()).toBeVisible();
+  expect(await eraHeadings.count()).toBeGreaterThan(0);
+});
+
+test('taxonomy graph tab renders an SVG with nodes', async ({ page }) => {
+  await page.goto('/taxonomy.html');
+  await expect(page.locator('#loading')).toBeHidden({ timeout: 10000 });
+
+  // switch to Graph tab
+  await page.click('#tab-graph');
+
+  // D3 loads dynamically — wait up to 15s for the SVG to appear
+  await expect(page.locator('#graph-svg')).toBeVisible({ timeout: 15000 });
+
+  // the graph should contain at least some circle elements (nodes)
+  const circles = page.locator('#graph-svg circle');
+  await expect(circles.first()).toBeVisible({ timeout: 5000 });
+  expect(await circles.count()).toBeGreaterThan(0);
+});

@@ -180,8 +180,8 @@
   globalThis.showTab = function (name) {
     document.getElementById('tab-tree').classList.toggle('active', name === 'tree');
     document.getElementById('tab-graph').classList.toggle('active', name === 'graph');
-    document.getElementById('tree-view').style.display  = name === 'tree'  ? '' : 'none';
-    document.getElementById('graph-view').style.display = name === 'graph' ? '' : 'none';
+    document.getElementById('tree-view').style.display  = name === 'tree'  ? 'block' : 'none';
+    document.getElementById('graph-view').style.display = name === 'graph' ? 'block' : 'none';
     if (name === 'graph' && !globalThis._graphBuilt) buildGraph(globalThis._taxoData);
   };
 
@@ -527,7 +527,7 @@
   load.then(function (data) {
     globalThis._taxoData = data;
     document.getElementById('loading').style.display = 'none';
-    document.getElementById('tree-view').style.display = '';
+    document.getElementById('tree-view').style.display = 'block';
 
     var badge = document.getElementById('source-badge');
     if (data.source === 'firestore') {
